@@ -7,7 +7,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-ink text-ink-foreground">
+    <header className="sticky top-0 z-40 bg-primary text-primary-foreground">
       <div className="flex items-center gap-8 px-5 py-4">
         <Link to="/" className="flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center bg-primary-foreground font-display text-lg font-bold text-primary">
