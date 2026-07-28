@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
 import { PROGRAMS } from "@/data/site";
+import { programImage } from "@/lib/program-images";
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
@@ -31,9 +32,17 @@ function Programs() {
       />
       <div className="mx-auto max-w-6xl px-4 py-14">
         <ul className="grid gap-x-12 gap-y-10 md:grid-cols-2">
-          {PROGRAMS.map((p) => (
-            <li key={p.slug} className="module-rule pt-4">
-              <div className="flex items-baseline justify-between gap-4">
+          {PROGRAMS.map((p, i) => (
+            <li key={p.slug}>
+              <div className="aspect-[3/2] w-full overflow-hidden">
+                <img
+                  src={programImage(p.slug, i)}
+                  alt=""
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="mt-4 flex items-baseline justify-between gap-4">
                 <h2 className="font-display text-lg font-bold">{p.name}</h2>
                 <span className="text-xs tracking-wide text-muted-foreground uppercase">
                   {p.duration}
