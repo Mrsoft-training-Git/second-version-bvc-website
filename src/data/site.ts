@@ -141,3 +141,22 @@ export const QUICK_LINKS = [
   { label: "Visit the center", to: "/contact" },
   { label: "Industry partnerships", to: "/about" },
 ];
+
+// Left-panel resources, mirroring an institutional site's "Top resources for" block.
+export const TOP_RESOURCES = [
+  { label: "prospective trainees", to: "/admissions" },
+  { label: "current trainees", to: "/campus-life" },
+  { label: "instructors & staff", to: "/about" },
+  { label: "graduates", to: "/news" },
+  { label: "parents & sponsors", to: "/admissions" },
+  { label: "all resources", to: "/education" },
+];
+
+export const PANEL_LINKS = [
+  { label: "Visit", to: "/contact" },
+  { label: "Programs", to: "/programs" },
+  { label: "Events", to: "/campus-life" },
+  { label: "People", to: "/about" },
+  { label: "Jobs", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
