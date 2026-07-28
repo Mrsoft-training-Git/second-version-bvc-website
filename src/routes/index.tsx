@@ -6,6 +6,8 @@ import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
 import { FACTS, PROGRAMS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { programImage } from "@/lib/program-images";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,24 +51,23 @@ function SpotlightCarousel() {
 
   return (
     <section aria-labelledby="spotlight-heading" className="border-b border-border">
-      <figure className="relative overflow-hidden">
-        <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+      <figure className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9]">
           {SPOTLIGHTS.map((s, i) => (
             <img
               key={s.slug}
               src={SPOTLIGHT_IMAGES[s.imageKey]}
               alt={s.alt}
               loading={i === 0 ? "eager" : "lazy"}
-              className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ease-out ${
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ease-out ${
                 i === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
               }`}
             />
           ))}
         </div>
-        <figcaption className="mx-auto max-w-6xl px-4 pt-2 text-xs text-muted-foreground">
-          {item.caption}
-        </figcaption>
+        <figcaption className="pt-2 text-xs text-muted-foreground">{item.caption}</figcaption>
       </figure>
+
 
       <div className="mx-auto max-w-6xl px-4 pt-6 pb-10">
         <div key={item.slug} className="animate-fade-in">
@@ -112,63 +113,42 @@ function Home() {
     <>
       <SpotlightCarousel />
 
-      {/* News modules */}
-      <section aria-labelledby="news-heading" className="mx-auto max-w-6xl px-4 py-14">
+      {/* Programs */}
+      <section aria-labelledby="programs-heading" className="mx-auto max-w-6xl px-4 py-14">
         <div className="module-rule flex items-end justify-between pt-3">
-          <h2 id="news-heading" className="text-2xl font-bold">
-            News
+          <h2 id="programs-heading" className="text-2xl font-bold">
+            Programs
           </h2>
           <Link
-            to="/news"
+            to="/programs"
             className="font-display text-xs font-semibold tracking-wide text-primary uppercase link-underline"
           >
-            All news
+            All programs
           </Link>
         </div>
-
-        <div className="mt-8 grid gap-10 lg:grid-cols-3">
-          <article className="lg:col-span-1">
-            <Link to="/news/$slug" params={{ slug: lead.slug }} className="group block">
-              <img
-                src={CARD_IMAGES[0]}
-                alt=""
-                loading="lazy"
-                width={900}
-                height={600}
-                className="w-full object-cover"
-              />
-              <p className="eyebrow mt-3">{lead.category}</p>
-              <h3 className="mt-1 text-xl font-bold group-hover:text-primary">{lead.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{lead.dek}</p>
-              <p className="mt-2 text-xs text-muted-foreground">{lead.date}</p>
-            </Link>
-          </article>
-
-          <div className="grid gap-8 sm:grid-cols-2 lg:col-span-2">
-            {rest.slice(0, 4).map((s, i) => (
-              <article key={s.slug}>
-                <Link to="/news/$slug" params={{ slug: s.slug }} className="group block">
-                  {i < 2 && (
-                    <img
-                      src={CARD_IMAGES[(i + 1) % CARD_IMAGES.length]}
-                      alt=""
-                      loading="lazy"
-                      width={900}
-                      height={600}
-                      className="mb-3 w-full object-cover"
-                    />
-                  )}
-                  <p className="eyebrow">{s.category}</p>
-                  <h3 className="mt-1 font-display text-base font-bold group-hover:text-primary">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.dek}</p>
-                  <p className="mt-2 text-xs text-muted-foreground">{s.date}</p>
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
+        <ul className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          {PROGRAMS.slice(0, 6).map((p, i) => (
+            <li key={p.slug}>
+              <Link to="/programs" className="group block">
+                <div className="aspect-[3/2] w-full overflow-hidden">
+                  <img
+                    src={programImage(p.slug, i)}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <h3 className="mt-3 font-display text-base font-bold group-hover:text-primary">
+                  {p.name}
+                </h3>
+                <p className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
+                  {p.duration}
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{p.body}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* Facts band */}
@@ -188,35 +168,63 @@ function Home() {
         </div>
       </section>
 
-      {/* Programs */}
-      <section aria-labelledby="programs-heading" className="mx-auto max-w-6xl px-4 py-14">
+      {/* News modules */}
+      <section aria-labelledby="news-heading" className="mx-auto max-w-6xl px-4 py-14">
         <div className="module-rule flex items-end justify-between pt-3">
-          <h2 id="programs-heading" className="text-2xl font-bold">
-            Programs
+          <h2 id="news-heading" className="text-2xl font-bold">
+            News
           </h2>
           <Link
-            to="/programs"
+            to="/news"
             className="font-display text-xs font-semibold tracking-wide text-primary uppercase link-underline"
           >
-            All programs
+            All news
           </Link>
         </div>
-        <ul className="mt-8 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-          {PROGRAMS.slice(0, 6).map((p) => (
-            <li key={p.slug} className="border-t border-border pt-4">
-              <Link to="/programs" className="group block">
-                <h3 className="font-display text-base font-bold group-hover:text-primary">
-                  {p.name}
-                </h3>
-                <p className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
-                  {p.duration}
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">{p.body}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+
+        <div className="mt-8 grid gap-10 lg:grid-cols-3">
+          <article className="lg:col-span-1">
+            <Link to="/news/$slug" params={{ slug: lead.slug }} className="group block">
+              <div className="aspect-[3/2] w-full overflow-hidden">
+                <img
+                  src={CARD_IMAGES[0]}
+                  alt=""
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <p className="eyebrow mt-3">{lead.category}</p>
+              <h3 className="mt-1 text-xl font-bold group-hover:text-primary">{lead.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{lead.dek}</p>
+              <p className="mt-2 text-xs text-muted-foreground">{lead.date}</p>
+            </Link>
+          </article>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:col-span-2">
+            {rest.slice(0, 4).map((s, i) => (
+              <article key={s.slug}>
+                <Link to="/news/$slug" params={{ slug: s.slug }} className="group block">
+                  <div className="aspect-[3/2] w-full overflow-hidden">
+                    <img
+                      src={CARD_IMAGES[(i + 1) % CARD_IMAGES.length]}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <p className="eyebrow mt-3">{s.category}</p>
+                  <h3 className="mt-1 font-display text-base font-bold group-hover:text-primary">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{s.dek}</p>
+                  <p className="mt-2 text-xs text-muted-foreground">{s.date}</p>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
+
 
       {/* Campus / admissions call */}
       <section aria-labelledby="visit-heading" className="border-t border-border bg-surface">
