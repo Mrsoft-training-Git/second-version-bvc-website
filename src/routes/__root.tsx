@@ -143,9 +143,7 @@ function RootComponent() {
       <div className="min-h-screen">
         <SiteHeader />
         <div className="flex flex-col lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
-          <div className="order-2 lg:order-none">
-            <SiteSidebar />
-          </div>
+          <SiteSidebar />
           <div className="order-1 flex min-h-screen flex-col lg:order-none">
             <main className="flex-1">
               {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
@@ -154,6 +152,7 @@ function RootComponent() {
             <SiteFooter />
           </div>
         </div>
+
 
       </div>
     </QueryClientProvider>
