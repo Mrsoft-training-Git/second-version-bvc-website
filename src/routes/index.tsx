@@ -107,7 +107,7 @@ function SpotlightCarousel() {
 }
 
 function Home() {
-  const [lead, ...rest] = STORIES;
+
 
   return (
     <>
