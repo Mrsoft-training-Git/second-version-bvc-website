@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import spotlightImg from "@/assets/spotlight-workshop.jpg";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
-import { FACTS, PROGRAMS, SPOTLIGHT, STORIES } from "@/data/site";
+import { FACTS, PROGRAMS, SPOTLIGHTS, STORIES } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
