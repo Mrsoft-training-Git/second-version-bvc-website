@@ -31,45 +31,80 @@ export const Route = createFileRoute("/")({
 
 const CARD_IMAGES = [electricalImg, ictImg, graduationImg];
 
-function Home() {
-  const [lead, ...rest] = STORIES;
+const SPOTLIGHT_IMAGES: Record<string, string> = {
+  workshop: spotlightImg,
+  electrical: electricalImg,
+  graduation: graduationImg,
+};
+
+function SpotlightCarousel() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % SPOTLIGHTS.length), 7000);
+    return () => clearInterval(id);
+  }, []);
+
+  const item = SPOTLIGHTS[index];
 
   return (
-    <>
-      {/* Spotlight */}
-      <section aria-labelledby="spotlight-heading" className="border-b border-border">
-        <div className="mx-auto grid max-w-6xl gap-0 px-4 py-10 lg:grid-cols-[1.6fr_1fr] lg:gap-10">
-          <figure>
+    <section aria-labelledby="spotlight-heading" className="border-b border-border">
+      <figure className="relative overflow-hidden">
+        <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+          {SPOTLIGHTS.map((s, i) => (
             <img
-              src={spotlightImg}
-              alt="Trainees welding a chassis in the BVC fabrication hall"
-              width={1600}
-              height={1008}
-              className="w-full object-cover"
+              key={s.slug}
+              src={SPOTLIGHT_IMAGES[s.imageKey]}
+              alt={s.alt}
+              loading={i === 0 ? "eager" : "lazy"}
+              className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ease-out ${
+                i === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
+              }`}
             />
-            <figcaption className="mt-2 text-xs text-muted-foreground">
-              Second-year welding trainees in the fabrication hall. Photo: BVC
-            </figcaption>
-          </figure>
-          <div className="mt-8 lg:mt-0">
-            <p className="eyebrow">{SPOTLIGHT.eyebrow}</p>
-            <h1 id="spotlight-heading" className="mt-3 text-3xl font-bold sm:text-4xl">
-              {SPOTLIGHT.title}
-            </h1>
-            <p className="mt-4 font-serif text-lg leading-relaxed text-muted-foreground">
-              {SPOTLIGHT.body}
-            </p>
-            <Link
-              to="/news/$slug"
-              params={{ slug: STORIES[0].slug }}
-              className="mt-5 inline-block font-display text-sm font-semibold tracking-wide text-primary uppercase link-underline"
-            >
-              {SPOTLIGHT.linkLabel}
-            </Link>
-
-          </div>
+          ))}
         </div>
-      </section>
+        <figcaption className="mx-auto max-w-6xl px-4 pt-2 text-xs text-muted-foreground">
+          {item.caption}
+        </figcaption>
+      </figure>
+
+      <div className="mx-auto max-w-6xl px-4 pt-6 pb-10">
+        <div key={item.slug} className="animate-fade-in">
+          <p className="eyebrow">{item.eyebrow}</p>
+          <h1 id="spotlight-heading" className="mt-3 text-3xl font-bold sm:text-4xl">
+            {item.title}
+          </h1>
+          <p className="mt-4 max-w-3xl font-serif text-lg leading-relaxed text-muted-foreground">
+            {item.body}
+          </p>
+          <Link
+            to="/news/$slug"
+            params={{ slug: item.slug }}
+            className="link-underline mt-5 inline-block font-display text-sm font-semibold tracking-wide text-primary uppercase"
+          >
+            {item.linkLabel}
+          </Link>
+        </div>
+
+        <div className="mt-8 flex items-center gap-3">
+          {SPOTLIGHTS.map((s, i) => (
+            <button
+              key={s.slug}
+              type="button"
+              aria-label={`Show spotlight: ${s.title}`}
+              aria-current={i === index}
+              onClick={() => setIndex(i)}
+              className={`h-0.5 transition-all duration-500 ${
+                i === index ? "w-16 bg-primary" : "w-8 bg-border hover:bg-muted-foreground"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
       {/* News modules */}
       <section aria-labelledby="news-heading" className="mx-auto max-w-6xl px-4 py-14">
