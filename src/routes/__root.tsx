@@ -135,13 +135,18 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
+      <div className="min-h-screen">
         <SiteHeader />
-        <main className="flex-1">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
-        <SiteFooter />
+        <div className="lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
+          <SiteSidebar />
+          <div className="flex min-h-screen flex-col">
+            <main className="flex-1">
+              {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+              <Outlet />
+            </main>
+            <SiteFooter />
+          </div>
+        </div>
       </div>
     </QueryClientProvider>
   );
