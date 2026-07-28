@@ -6,6 +6,8 @@ import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
 import { FACTS, PROGRAMS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { programImage } from "@/lib/program-images";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
