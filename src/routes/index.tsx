@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:description",
-        content: "Nine trade areas, 1,850 trainees, 78% placed within six months of graduating.",
+        content: "BVC trains welders, electricians, fitters, technicians and hospitality professionals through hands-on workshop instruction and industry placement.",
       },
     ],
   }),
