@@ -1,6 +1,7 @@
 // Mock content for the BVC site. Replace with real copy/assets later.
 
 export const NAV = [
+  { label: "Home", to: "/" },
   { label: "Education", to: "/education" },
   { label: "Programs", to: "/programs" },
   { label: "Admissions", to: "/admissions" },
@@ -8,6 +9,7 @@ export const NAV = [
   { label: "News", to: "/news" },
   { label: "About", to: "/about" },
 ] as const;
+
 
 export type Story = {
   slug: string;
@@ -192,19 +194,16 @@ export const QUICK_LINKS = [
 
 // Left-panel resources, mirroring an institutional site's "Top resources for" block.
 export const TOP_RESOURCES = [
+  { label: "programs", to: "/programs" },
   { label: "prospective trainees", to: "/admissions" },
-  { label: "current trainees", to: "/campus-life" },
-  { label: "instructors & staff", to: "/about" },
-  { label: "graduates", to: "/news" },
-  { label: "parents & sponsors", to: "/admissions" },
   { label: "all resources", to: "/education" },
+  { label: "events", to: "/campus-life" },
 ];
 
 export const PANEL_LINKS = [
   { label: "Visit", to: "/contact" },
-  { label: "Programs", to: "/programs" },
-  { label: "Events", to: "/campus-life" },
   { label: "People", to: "/about" },
   { label: "Jobs", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
+

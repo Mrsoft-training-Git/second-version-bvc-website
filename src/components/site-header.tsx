@@ -8,8 +8,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 bg-primary text-primary-foreground">
-      <div className="flex items-center gap-8 px-5 py-4">
-        <Link to="/" className="flex items-center gap-3">
+      <div className="flex items-center gap-6 px-5 py-4">
+        <Link to="/" className="flex shrink-0 items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center bg-primary-foreground font-display text-lg font-bold text-primary">
             B
           </span>
@@ -21,13 +21,17 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden flex-wrap gap-6 lg:flex">
+        <nav
+          aria-label="Primary"
+          className="hidden flex-1 flex-wrap items-center justify-center gap-6 lg:flex"
+        >
           {NAV.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               className="font-display text-sm font-semibold tracking-wide opacity-90 hover:opacity-100 hover:underline underline-offset-4"
               activeProps={{ className: "underline" }}
+              activeOptions={item.to === "/" ? { exact: true } : undefined}
             >
               {item.label}
             </Link>
@@ -44,6 +48,7 @@ export function SiteHeader() {
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
+
 
       {open && (
         <nav aria-label="Primary mobile" className="border-t border-rule/30 lg:hidden">

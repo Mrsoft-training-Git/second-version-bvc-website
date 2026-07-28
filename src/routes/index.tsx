@@ -107,7 +107,7 @@ function SpotlightCarousel() {
 }
 
 function Home() {
-  const [lead, ...rest] = STORIES;
+
 
   return (
     <>
@@ -182,47 +182,29 @@ function Home() {
           </Link>
         </div>
 
-        <div className="mt-8 grid gap-10 lg:grid-cols-3">
-          <article className="lg:col-span-1">
-            <Link to="/news/$slug" params={{ slug: lead.slug }} className="group block">
-              <div className="aspect-[3/2] w-full overflow-hidden">
-                <img
-                  src={CARD_IMAGES[0]}
-                  alt=""
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <p className="eyebrow mt-3">{lead.category}</p>
-              <h3 className="mt-1 text-xl font-bold group-hover:text-primary">{lead.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{lead.dek}</p>
-              <p className="mt-2 text-xs text-muted-foreground">{lead.date}</p>
-            </Link>
-          </article>
+        <ul className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {STORIES.slice(0, 3).map((s, i) => (
+            <li key={s.slug}>
+              <Link to="/news/$slug" params={{ slug: s.slug }} className="group block">
+                <div className="aspect-[3/2] w-full overflow-hidden">
+                  <img
+                    src={CARD_IMAGES[i % CARD_IMAGES.length]}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <p className="eyebrow mt-3">{s.category}</p>
+                <h3 className="mt-1 font-display text-lg font-bold group-hover:text-primary">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">{s.dek}</p>
+                <p className="mt-2 text-xs text-muted-foreground">{s.date}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:col-span-2">
-            {rest.slice(0, 4).map((s, i) => (
-              <article key={s.slug}>
-                <Link to="/news/$slug" params={{ slug: s.slug }} className="group block">
-                  <div className="aspect-[3/2] w-full overflow-hidden">
-                    <img
-                      src={CARD_IMAGES[(i + 1) % CARD_IMAGES.length]}
-                      alt=""
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <p className="eyebrow mt-3">{s.category}</p>
-                  <h3 className="mt-1 font-display text-base font-bold group-hover:text-primary">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.dek}</p>
-                  <p className="mt-2 text-xs text-muted-foreground">{s.date}</p>
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
       </section>
 
 
