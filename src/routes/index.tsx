@@ -105,6 +105,12 @@ function SpotlightCarousel() {
   );
 }
 
+function Home() {
+  const [lead, ...rest] = STORIES;
+
+  return (
+    <>
+      <SpotlightCarousel />
 
       {/* News modules */}
       <section aria-labelledby="news-heading" className="mx-auto max-w-6xl px-4 py-14">
