@@ -49,24 +49,23 @@ function SpotlightCarousel() {
 
   return (
     <section aria-labelledby="spotlight-heading" className="border-b border-border">
-      <figure className="relative overflow-hidden">
-        <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+      <figure className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9]">
           {SPOTLIGHTS.map((s, i) => (
             <img
               key={s.slug}
               src={SPOTLIGHT_IMAGES[s.imageKey]}
               alt={s.alt}
               loading={i === 0 ? "eager" : "lazy"}
-              className={`absolute inset-0 h-full w-full object-cover transition-all duration-1000 ease-out ${
+              className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ease-out ${
                 i === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
               }`}
             />
           ))}
         </div>
-        <figcaption className="mx-auto max-w-6xl px-4 pt-2 text-xs text-muted-foreground">
-          {item.caption}
-        </figcaption>
+        <figcaption className="pt-2 text-xs text-muted-foreground">{item.caption}</figcaption>
       </figure>
+
 
       <div className="mx-auto max-w-6xl px-4 pt-6 pb-10">
         <div key={item.slug} className="animate-fade-in">
