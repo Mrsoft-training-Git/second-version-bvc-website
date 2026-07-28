@@ -1,6 +1,7 @@
 // Mock content for the BVC site. Replace with real copy/assets later.
 
 export const NAV = [
+  { label: "Home", to: "/" },
   { label: "Education", to: "/education" },
   { label: "Programs", to: "/programs" },
   { label: "Admissions", to: "/admissions" },
@@ -8,6 +9,7 @@ export const NAV = [
   { label: "News", to: "/news" },
   { label: "About", to: "/about" },
 ] as const;
+
 
 export type Story = {
   slug: string;
