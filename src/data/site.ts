@@ -26,6 +26,54 @@ export const SPOTLIGHT = {
   linkTo: "/news/learning-by-making",
 };
 
+export type Spotlight = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  linkLabel: string;
+  slug: string;
+  caption: string;
+  imageKey: "workshop" | "electrical" | "graduation";
+  alt: string;
+};
+
+export const SPOTLIGHTS: Spotlight[] = [
+  {
+    eyebrow: "Spotlight",
+    title: "Learning by making",
+    body:
+      "In the BVC fabrication hall, second-year trainees rebuild a light-duty chassis from salvaged parts — cutting, welding and aligning every joint themselves. Every certificate at Bonny Vocational Center is earned on the shop floor.",
+    linkLabel: "Full story",
+    slug: "learning-by-making",
+    caption: "Second-year welding trainees in the fabrication hall. Photo: BVC",
+    imageKey: "workshop",
+    alt: "Trainees welding a chassis in the BVC fabrication hall",
+  },
+  {
+    eyebrow: "Facilities",
+    title: "Forty new benches, one bigger lab",
+    body:
+      "The expanded electrical installation lab doubles bench capacity ahead of the September intake, adding three control-panel rigs so every trainee wires a live circuit in their first term.",
+    linkLabel: "Read more",
+    slug: "electrical-lab-expansion",
+    caption: "The expanded electrical installation lab. Photo: BVC",
+    imageKey: "electrical",
+    alt: "Rows of wiring benches in the BVC electrical installation lab",
+  },
+  {
+    eyebrow: "Community",
+    title: "412 graduates, nine trades",
+    body:
+      "The class of 2026 is the largest cohort in the center's history, with 78% of graduates placed in work or apprenticeships within six months of leaving the workshop floor.",
+    linkLabel: "See the story",
+    slug: "class-of-2026",
+    caption: "Graduation day on the BVC campus. Photo: BVC",
+    imageKey: "graduation",
+    alt: "BVC graduates celebrating at the 2026 graduation ceremony",
+  },
+];
+
+
 export const STORIES: Story[] = [
   {
     slug: "learning-by-making",
