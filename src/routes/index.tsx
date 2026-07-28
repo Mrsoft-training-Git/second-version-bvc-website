@@ -66,20 +66,6 @@ function Home() {
               {SPOTLIGHT.linkLabel}
             </Link>
 
-            <div className="mt-10 module-rule pt-4">
-              <p className="font-display text-xs font-semibold tracking-[0.14em] uppercase">
-                Quick links
-              </p>
-              <ul className="mt-3 space-y-2 text-sm">
-                {QUICK_LINKS.map((l) => (
-                  <li key={l.to}>
-                    <Link to={l.to} className="link-underline">
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>
