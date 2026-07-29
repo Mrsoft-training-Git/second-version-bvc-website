@@ -126,7 +126,7 @@ function Home() {
             All programs
           </Link>
         </div>
-        <ul className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 grid gap-x-10 gap-y-10 grid-cols-2">
           {PROGRAMS.slice(0, 6).map((p, i) => (
             <li key={p.slug}>
               <Link to="/programs" className="group block">
@@ -182,7 +182,7 @@ function Home() {
           </Link>
         </div>
 
-        <ul className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 grid gap-10 grid-cols-2">
           {STORIES.slice(0, 3).map((s, i) => (
             <li key={s.slug}>
               <Link to="/news/$slug" params={{ slug: s.slug }} className="group block">
