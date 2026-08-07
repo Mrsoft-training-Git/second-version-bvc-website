@@ -188,7 +188,7 @@ export const FACTS = [
 export const QUICK_LINKS = [
   { label: "Apply to BVC", to: "/admissions" },
   { label: "Program catalogue", to: "/programs" },
-  { label: "Visit the center", to: "/contact" },
+  { label: "Visit the center", to: "/visit" },
   { label: "Industry partnerships", to: "/about" },
 ];
 
@@ -201,9 +201,10 @@ export const TOP_RESOURCES = [
 ];
 
 export const PANEL_LINKS = [
-  { label: "Visit", to: "/contact" },
+  { label: "Visit", to: "/visit" },
   { label: "People", to: "/about" },
   { label: "Jobs", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
+
 
