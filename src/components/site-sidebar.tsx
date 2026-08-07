@@ -31,17 +31,26 @@ export function SiteSidebar() {
         </div>
 
         <div className="mt-8">
-          <p className="font-display text-sm font-bold">Top resources for</p>
-          <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+          <p className="mb-4 ml-1 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+            Top resources for
+          </p>
+          <div className="grid grid-cols-2 gap-2">
             {TOP_RESOURCES.map((r) => (
-              <li key={r.label}>
-                <Link to={r.to} className="hover:text-primary hover:underline">
-                  <span className="mr-1 text-primary">—</span>
+              <Link
+                key={r.label}
+                to={r.to}
+                className="group relative flex h-10 items-center justify-center overflow-hidden border border-border px-3 text-center transition-colors duration-300 hover:border-primary"
+              >
+                <span className="relative z-10 text-[11px] font-bold uppercase tracking-wider leading-tight text-foreground transition-colors duration-300 group-hover:text-primary-foreground">
                   {r.label}
-                </Link>
-              </li>
+                </span>
+                <div className="absolute inset-0 translate-y-full bg-primary transition-transform duration-300 ease-out group-hover:translate-y-0" />
+              </Link>
             ))}
-          </ul>
+          </div>
+          <div className="mt-6 flex justify-center">
+            <div className="h-px w-8 bg-border" />
+          </div>
         </div>
 
         <Link
