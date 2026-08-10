@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
 import { ContentCard } from "@/components/content-card";
 import { STORIES } from "@/data/site";
