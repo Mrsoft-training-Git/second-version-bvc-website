@@ -8,6 +8,7 @@ import campusImg from "@/assets/campus.jpg";
 import { DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { LogoMarquee } from "@/components/logo-marquee";
+import { ContentCard } from "@/components/content-card";
 
 
 
@@ -128,26 +129,18 @@ function Home() {
             All programs
           </Link>
         </div>
-        <ul className="mt-8 grid gap-x-10 gap-y-10 grid-cols-2">
+        <ul className="mt-8 grid gap-x-8 gap-y-10 grid-cols-2">
           {PROGRAMS.slice(0, 6).map((p, i) => (
             <li key={p.slug}>
-              <Link to="/programs" className="group block">
-                <div className="aspect-[3/2] w-full overflow-hidden">
-                  <img
-                    src={programImage(p.slug, i)}
-                    alt=""
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mt-3 font-display text-base font-bold group-hover:text-primary">
-                  {p.name}
-                </h3>
-                <p className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
-                  {p.duration}
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">{p.body}</p>
-              </Link>
+              <ContentCard
+                to="/programs"
+                image={programImage(p.slug, i)}
+                badge="Program"
+                title={p.name}
+                body={p.body}
+                meta={p.duration}
+                cta="Explore"
+              />
             </li>
           ))}
         </ul>
@@ -184,25 +177,20 @@ function Home() {
           </Link>
         </div>
 
-        <ul className="mt-8 grid gap-10 grid-cols-2">
+        <ul className="mt-8 grid gap-x-8 gap-y-10 grid-cols-2">
           {STORIES.slice(0, 3).map((s, i) => (
             <li key={s.slug}>
-              <Link to="/news/$slug" params={{ slug: s.slug }} className="group block">
-                <div className="aspect-[3/2] w-full overflow-hidden">
-                  <img
-                    src={CARD_IMAGES[i % CARD_IMAGES.length]}
-                    alt=""
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <p className="eyebrow mt-3">{s.category}</p>
-                <h3 className="mt-1 font-display text-lg font-bold group-hover:text-primary">
-                  {s.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground">{s.dek}</p>
-                <p className="mt-2 text-xs text-muted-foreground">{s.date}</p>
-              </Link>
+              <ContentCard
+                to="/news/$slug"
+                params={{ slug: s.slug }}
+                image={CARD_IMAGES[i % CARD_IMAGES.length]}
+                badge={s.category}
+                badgeVariant="neutral"
+                title={s.title}
+                body={s.dek}
+                meta={s.date}
+                cta="Read"
+              />
             </li>
           ))}
         </ul>

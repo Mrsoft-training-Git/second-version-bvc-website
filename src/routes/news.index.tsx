@@ -1,5 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
+import { ContentCard } from "@/components/content-card";
 import { STORIES } from "@/data/site";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
@@ -35,25 +36,20 @@ function NewsIndex() {
         intro="Announcements, program updates and stories from across the center."
       />
       <div className="mx-auto max-w-6xl px-4 py-14">
-        <ul className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {STORIES.map((s, i) => (
             <li key={s.slug}>
-              <Link to="/news/$slug" params={{ slug: s.slug }} className="group block">
-                <img
-                  src={IMAGES[i % IMAGES.length]}
-                  alt=""
-                  loading="lazy"
-                  width={900}
-                  height={600}
-                  className="w-full object-cover"
-                />
-                <p className="eyebrow mt-3">{s.category}</p>
-                <h2 className="mt-1 font-display text-lg font-bold group-hover:text-primary">
-                  {s.title}
-                </h2>
-                <p className="mt-2 text-sm text-muted-foreground">{s.dek}</p>
-                <p className="mt-2 text-xs text-muted-foreground">{s.date}</p>
-              </Link>
+              <ContentCard
+                to="/news/$slug"
+                params={{ slug: s.slug }}
+                image={IMAGES[i % IMAGES.length]}
+                badge={s.category}
+                badgeVariant="neutral"
+                title={s.title}
+                body={s.dek}
+                meta={s.date}
+                cta="Read"
+              />
             </li>
           ))}
         </ul>
