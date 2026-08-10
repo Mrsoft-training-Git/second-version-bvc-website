@@ -5,8 +5,10 @@ import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
-import { FACTS, PROGRAMS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
+import { LogoMarquee } from "@/components/logo-marquee";
+
 
 
 export const Route = createFileRoute("/")({
@@ -206,6 +208,31 @@ function Home() {
         </ul>
 
       </section>
+
+      {/* Sponsors & donors */}
+      <section
+        aria-labelledby="sponsors-heading"
+        className="border-t border-border bg-surface py-14"
+      >
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="module-rule pt-3">
+            <h2 id="sponsors-heading" className="text-2xl font-bold">
+              Sponsors &amp; Donors
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
+              Industry partners and benefactors whose support funds workshops, tools and
+              scholarships at Bonny Vocational Center.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 space-y-4">
+          <LogoMarquee items={SPONSORS} direction="left" speed={38} />
+          <LogoMarquee items={DONORS} direction="right" speed={46} />
+        </div>
+      </section>
+
+
 
 
       {/* Campus / admissions call */}
