@@ -185,6 +185,30 @@ export const FACTS = [
   { value: "2004", label: "Founded" },
 ];
 
+// Placeholder sponsor/donor names — swap for real logos when assets arrive.
+export const SPONSORS = [
+  { name: "Bonny Energy" },
+  { name: "Delta Marine" },
+  { name: "Harcourt Steel" },
+  { name: "Riverline LNG" },
+  { name: "Atlas Fabrication" },
+  { name: "Kono Logistics" },
+  { name: "Ogbia Power" },
+  { name: "Finima Works" },
+];
+
+export const DONORS = [
+  { name: "Bonny Trust" },
+  { name: "Island Foundation" },
+  { name: "Skills for Nigeria" },
+  { name: "Mangrove Fund" },
+  { name: "Opuoma Charity" },
+  { name: "Ijaw Education Board" },
+  { name: "Peterside Family" },
+  { name: "Coastal Alumni" },
+];
+
+
 export const QUICK_LINKS = [
   { label: "Apply to BVC", to: "/admissions" },
   { label: "Program catalogue", to: "/programs" },
