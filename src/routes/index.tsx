@@ -128,26 +128,18 @@ function Home() {
             All programs
           </Link>
         </div>
-        <ul className="mt-8 grid gap-x-10 gap-y-10 grid-cols-2">
+        <ul className="mt-8 grid gap-x-8 gap-y-10 grid-cols-2">
           {PROGRAMS.slice(0, 6).map((p, i) => (
             <li key={p.slug}>
-              <Link to="/programs" className="group block">
-                <div className="aspect-[3/2] w-full overflow-hidden">
-                  <img
-                    src={programImage(p.slug, i)}
-                    alt=""
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mt-3 font-display text-base font-bold group-hover:text-primary">
-                  {p.name}
-                </h3>
-                <p className="mt-1 text-xs tracking-wide text-muted-foreground uppercase">
-                  {p.duration}
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">{p.body}</p>
-              </Link>
+              <ContentCard
+                to="/programs"
+                image={programImage(p.slug, i)}
+                badge="Program"
+                title={p.name}
+                body={p.body}
+                meta={p.duration}
+                cta="Explore"
+              />
             </li>
           ))}
         </ul>
