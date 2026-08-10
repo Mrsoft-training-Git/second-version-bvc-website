@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
+import { ContentCard } from "@/components/content-card";
 import { STORIES } from "@/data/site";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
