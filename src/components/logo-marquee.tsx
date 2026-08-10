@@ -1,11 +1,29 @@
-type Item = { name: string };
+type Item = { name: string; logo?: string };
 
-function LogoTile({ name }: Item) {
+function LogoTile({ name, logo }: Item) {
   return (
-    <div className="flex h-20 w-40 shrink-0 items-center justify-center border border-border bg-card px-4">
-      <span className="text-center font-display text-xs font-bold tracking-[0.12em] text-muted-foreground uppercase">
-        {name}
-      </span>
+    <div className="group/tile relative flex h-24 w-44 shrink-0 items-center justify-center overflow-hidden border border-border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-primary/40 hover:shadow-[0_6px_16px_rgba(0,0,0,0.10)]">
+      {/* subtle professional plate so light, dark and transparent logos all read well */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(160deg, rgba(0,0,0,0.035) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.03) 100%)",
+        }}
+      />
+      {logo ? (
+        <img
+          src={logo}
+          alt={name}
+          loading="lazy"
+          className="relative max-h-[68%] max-w-[80%] object-contain opacity-90 grayscale transition-all duration-300 group-hover/tile:opacity-100 group-hover/tile:grayscale-0"
+        />
+      ) : (
+        <span className="relative px-4 text-center font-display text-xs font-bold tracking-[0.12em] text-muted-foreground uppercase">
+          {name}
+        </span>
+      )}
     </div>
   );
 }
@@ -37,7 +55,7 @@ export function LogoMarquee({
         }}
       >
         {doubled.map((item, i) => (
-          <LogoTile key={`${item.name}-${i}`} name={item.name} />
+          <LogoTile key={`${item.name}-${i}`} name={item.name} logo={item.logo} />
         ))}
       </div>
     </div>
