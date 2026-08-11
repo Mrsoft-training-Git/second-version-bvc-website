@@ -69,44 +69,58 @@ function SpotlightCarousel() {
               }`}
             />
           ))}
+
+          {/* Scrim */}
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/10"
+          />
+
+          {/* Overlaid copy */}
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full px-6 py-8 sm:px-10 lg:px-14">
+              <div key={item.slug} className="max-w-2xl animate-fade-in text-ink-foreground">
+                <p className="font-display text-[11px] font-semibold tracking-[0.18em] text-gold uppercase">
+                  {item.eyebrow}
+                </p>
+                <h1
+                  id="spotlight-heading"
+                  className="mt-3 font-display text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl"
+                >
+                  {item.title}
+                </h1>
+                <p className="mt-4 hidden max-w-xl text-sm leading-relaxed text-ink-foreground/85 sm:block sm:text-base">
+                  {item.body}
+                </p>
+                <Link
+                  to="/news/$slug"
+                  params={{ slug: item.slug }}
+                  className="mt-6 inline-flex items-center bg-gold px-5 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+                >
+                  {item.linkLabel}
+                </Link>
+              </div>
+
+              <div className="mt-8 flex items-center gap-3">
+                {SPOTLIGHTS.map((s, i) => (
+                  <button
+                    key={s.slug}
+                    type="button"
+                    aria-label={`Show spotlight: ${s.title}`}
+                    aria-current={i === index}
+                    onClick={() => setIndex(i)}
+                    className={`h-0.5 transition-all duration-500 ${
+                      i === index ? "w-16 bg-gold" : "w-8 bg-ink-foreground/40 hover:bg-ink-foreground/70"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-        <figcaption className="pt-2 text-xs text-muted-foreground">{item.caption}</figcaption>
+        <figcaption className="pt-2 pb-8 text-xs text-muted-foreground">{item.caption}</figcaption>
       </figure>
 
-
-      <div className="mx-auto max-w-6xl px-4 pt-6 pb-10">
-        <div key={item.slug} className="animate-fade-in">
-          <p className="eyebrow">{item.eyebrow}</p>
-          <h1 id="spotlight-heading" className="mt-3 text-3xl font-bold sm:text-4xl">
-            {item.title}
-          </h1>
-          <p className="mt-4 max-w-3xl font-serif text-lg leading-relaxed text-muted-foreground">
-            {item.body}
-          </p>
-          <Link
-            to="/news/$slug"
-            params={{ slug: item.slug }}
-            className="link-underline mt-5 inline-block font-display text-sm font-semibold tracking-wide text-primary uppercase"
-          >
-            {item.linkLabel}
-          </Link>
-        </div>
-
-        <div className="mt-8 flex items-center gap-3">
-          {SPOTLIGHTS.map((s, i) => (
-            <button
-              key={s.slug}
-              type="button"
-              aria-label={`Show spotlight: ${s.title}`}
-              aria-current={i === index}
-              onClick={() => setIndex(i)}
-              className={`h-0.5 transition-all duration-500 ${
-                i === index ? "w-16 bg-primary" : "w-8 bg-border hover:bg-muted-foreground"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
