@@ -40,7 +40,7 @@ export function SiteSidebar() {
               <Link
                 key={r.label}
                 to={r.to}
-                className="group relative flex h-10 items-center justify-center overflow-hidden border border-ink-foreground/25 px-3 text-center transition-colors duration-300 hover:border-gold"
+                className="group relative flex h-9 items-center justify-start overflow-hidden border border-ink-foreground/25 px-3 transition-colors duration-300 hover:border-gold"
               >
                 <span className="relative z-10 text-[11px] font-bold uppercase tracking-wider leading-tight text-ink-foreground transition-colors duration-300 group-hover:text-gold-foreground">
                   {r.label}
@@ -49,8 +49,8 @@ export function SiteSidebar() {
               </Link>
             ))}
           </div>
-          <div className="mt-6 flex justify-center">
-            <div className="h-px w-8 bg-ink-foreground/25" />
+          <div className="mt-5 flex justify-center">
+            <div className="h-px w-6 bg-ink-foreground/25" />
           </div>
         </div>
 
