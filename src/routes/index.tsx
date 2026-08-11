@@ -9,6 +9,8 @@ import { DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/s
 import { programImage } from "@/lib/program-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ContentCard } from "@/components/content-card";
+import { ProgramShowcase } from "@/components/program-showcase";
+
 
 
 
