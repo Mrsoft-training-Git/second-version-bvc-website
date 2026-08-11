@@ -14,6 +14,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as EducationRouteImport } from './routes/education'
+import { Route as DepartmentsRouteImport } from './routes/departments'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CampusLifeRouteImport } from './routes/campus-life'
 import { Route as AboutRouteImport } from './routes/about'
@@ -46,6 +47,11 @@ const NewsRoute = NewsRouteImport.update({
 const EducationRoute = EducationRouteImport.update({
   id: '/education',
   path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepartmentsRoute = DepartmentsRouteImport.update({
+  id: '/departments',
+  path: '/departments',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -94,6 +100,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
@@ -109,6 +116,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
@@ -123,6 +131,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
@@ -140,6 +149,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/campus-life'
     | '/contact'
+    | '/departments'
     | '/education'
     | '/news'
     | '/programs'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/campus-life'
     | '/contact'
+    | '/departments'
     | '/education'
     | '/sitemap.xml'
     | '/visit'
@@ -168,6 +179,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/campus-life'
     | '/contact'
+    | '/departments'
     | '/education'
     | '/news'
     | '/programs'
@@ -184,6 +196,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CampusLifeRoute: typeof CampusLifeRoute
   ContactRoute: typeof ContactRoute
+  DepartmentsRoute: typeof DepartmentsRoute
   EducationRoute: typeof EducationRoute
   NewsRoute: typeof NewsRouteWithChildren
   ProgramsRoute: typeof ProgramsRouteWithChildren
@@ -226,6 +239,13 @@ declare module '@tanstack/react-router' {
       path: '/education'
       fullPath: '/education'
       preLoaderRoute: typeof EducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/departments': {
+      id: '/departments'
+      path: '/departments'
+      fullPath: '/departments'
+      preLoaderRoute: typeof DepartmentsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -318,6 +338,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CampusLifeRoute: CampusLifeRoute,
   ContactRoute: ContactRoute,
+  DepartmentsRoute: DepartmentsRoute,
   EducationRoute: EducationRoute,
   NewsRoute: NewsRouteWithChildren,
   ProgramsRoute: ProgramsRouteWithChildren,
@@ -327,13 +348,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
