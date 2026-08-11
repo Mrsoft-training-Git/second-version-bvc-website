@@ -1,9 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 
 import { ProgramCard } from "@/components/program-card";
-import { PROGRAMS, PROGRAM_CATEGORIES } from "@/data/programs";
+import { CITY_GUILDS_PROGRAMS, ND_PROGRAMS, PROGRAM_CATEGORIES } from "@/data/programs";
 import { programImage } from "@/lib/program-images";
 import { ProgramShowcase } from "@/components/program-showcase";
+
 
 export const Route = createFileRoute("/programs/")({
   head: () => ({
