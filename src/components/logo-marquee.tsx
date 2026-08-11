@@ -2,7 +2,7 @@ type Item = { name: string; logo?: string };
 
 function LogoTile({ name, logo }: Item) {
   return (
-    <div className="group/tile relative flex h-24 w-44 shrink-0 items-center justify-center overflow-hidden border border-border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-primary/40 hover:shadow-[0_6px_16px_rgba(0,0,0,0.10)]">
+    <div className="group/tile relative flex h-24 w-44 shrink-0 items-center justify-center overflow-visible border border-border bg-white shadow-[0_1px_2px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-primary/40 hover:shadow-[0_6px_16px_rgba(0,0,0,0.10)]">
       {/* subtle professional plate so light, dark and transparent logos all read well */}
       <div
         aria-hidden
@@ -17,16 +17,16 @@ function LogoTile({ name, logo }: Item) {
           src={logo}
           alt={name}
           loading="lazy"
-          className="relative max-h-[68%] max-w-[80%] object-contain transition-all duration-300 group-hover/tile:scale-105 group-hover/tile:opacity-0"
+          className="relative max-h-[68%] max-w-[80%] object-contain transition-transform duration-300 group-hover/tile:scale-105"
         />
       ) : (
         <span className="relative px-4 text-center font-display text-xs font-bold tracking-[0.12em] text-muted-foreground uppercase">
           {name}
         </span>
       )}
-      {/* Name overlay shown on hover */}
+      {/* Name pops out below the tile on hover, logo stays visible */}
       {logo && (
-        <span className="pointer-events-none absolute inset-0 flex items-center justify-center px-3 text-center font-display text-[11px] font-semibold leading-tight tracking-[0.08em] text-foreground uppercase opacity-0 transition-opacity duration-300 group-hover/tile:opacity-100">
+        <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-sm bg-ink px-3 py-1.5 text-[11px] font-semibold leading-tight tracking-[0.06em] text-ink-foreground uppercase opacity-0 shadow-lg transition-all duration-300 group-hover/tile:translate-y-0 group-hover/tile:opacity-100">
           {name}
         </span>
       )}
@@ -55,7 +55,7 @@ export function LogoMarquee({
       }}
     >
       <div
-        className="flex w-max gap-4 group-hover:[animation-play-state:paused]"
+        className="flex w-max gap-4 pb-8 group-hover:[animation-play-state:paused]"
         style={{
           animation: `marquee-${direction} ${speed}s linear infinite`,
         }}
