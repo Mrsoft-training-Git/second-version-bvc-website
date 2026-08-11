@@ -56,7 +56,7 @@ export function SiteSidebar() {
 
         <Link
           to="/admissions"
-          className="mt-8 block border border-gold px-4 py-4 text-center font-semibold text-gold underline underline-offset-4 transition-colors hover:bg-gold hover:text-gold-foreground hover:no-underline"
+          className="mt-6 block border border-gold px-3 py-3 text-center text-sm font-semibold text-gold underline underline-offset-4 transition-colors hover:bg-gold hover:text-gold-foreground hover:no-underline"
         >
           September intake is now open
         </Link>
