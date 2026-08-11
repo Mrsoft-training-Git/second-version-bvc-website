@@ -193,18 +193,18 @@ export const FACTS = [
 ];
 
 export const SPONSORS = [
+  { name: "Nigerian Content Development and Monitoring Board", logo: ncdmbLogo.url },
   { name: "Nigeria LNG Limited", logo: nlngLogo.url },
-  { name: "Hyundai Heavy Industries", logo: hyundaiLogo.url },
+  { name: "Hyundai Heavy Industries Company Limited", logo: hyundaiLogo.url },
   { name: "ABB Nigeria Limited", logo: abbLogo.url },
+  { name: "Samsung Heavy Industries Company Limited", logo: samsungLogo.url },
   { name: "Schneider Electric", logo: schneiderLogo.url },
-  { name: "Samsung", logo: samsungLogo.url },
-  { name: "NCDMB", logo: ncdmbLogo.url },
 ];
 
 export const DONORS = [
-  { name: "Amanyanabo-in-Council", logo: amanyanaboLogo.url },
-  { name: "Titled Citizens' Assembly", logo: tcaLogo.url },
-  { name: "NCDMB", logo: ncdmbLogo.url },
+  { name: "Amanyanabo in Council", logo: amanyanaboLogo.url },
+  { name: "Titled Citizens' Assembly of Grand Bonny Kingdom", logo: tcaLogo.url },
+  { name: "Nigerian Content Development and Monitoring Board", logo: ncdmbLogo.url },
   { name: "Nigeria LNG Limited", logo: nlngLogo.url },
   { name: "Schneider Electric", logo: schneiderLogo.url },
   { name: "ABB Nigeria Limited", logo: abbLogo.url },
