@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { PROGRAMS } from "@/data/site";
+import { CITY_GUILDS_PROGRAMS } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { cn } from "@/lib/utils";
 
@@ -24,7 +24,7 @@ export function ProgramShowcase({
   title?: string;
   intro?: string;
 }) {
-  const items = PROGRAMS;
+  const items = CITY_GUILDS_PROGRAMS;
   const [index, setIndex] = useState(0);
 
   const go = useCallback(
