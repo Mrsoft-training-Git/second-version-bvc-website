@@ -24,8 +24,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 bg-primary text-primary-foreground">
       <div className="flex items-center gap-6 px-5 py-4">
         <Link to="/" className="flex shrink-0 items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center bg-primary-foreground font-display text-lg font-bold text-primary">
-            B
+          <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary-foreground p-0.5">
+            <img src={bvcLogo.url} alt="Bonny Vocational Centre crest" className="h-full w-full object-contain" />
           </span>
           <span className="leading-tight">
             <span className="block font-display text-lg font-bold tracking-tight">BVC</span>
