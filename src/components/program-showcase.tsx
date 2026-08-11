@@ -29,7 +29,7 @@ export function ProgramShowcase({ className }: { className?: string }) {
   return (
     <section
       aria-labelledby="program-showcase-heading"
-      className={cn("relative overflow-hidden bg-ink text-ink-foreground", className)}
+      className={cn("relative overflow-hidden bg-white text-ink", className)}
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px nav-ribbon" />
 
@@ -40,7 +40,7 @@ export function ProgramShowcase({ className }: { className?: string }) {
           </p>
           <Link
             to="/programs"
-            className="font-display text-[11px] font-semibold tracking-[0.14em] text-ink-foreground/70 uppercase transition-colors hover:text-gold"
+            className="font-display text-[11px] font-semibold tracking-[0.14em] text-ink/60 uppercase transition-colors hover:text-primary"
           >
             All programs
           </Link>
@@ -58,7 +58,7 @@ export function ProgramShowcase({ className }: { className?: string }) {
                 key={p.slug}
                 aria-hidden={!isActive}
                 className={cn(
-                  "absolute top-0 left-1/2 h-full w-[78%] overflow-hidden rounded-xl border border-ink-foreground/15 bg-ink shadow-2xl transition-all duration-700 ease-out sm:w-[68%]",
+                  "absolute top-0 left-1/2 h-full w-[78%] overflow-hidden rounded-xl border border-ink/10 bg-surface shadow-2xl transition-all duration-700 ease-out sm:w-[68%]",
                   isActive ? "z-20 opacity-100" : "z-10",
                   !isActive && visible ? "opacity-35" : "",
                   !visible ? "opacity-0" : "",
@@ -83,7 +83,7 @@ export function ProgramShowcase({ className }: { className?: string }) {
             type="button"
             onClick={() => go(-1)}
             aria-label="Previous program"
-            className="absolute top-1/2 left-0 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ink-foreground/25 bg-ink/80 backdrop-blur transition-all duration-300 hover:border-gold hover:text-gold"
+            className="absolute top-1/2 left-0 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ink/15 bg-white/85 text-ink shadow-lg backdrop-blur transition-all duration-300 hover:border-primary hover:text-primary"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -91,7 +91,7 @@ export function ProgramShowcase({ className }: { className?: string }) {
             type="button"
             onClick={() => go(1)}
             aria-label="Next program"
-            className="absolute top-1/2 right-0 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ink-foreground/25 bg-ink/80 backdrop-blur transition-all duration-300 hover:border-gold hover:text-gold"
+            className="absolute top-1/2 right-0 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ink/15 bg-white/85 text-ink shadow-lg backdrop-blur transition-all duration-300 hover:border-primary hover:text-primary"
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -101,19 +101,19 @@ export function ProgramShowcase({ className }: { className?: string }) {
         <div key={active.slug} className="mx-auto mt-10 max-w-2xl animate-fade-in text-center">
           <h2
             id="program-showcase-heading"
-            className="font-display text-2xl font-bold text-gold sm:text-3xl"
+            className="font-display text-2xl font-bold text-ink sm:text-3xl"
           >
             {active.name}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-ink-foreground/75 sm:text-base">
+          <p className="mt-3 text-sm leading-relaxed text-ink/70 sm:text-base">
             {active.body}
           </p>
-          <p className="mt-3 text-[11px] font-semibold tracking-[0.14em] text-ink-foreground/50 uppercase">
+          <p className="mt-3 text-[11px] font-semibold tracking-[0.14em] text-ink/50 uppercase">
             {active.duration}
           </p>
           <Link
             to="/admissions"
-            className="mt-6 inline-block border border-gold px-5 py-2 font-display text-xs font-semibold tracking-[0.12em] text-gold uppercase transition-all duration-300 hover:bg-gold hover:text-gold-foreground"
+            className="mt-6 inline-block border border-gold bg-gold px-5 py-2 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold"
           >
             Entry requirements
           </Link>
@@ -131,8 +131,8 @@ export function ProgramShowcase({ className }: { className?: string }) {
               className={cn(
                 "h-1.5 rounded-full transition-all duration-500",
                 i === index
-                  ? "w-8 bg-gold"
-                  : "w-1.5 bg-ink-foreground/30 hover:bg-ink-foreground/60",
+                  ? "w-8 bg-primary"
+                  : "w-1.5 bg-ink/20 hover:bg-ink/40",
               )}
             />
           ))}
