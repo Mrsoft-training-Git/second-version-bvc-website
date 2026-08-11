@@ -247,7 +247,7 @@ function Home() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 to="/admissions"
-                className="bg-primary px-5 py-2.5 font-display text-sm font-semibold tracking-wide text-primary-foreground uppercase hover:opacity-90"
+                className="bg-gold px-5 py-2.5 font-display text-sm font-semibold tracking-wide text-gold-foreground uppercase shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
               >
                 How to apply
               </Link>
