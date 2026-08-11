@@ -25,17 +25,28 @@ export function SiteHeader() {
           aria-label="Primary"
           className="hidden flex-1 flex-wrap items-center justify-center gap-6 lg:flex"
         >
-          {NAV.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="font-display text-sm font-semibold tracking-wide opacity-90 hover:opacity-100 hover:underline underline-offset-4"
-              activeProps={{ className: "underline" }}
-              activeOptions={item.to === "/" ? { exact: true } : undefined}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV.map((item) =>
+            "hash" in item && item.hash ? (
+              <button
+                key={item.label}
+                type="button"
+                onClick={() => scrollToSponsors()}
+                className="font-display text-sm font-semibold tracking-wide opacity-90 hover:opacity-100 hover:underline underline-offset-4"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="font-display text-sm font-semibold tracking-wide opacity-90 hover:opacity-100 hover:underline underline-offset-4"
+                activeProps={{ className: "underline" }}
+                activeOptions={item.to === "/" ? { exact: true } : undefined}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <button
