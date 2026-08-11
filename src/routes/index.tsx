@@ -39,9 +39,9 @@ export const Route = createFileRoute("/")({
 const CARD_IMAGES = [electricalImg, ictImg, graduationImg];
 
 const SPOTLIGHT_IMAGES: Record<string, string> = {
-  workshop: spotlightImg,
-  electrical: electricalImg,
-  graduation: graduationImg,
+  metrology: metrologyImg.url,
+  refrigeration: refrigerationImg.url,
+  culinary: culinaryImg.url,
 };
 
 function SpotlightCarousel() {
