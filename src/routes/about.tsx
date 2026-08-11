@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
-import spotlightImg from "@/assets/spotlight-workshop.jpg";
 import judeImg from "@/assets/people/Mr._Jude.png.asset.json";
 import daggoImg from "@/assets/people/Se-Alabo.png.asset.json";
 import tonyeImg from "@/assets/people/Dr._Tonye.png.asset.json";
@@ -80,13 +79,6 @@ const GOALS = [
   "Expand enrollment capacity while ensuring equal opportunities for marginalized and underrepresented groups.",
   "Integrate modern technology and eco-friendly practices into institutional operations and training.",
   "Build a resilient, financially autonomous, and transparent management framework.",
-];
-
-const ACHIEVEMENTS = [
-  { value: "20+", label: "Years of operation" },
-  { value: "35+", label: "ND programmes & C&G qualifications" },
-  { value: "1,000+", label: "Graduates with C&G Level 3 Diploma" },
-  { value: "84%", label: "Graduate employment rate" },
 ];
 
 const MANAGEMENT = [
@@ -249,27 +241,6 @@ function About() {
           </section>
 
           <aside className="space-y-10">
-            <img
-              src={spotlightImg}
-              alt="Instructor and trainees at a welding bench at Bonny Vocational Centre"
-              loading="lazy"
-              width={1600}
-              height={1008}
-              className="w-full rounded-xl object-cover shadow-sm"
-            />
-            <div>
-              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Achievements
-              </h2>
-              <dl className="mt-4 text-sm">
-                {ACHIEVEMENTS.map((f) => (
-                  <div key={f.label} className="flex justify-between gap-4 border-b border-border py-2.5">
-                    <dt className="text-muted-foreground">{f.label}</dt>
-                    <dd className="font-display font-semibold whitespace-nowrap">{f.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
             <div>
               <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
                 Accreditation &amp; recognition
@@ -327,9 +298,6 @@ function About() {
               <PersonCard key={p.name} person={p} />
             ))}
           </div>
-          <p className="mt-3 text-xs text-muted-foreground">
-            Portraits for some trustees are pending.
-          </p>
         </section>
 
         <section className="mt-16">
