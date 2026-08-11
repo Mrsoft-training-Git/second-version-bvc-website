@@ -33,22 +33,22 @@ function Programs() {
         <h1 className="sr-only">Programs at Bonny Vocational Center</h1>
 
 
-        <ul className="grid gap-x-8 gap-y-10 md:grid-cols-2">
+        <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {PROGRAMS.map((p, i) => (
             <li key={p.slug}>
-
-              <ContentCard
+              <ProgramCard
                 to="/admissions"
                 image={programImage(p.slug, i)}
-                badge="Program"
+                alt={p.name}
                 title={p.name}
                 body={p.body}
-                meta={p.duration}
-                cta="Entry requirements"
+                duration={p.duration}
+                cta="View curriculum"
               />
             </li>
           ))}
         </ul>
+
       </div>
     </>
   );
