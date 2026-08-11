@@ -21,6 +21,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
 import { Route as NewsIndexRouteImport } from './routes/news.index'
+import { Route as ProgramsNationalDiplomaRouteImport } from './routes/programs.national-diploma'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
 
@@ -84,6 +85,11 @@ const NewsIndexRoute = NewsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => NewsRoute,
 } as any)
+const ProgramsNationalDiplomaRoute = ProgramsNationalDiplomaRouteImport.update({
+  id: '/national-diploma',
+  path: '/national-diploma',
+  getParentRoute: () => ProgramsRoute,
+} as any)
 const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -108,6 +114,7 @@ export interface FileRoutesByFullPath {
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/programs/national-diploma': typeof ProgramsNationalDiplomaRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -122,6 +129,7 @@ export interface FileRoutesByTo {
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/programs/national-diploma': typeof ProgramsNationalDiplomaRoute
   '/news': typeof NewsIndexRoute
   '/programs': typeof ProgramsIndexRoute
 }
@@ -139,6 +147,7 @@ export interface FileRoutesById {
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/programs/national-diploma': typeof ProgramsNationalDiplomaRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -157,6 +166,7 @@ export interface FileRouteTypes {
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/programs/national-diploma'
     | '/news/'
     | '/programs/'
   fileRoutesByTo: FileRoutesByTo
@@ -171,6 +181,7 @@ export interface FileRouteTypes {
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/programs/national-diploma'
     | '/news'
     | '/programs'
   id:
@@ -187,6 +198,7 @@ export interface FileRouteTypes {
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/programs/national-diploma'
     | '/news/'
     | '/programs/'
   fileRoutesById: FileRoutesById
@@ -290,6 +302,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsIndexRouteImport
       parentRoute: typeof NewsRoute
     }
+    '/programs/national-diploma': {
+      id: '/programs/national-diploma'
+      path: '/national-diploma'
+      fullPath: '/programs/national-diploma'
+      preLoaderRoute: typeof ProgramsNationalDiplomaRouteImport
+      parentRoute: typeof ProgramsRoute
+    }
     '/programs/$slug': {
       id: '/programs/$slug'
       path: '/$slug'
@@ -321,11 +340,13 @@ const NewsRouteWithChildren = NewsRoute._addFileChildren(NewsRouteChildren)
 
 interface ProgramsRouteChildren {
   ProgramsSlugRoute: typeof ProgramsSlugRoute
+  ProgramsNationalDiplomaRoute: typeof ProgramsNationalDiplomaRoute
   ProgramsIndexRoute: typeof ProgramsIndexRoute
 }
 
 const ProgramsRouteChildren: ProgramsRouteChildren = {
   ProgramsSlugRoute: ProgramsSlugRoute,
+  ProgramsNationalDiplomaRoute: ProgramsNationalDiplomaRoute,
   ProgramsIndexRoute: ProgramsIndexRoute,
 }
 
