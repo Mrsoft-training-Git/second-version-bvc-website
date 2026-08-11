@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import spotlightImg from "@/assets/spotlight-workshop.jpg";
+import metrologyImg from "@/assets/Picture67.jpg.asset.json";
+import refrigerationImg from "@/assets/Picture70.jpg.asset.json";
+import culinaryImg from "@/assets/Picture75.jpg.asset.json";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
@@ -39,9 +41,9 @@ export const Route = createFileRoute("/")({
 const CARD_IMAGES = [electricalImg, ictImg, graduationImg];
 
 const SPOTLIGHT_IMAGES: Record<string, string> = {
-  workshop: spotlightImg,
-  electrical: electricalImg,
-  graduation: graduationImg,
+  metrology: metrologyImg.url,
+  refrigeration: refrigerationImg.url,
+  culinary: culinaryImg.url,
 };
 
 function SpotlightCarousel() {
@@ -92,13 +94,6 @@ function SpotlightCarousel() {
                 <p className="mt-4 hidden max-w-xl text-sm leading-relaxed text-ink-foreground/85 sm:block sm:text-base">
                   {item.body}
                 </p>
-                <Link
-                  to="/news/$slug"
-                  params={{ slug: item.slug }}
-                  className="mt-6 inline-flex items-center bg-gold px-5 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  {item.linkLabel}
-                </Link>
               </div>
 
               <div className="mt-8 flex items-center gap-3">
