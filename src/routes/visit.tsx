@@ -238,7 +238,7 @@ function VisitPage() {
                 </button>
               ) : (
                 <Link
-                  to="/admissions"
+                  to="/contact"
                   className="group relative inline-flex items-center gap-2 overflow-hidden border border-primary px-4 py-2.5 font-display text-[11px] font-bold uppercase tracking-wider text-primary transition-colors duration-300 hover:text-primary-foreground"
                 >
                   <span className="relative z-10">Apply to BVC</span>
