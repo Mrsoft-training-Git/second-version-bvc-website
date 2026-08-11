@@ -131,8 +131,15 @@ export const STORIES: Story[] = [
 ];
 
 // Real programme catalogue lives in ./programs
-export { PROGRAMS, PROGRAM_CATEGORIES, getProgram } from "./programs";
+export {
+  PROGRAMS,
+  PROGRAM_CATEGORIES,
+  ND_PROGRAMS,
+  CITY_GUILDS_PROGRAMS,
+  getProgram,
+} from "./programs";
 export type { Program, ProgramCategory } from "./programs";
+
 
 
 export const FACTS = [
