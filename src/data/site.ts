@@ -10,7 +10,6 @@ import tcaLogo from "@/assets/logos/tca.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
-  { label: "Admissions", to: "/admissions" },
   { label: "Campus Life", to: "/campus-life" },
   { label: "News", to: "/news" },
   { label: "About", to: "/about" },
@@ -160,7 +159,7 @@ export const DONORS = [
 
 
 export const QUICK_LINKS = [
-  { label: "Apply to BVC", to: "/admissions" },
+  { label: "Contact BVC", to: "/contact" },
   { label: "Program catalogue", to: "/programs" },
   { label: "Visit the center", to: "/visit" },
   { label: "Industry partnerships", to: "/about" },
@@ -169,7 +168,7 @@ export const QUICK_LINKS = [
 // Left-panel resources, mirroring an institutional site's "Top resources for" block.
 export const TOP_RESOURCES = [
   { label: "programs", to: "/programs" },
-  { label: "prospective trainees", to: "/admissions" },
+  { label: "prospective trainees", to: "/contact" },
   { label: "all resources", to: "/education" },
   { label: "events", to: "/campus-life" },
 ];

@@ -84,7 +84,7 @@ export function SiteHeader() {
         {/* Right side: CTA + mobile toggle */}
         <div className="relative z-10 flex shrink-0 items-center gap-3">
           <Link
-            to="/admissions"
+            to="/contact"
             className="hidden rounded-lg bg-gold px-5 py-2.5 text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
           >
             Apply
@@ -132,7 +132,7 @@ export function SiteHeader() {
               )
             )}
             <Link
-              to="/admissions"
+              to="/contact"
               onClick={() => setOpen(false)}
               className="mt-3 block rounded-lg bg-gold px-5 py-3 text-center text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-95"
             >

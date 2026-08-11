@@ -54,13 +54,6 @@ export function SiteSidebar() {
           </div>
         </div>
 
-        <Link
-          to="/admissions"
-          className="mt-6 block border border-gold px-3 py-3 text-center text-sm font-semibold text-gold underline underline-offset-4 transition-colors hover:bg-gold hover:text-gold-foreground hover:no-underline"
-        >
-          September intake is now open
-        </Link>
-
         <div className="mt-auto pt-12 text-sm">
           <p className="font-semibold">Bonny Vocational Center</p>
           <p className="mt-1 text-ink-foreground/70">

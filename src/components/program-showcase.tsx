@@ -143,7 +143,7 @@ export function ProgramShowcase({
                 {active.duration}
               </p>
               <Link
-                to="/admissions"
+                to="/contact"
                 className="mt-6 inline-block border border-gold bg-gold px-5 py-2 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold"
               >
                 Entry requirements
