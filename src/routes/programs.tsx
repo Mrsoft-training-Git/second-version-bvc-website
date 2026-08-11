@@ -3,6 +3,8 @@ import { PageHeader } from "@/components/page-header";
 import { ContentCard } from "@/components/content-card";
 import { PROGRAMS } from "@/data/site";
 import { programImage } from "@/lib/program-images";
+import { ProgramShowcase } from "@/components/program-showcase";
+
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
@@ -31,10 +33,12 @@ function Programs() {
         title="Nine trades, one standard"
         intro="Every BVC program is competency-based: trainees advance when they can demonstrate the task, not when the calendar says so."
       />
+      <ProgramShowcase />
       <div className="mx-auto max-w-6xl px-4 py-14">
         <ul className="grid gap-x-8 gap-y-10 md:grid-cols-2">
           {PROGRAMS.map((p, i) => (
             <li key={p.slug}>
+
               <ContentCard
                 to="/admissions"
                 image={programImage(p.slug, i)}
