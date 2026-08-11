@@ -58,13 +58,14 @@ export function ProgramShowcase({ className }: { className?: string }) {
                 key={p.slug}
                 aria-hidden={!isActive}
                 className={cn(
-                  "absolute top-0 left-1/2 h-full w-[78%] -translate-x-1/2 overflow-hidden rounded-xl border border-ink-foreground/15 bg-ink shadow-2xl transition-all duration-700 ease-out sm:w-[68%]",
+                  "absolute top-0 left-1/2 h-full w-[78%] overflow-hidden rounded-xl border border-ink-foreground/15 bg-ink shadow-2xl transition-all duration-700 ease-out sm:w-[68%]",
                   isActive ? "z-20 opacity-100" : "z-10",
                   !isActive && visible ? "opacity-35" : "",
                   !visible ? "opacity-0" : "",
                 )}
                 style={{
-                  transform: `translateX(calc(-50% + ${rel * 62}%)) scale(${isActive ? 1 : 0.86})`,
+                  transform: `translateX(calc(-50% + ${rel * 72}%)) scale(${isActive ? 1 : 0.86})`,
+
                 }}
               >
                 <img
