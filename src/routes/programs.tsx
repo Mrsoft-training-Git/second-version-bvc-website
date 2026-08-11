@@ -3,6 +3,8 @@ import { PageHeader } from "@/components/page-header";
 import { ContentCard } from "@/components/content-card";
 import { PROGRAMS } from "@/data/site";
 import { programImage } from "@/lib/program-images";
+import { ProgramShowcase } from "@/components/program-showcase";
+
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
