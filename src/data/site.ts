@@ -1,4 +1,12 @@
 // Mock content for the BVC site. Replace with real copy/assets later.
+import nlngLogo from "@/assets/logos/nlng.png.asset.json";
+import hyundaiLogo from "@/assets/logos/hyundai.png.asset.json";
+import abbLogo from "@/assets/logos/abb.png.asset.json";
+import schneiderLogo from "@/assets/logos/schneider.png.asset.json";
+import samsungLogo from "@/assets/logos/samsung.png.asset.json";
+import ncdmbLogo from "@/assets/logos/ncdmb.jpg.asset.json";
+import amanyanaboLogo from "@/assets/logos/amanyanabo.png.asset.json";
+import tcaLogo from "@/assets/logos/tca.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
