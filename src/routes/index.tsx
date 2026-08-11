@@ -162,7 +162,7 @@ function Home() {
           </Link>
         </div>
 
-        <ul className="mt-8 grid gap-x-8 gap-y-10 grid-cols-2">
+        <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
           {STORIES.slice(0, 3).map((s, i) => (
             <li key={s.slug}>
               <ContentCard
