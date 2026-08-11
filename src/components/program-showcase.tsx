@@ -46,18 +46,30 @@ export function ProgramShowcase({
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px nav-ribbon" />
 
-      <div className="mx-auto max-w-6xl px-4 pt-12 pb-14">
-        <div className="flex items-end justify-between">
-          <p className="font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase">
-            Programs
-          </p>
-          <Link
-            to="/programs"
-            className="font-display text-[11px] font-semibold tracking-[0.14em] text-ink/60 uppercase transition-colors hover:text-primary"
-          >
-            All programs
-          </Link>
-        </div>
+      <div className={cn("mx-auto max-w-6xl px-4 pb-14", hero ? "pt-10" : "pt-12")}>
+        {hero ? (
+          <div className="max-w-3xl">
+            <p className="font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase">
+              {eyebrow ?? "Programs"}
+            </p>
+            {title && (
+              <h1 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">{title}</h1>
+            )}
+            {intro && <p className="mt-5 text-lg leading-relaxed text-ink/70">{intro}</p>}
+          </div>
+        ) : (
+          <div className="flex items-end justify-between">
+            <p className="font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase">
+              Programs
+            </p>
+            <Link
+              to="/programs"
+              className="font-display text-[11px] font-semibold tracking-[0.14em] text-ink/60 uppercase transition-colors hover:text-primary"
+            >
+              All programs
+            </Link>
+          </div>
+        )}
 
         {/* Stage */}
         <div className="relative mt-8 h-[240px] sm:h-[340px] lg:h-[420px]">

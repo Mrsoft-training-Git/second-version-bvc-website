@@ -28,13 +28,15 @@ export const Route = createFileRoute("/programs")({
 function Programs() {
   return (
     <>
-      <PageHeader
+      <ProgramShowcase
+        hero
         eyebrow="Programs"
         title="Nine trades, one standard"
         intro="Every BVC program is competency-based: trainees advance when they can demonstrate the task, not when the calendar says so."
+        className="border-b border-border"
       />
-      <ProgramShowcase />
       <div className="mx-auto max-w-6xl px-4 py-14">
+
         <ul className="grid gap-x-8 gap-y-10 md:grid-cols-2">
           {PROGRAMS.map((p, i) => (
             <li key={p.slug}>
