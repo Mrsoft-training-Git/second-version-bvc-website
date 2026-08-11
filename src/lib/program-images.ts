@@ -3,21 +3,20 @@ import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
+import { getProgram } from "@/data/programs";
 
 const POOL = [workshopImg, electricalImg, ictImg, graduationImg, campusImg];
 
-export const PROGRAM_IMAGES: Record<string, string> = {
-  welding: workshopImg,
-  electrical: electricalImg,
-  mechanical: workshopImg,
-  ict: ictImg,
-  instrumentation: electricalImg,
-  catering: campusImg,
-  tailoring: graduationImg,
-  plumbing: campusImg,
-  carpentry: workshopImg,
+// Placeholder imagery per programme family until real photography is supplied.
+const BY_CATEGORY: Record<string, string> = {
+  Engineering: workshopImg,
+  "Hospitality & Culinary": campusImg,
+  ICT: ictImg,
+  "Business & Education": graduationImg,
+  "Skills Proficiency": electricalImg,
 };
 
 export function programImage(slug: string, index = 0) {
-  return PROGRAM_IMAGES[slug] ?? POOL[index % POOL.length];
+  const category = getProgram(slug)?.category;
+  return (category && BY_CATEGORY[category]) || POOL[index % POOL.length];
 }
