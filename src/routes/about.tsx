@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHeader } from "@/components/page-header";
 import judeImg from "@/assets/people/Mr._Jude.png.asset.json";
 import daggoImg from "@/assets/people/Se-Alabo.png.asset.json";
 import tonyeImg from "@/assets/people/Dr._Tonye.png.asset.json";
@@ -139,176 +138,267 @@ function initials(name: string) {
     .join("");
 }
 
-function PersonCard({ person }: { person: Person }) {
-  return (
-    <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <div className="aspect-[4/5] overflow-hidden bg-surface">
-        {person.img ? (
-          <img
-            src={person.img}
-            alt={person.name}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-ink text-ink-foreground">
-            <span className="font-display text-3xl font-bold tracking-wide text-accent">
-              {initials(person.name)}
-            </span>
-          </div>
-        )}
-      </div>
-      <figcaption className="border-t border-border px-4 py-3">
-        <p className="font-display text-sm font-semibold leading-snug">{person.name}</p>
-        <p className="mt-0.5 text-xs text-muted-foreground">{person.role}</p>
-      </figcaption>
-    </figure>
-  );
-}
-
 function About() {
   return (
-    <>
-      <PageHeader
-        eyebrow="About"
-        title="An excellent example of a TVET institution"
-        intro="Bonny Vocational Centre offers vocational and occupational skills training programmes that are nationally and internationally accredited, delivered with industry-aligned curricula and assured with duly recognised certificates."
-      />
+    <div className="bg-background">
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-ink px-6 pt-20 pb-32 text-ink-foreground sm:px-12">
+        <div className="pointer-events-none absolute top-0 right-0 h-full w-1/3 opacity-10">
+          <div className="grid h-full grid-cols-4 gap-2">
+            <div className="h-full bg-ink-foreground/25" />
+            <div className="h-full translate-y-12 bg-ink-foreground/25" />
+            <div className="h-full bg-ink-foreground/25" />
+            <div className="h-full translate-y-24 bg-ink-foreground/25" />
+          </div>
+        </div>
+        <div className="relative z-10 mx-auto max-w-5xl">
+          <span className="mb-6 inline-block bg-gold px-3 py-1 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold-foreground">
+            Established 2004
+          </span>
+          <h1 className="max-w-3xl font-display text-5xl leading-[0.95] font-extrabold sm:text-6xl md:text-7xl">
+            An excellent example
+            <br />
+            <span className="text-primary">of a TVET institution.</span>
+          </h1>
+        </div>
+      </section>
 
-      <div className="mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
-          <section>
-            <h2 className="module-rule pt-3 text-2xl font-bold">History &amp; background</h2>
-            <div className="mt-4 space-y-4 font-serif text-lg leading-relaxed text-muted-foreground">
-              <p>
-                In furtherance of its policy for sustainable economic development within its host
-                communities, Nigeria LNG Limited established the Bonny Vocational Centre (BVC) in
-                partnership with the Bonny Kingdom in 2004.
-              </p>
-              <p>
-                BVC is an incorporated trustee governed by a Board of Trustees composed of
-                representatives from the community, government, industry, and technical experts who
-                provide policy direction for the institution. The management team is made up of
-                qualified and experienced professionals in educational management, TVET practice, and
-                business administration.
-              </p>
-              <p>
-                The Centre offers a range of qualifications across ten sectors, each externally
-                quality assured by its respective awarding body.
-              </p>
-            </div>
-
-            <h2 className="mt-12 module-rule pt-3 text-2xl font-bold">Vision</h2>
-            <p className="mt-4 font-serif text-lg leading-relaxed text-muted-foreground">
-              To become a leading TVET institution in the region, supplying the manpower requirements
-              of relevant industries within and beyond Bonny Island.
-            </p>
-
-            <h2 className="mt-12 module-rule pt-3 text-2xl font-bold">Mission</h2>
-            <p className="mt-4 font-serif text-lg leading-relaxed text-muted-foreground">
+      {/* MISSION / VISION OVERLAY */}
+      <section className="relative z-20 -mt-16 px-6 sm:px-12">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 shadow-xl md:grid-cols-2">
+          <div className="bg-primary p-10 text-primary-foreground">
+            <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase opacity-75">
+              Our Mission
+            </h2>
+            <p className="text-xl leading-relaxed font-light">
               To provide market-responsive, competency-based technical and vocational education
               through strong industry partnerships, cutting-edge technology, and practical training
-              that empowers youths across Bonny Kingdom, NLNG&rsquo;s Gas Transmission Systems (GTS)
-              Communities, and Nigeria for high-demand careers and entrepreneurial success.
+              that empowers youths across Bonny Kingdom, NLNG&rsquo;s GTS Communities, and Nigeria.
             </p>
+          </div>
+          <div className="bg-ink p-10 text-ink-foreground">
+            <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase opacity-75">
+              Our Vision
+            </h2>
+            <p className="text-xl leading-relaxed font-light text-gold">
+              To become a leading TVET institution in the region, supplying the manpower
+              requirements of relevant industries within and beyond Bonny Island.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <h2 className="mt-12 module-rule pt-3 text-2xl font-bold">Core values</h2>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {VALUES.map((v) => (
-                <div
-                  key={v.name}
-                  className="rounded-xl border border-border bg-card p-4 shadow-sm transition-shadow hover:shadow-md"
-                >
-                  <p className="font-display text-sm font-semibold tracking-[0.08em] uppercase text-primary">
+      {/* HISTORY */}
+      <section className="mx-auto grid max-w-5xl grid-cols-12 gap-10 px-6 py-24 sm:px-12">
+        <div className="col-span-12 md:col-span-4">
+          <h2 className="font-display text-4xl leading-tight font-extrabold">
+            A foundation built on purpose
+          </h2>
+          <div className="mt-6 h-1 w-20 bg-gold" />
+        </div>
+        <div className="col-span-12 md:col-span-8">
+          <div className="space-y-6 font-serif text-xl leading-relaxed">
+            <p>
+              <span className="float-left mt-2 mr-4 font-display text-6xl leading-none font-bold text-primary">
+                I
+              </span>
+              n furtherance of its policy for sustainable economic development within its host
+              communities, Nigeria LNG Limited established the Bonny Vocational Centre (BVC) in
+              partnership with the Bonny Kingdom in 2004.
+            </p>
+            <p className="text-muted-foreground">
+              BVC is an incorporated trustee governed by a Board of Trustees composed of
+              representatives from the community, government, industry, and technical experts who
+              provide policy direction for the institution. The management team is made up of
+              qualified and experienced professionals in educational management, TVET practice, and
+              business administration.
+            </p>
+            <p className="text-muted-foreground">
+              The Centre offers a range of qualifications across ten sectors, each externally quality
+              assured by its respective awarding body.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* VALUES + GOALS */}
+      <section className="bg-surface px-6 py-24 sm:px-12">
+        <div className="mx-auto flex max-w-5xl flex-col gap-16 md:flex-row">
+          <div className="md:w-1/2">
+            <h2 className="mb-10 border-b border-primary pb-4 font-display text-2xl font-bold uppercase tracking-tight">
+              Core values
+            </h2>
+            <div className="grid grid-cols-1 gap-x-8 gap-y-9 sm:grid-cols-2">
+              {VALUES.map((v, i) => (
+                <div key={v.name}>
+                  <div className="mb-2 font-display text-sm font-bold text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="mb-1 font-display text-sm font-bold uppercase tracking-wide text-primary">
                     {v.name}
-                  </p>
-                  <p className="mt-1.5 text-sm text-muted-foreground">{v.body}</p>
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{v.body}</p>
                 </div>
               ))}
             </div>
-
-            <h2 className="mt-12 module-rule pt-3 text-2xl font-bold">Strategic goals</h2>
-            <ol className="mt-6 space-y-4">
+          </div>
+          <div className="md:w-1/2">
+            <h2 className="mb-10 border-b border-primary pb-4 font-display text-2xl font-bold uppercase tracking-tight">
+              Strategic goals
+            </h2>
+            <ul className="space-y-6">
               {GOALS.map((g, i) => (
-                <li key={g} className="flex gap-5 border-b border-border pb-4">
-                  <span className="font-display text-lg font-bold text-accent">
-                    {String(i + 1).padStart(2, "0")}
+                <li key={g} className="flex gap-4">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink font-display text-[10px] font-bold text-ink-foreground">
+                    {String.fromCharCode(65 + i)}
                   </span>
-                  <p className="text-muted-foreground">{g}</p>
+                  <p className="leading-snug font-medium">{g}</p>
                 </li>
               ))}
-            </ol>
-          </section>
-
-          <aside className="space-y-10">
-            <div>
-              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Accreditation &amp; recognition
-              </h2>
-              <ul className="mt-4 text-sm">
-                {ACCREDITORS.map((a) => (
-                  <li key={a} className="border-b border-border py-2.5 text-muted-foreground">
-                    {a}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Sectors covered
-              </h2>
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {SECTORS.map((s) => (
-                  <li
-                    key={s}
-                    className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-surface-foreground"
-                  >
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
+            </ul>
+          </div>
         </div>
+      </section>
 
-        <section className="mt-16">
-          <h2 className="module-rule pt-3 text-2xl font-bold">Management team</h2>
-          <div className="mt-6 space-y-6">
-            {MANAGEMENT.map((m) => (
-              <article
-                key={m.name}
-                className="rounded-xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <p className="eyebrow text-accent">{m.role}</p>
-                <h3 className="mt-1.5 font-display text-xl font-bold">{m.name}</h3>
-                <div className="mt-3 space-y-3 text-sm leading-relaxed text-muted-foreground">
+      {/* LEADERSHIP */}
+      <section className="mx-auto max-w-5xl px-6 py-24 sm:px-12">
+        <h2 className="mb-16 text-center font-display text-4xl font-extrabold">Leadership</h2>
+        <div className="space-y-24">
+          {MANAGEMENT.map((m, i) => (
+            <article
+              key={m.name}
+              className={`flex flex-col items-center gap-12 ${
+                i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+              }`}
+            >
+              <div className="w-full shrink-0 md:w-1/3">
+                <div className="flex aspect-3/4 w-full items-center justify-center bg-ink shadow-xl">
+                  <span className="font-display text-5xl font-bold tracking-wide text-gold/70">
+                    {initials(m.name)}
+                  </span>
+                </div>
+              </div>
+              <div className="w-full md:w-2/3">
+                <h3 className="mb-1 font-display text-3xl font-bold">{m.name}</h3>
+                <p className="mb-6 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold">
+                  {m.role}
+                </p>
+                <div className="space-y-4 font-serif text-lg leading-relaxed text-muted-foreground">
                   {m.bio.map((p) => (
                     <p key={p.slice(0, 40)}>{p}</p>
                   ))}
                 </div>
-              </article>
-            ))}
-          </div>
-        </section>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-        <section className="mt-16">
-          <h2 className="module-rule pt-3 text-2xl font-bold">Board of Trustees</h2>
-          <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
-            {TRUSTEES.map((p) => (
-              <PersonCard key={p.name} person={p} />
-            ))}
+      {/* PEOPLE GRIDS */}
+      <section className="bg-ink px-6 py-24 text-ink-foreground sm:px-12">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-20">
+            <h2 className="mb-10 border-l-4 border-gold pl-6 font-display text-3xl font-bold">
+              Board of Trustees
+            </h2>
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-6">
+              {TRUSTEES.map((p) => (
+                <figure key={p.name} className="group">
+                  <div className="mb-3 aspect-square overflow-hidden bg-ink-foreground/10">
+                    {p.img ? (
+                      <img
+                        src={p.img}
+                        alt={p.name}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center font-display text-2xl font-bold text-gold/70">
+                        {initials(p.name)}
+                      </div>
+                    )}
+                  </div>
+                  <figcaption>
+                    <h3 className="font-display text-xs font-bold uppercase leading-snug">
+                      {p.name}
+                    </h3>
+                    <p className="text-[10px] tracking-[0.14em] uppercase text-ink-foreground/55">
+                      {p.role}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
-        </section>
 
-        <section className="mt-16">
-          <h2 className="module-rule pt-3 text-2xl font-bold">Consultancy team</h2>
-          <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-            {CONSULTANCY.map((p) => (
-              <PersonCard key={p.name} person={p} />
+          <div>
+            <h2 className="mb-10 border-l-4 border-primary pl-6 font-display text-3xl font-bold">
+              Consultancy team
+            </h2>
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
+              {CONSULTANCY.map((p) => (
+                <figure key={p.name} className="group text-center">
+                  <div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-gold/30 bg-ink-foreground/10">
+                    {p.img ? (
+                      <img
+                        src={p.img}
+                        alt={p.name}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center font-display text-lg font-bold text-gold/70">
+                        {initials(p.name)}
+                      </div>
+                    )}
+                  </div>
+                  <figcaption>
+                    <h3 className="font-display text-sm font-bold">{p.name}</h3>
+                    <p className="text-[9px] uppercase tracking-[0.12em] text-gold">{p.role}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTORS + ACCREDITATION */}
+      <section className="mx-auto grid max-w-5xl grid-cols-12 gap-10 px-6 py-20 sm:px-12">
+        <div className="col-span-12 md:col-span-8">
+          <h2 className="mb-8 font-display text-xl font-bold uppercase tracking-[0.16em]">
+            Sectors covered
+          </h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            {SECTORS.map((s) => (
+              <div
+                key={s}
+                className="bg-surface p-4 font-display text-[11px] font-bold uppercase text-primary transition-colors hover:bg-brand-tint"
+              >
+                {s}
+              </div>
             ))}
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+        <div className="col-span-12 bg-ink p-8 text-ink-foreground md:col-span-4">
+          <h2 className="mb-6 font-display text-lg font-bold uppercase tracking-[0.16em]">
+            Accreditations
+          </h2>
+          <ul className="space-y-4 text-xs text-ink-foreground/65">
+            {ACCREDITORS.map((a, i) => (
+              <li
+                key={a}
+                className={`flex items-start gap-3 ${
+                  i < ACCREDITORS.length - 1 ? "border-b border-ink-foreground/10 pb-3" : ""
+                }`}
+              >
+                <span className="mt-1 h-2 w-2 shrink-0 bg-gold" />
+                {a}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </div>
   );
 }
