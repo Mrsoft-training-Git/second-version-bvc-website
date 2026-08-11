@@ -180,7 +180,7 @@ export const QUICK_LINKS = [
 // Left-panel resources, mirroring an institutional site's "Top resources for" block.
 export const TOP_RESOURCES = [
   { label: "programs", to: "/programs" },
-  { label: "prospective trainees", to: "/contact" },
+  { label: "departments", to: "/departments" },
   { label: "all resources", to: "/education" },
   { label: "events", to: "/campus-life" },
 ];
