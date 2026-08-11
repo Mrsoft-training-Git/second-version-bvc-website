@@ -185,27 +185,22 @@ export const FACTS = [
   { value: "2004", label: "Founded" },
 ];
 
-// Placeholder sponsor/donor names — swap for real logos when assets arrive.
 export const SPONSORS = [
-  { name: "Bonny Energy" },
-  { name: "Delta Marine" },
-  { name: "Harcourt Steel" },
-  { name: "Riverline LNG" },
-  { name: "Atlas Fabrication" },
-  { name: "Kono Logistics" },
-  { name: "Ogbia Power" },
-  { name: "Finima Works" },
+  { name: "Nigeria LNG Limited", logo: nlngLogo.url },
+  { name: "Hyundai Heavy Industries", logo: hyundaiLogo.url },
+  { name: "ABB Nigeria Limited", logo: abbLogo.url },
+  { name: "Schneider Electric", logo: schneiderLogo.url },
+  { name: "Samsung", logo: samsungLogo.url },
+  { name: "NCDMB", logo: ncdmbLogo.url },
 ];
 
 export const DONORS = [
-  { name: "Bonny Trust" },
-  { name: "Island Foundation" },
-  { name: "Skills for Nigeria" },
-  { name: "Mangrove Fund" },
-  { name: "Opuoma Charity" },
-  { name: "Ijaw Education Board" },
-  { name: "Peterside Family" },
-  { name: "Coastal Alumni" },
+  { name: "Amanyanabo-in-Council", logo: amanyanaboLogo.url },
+  { name: "Titled Citizens' Assembly", logo: tcaLogo.url },
+  { name: "NCDMB", logo: ncdmbLogo.url },
+  { name: "Nigeria LNG Limited", logo: nlngLogo.url },
+  { name: "Schneider Electric", logo: schneiderLogo.url },
+  { name: "ABB Nigeria Limited", logo: abbLogo.url },
 ];
 
 
