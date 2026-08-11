@@ -179,3 +179,26 @@
   }
 }
 
+/* Flowing 3-color accent ribbon on the floating navbar */
+@keyframes nav-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@utility nav-ribbon {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-gold),
+    oklch(0.62 0.16 256),
+    oklch(0.78 0.1 240),
+    oklch(0.62 0.16 256),
+    var(--color-gold)
+  );
+  background-size: 200% 100%;
+  animation: nav-flow 6s linear infinite;
+}
+
