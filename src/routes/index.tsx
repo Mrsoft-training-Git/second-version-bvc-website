@@ -199,8 +199,9 @@ function Home() {
 
       {/* Sponsors & donors */}
       <section
+        id="sponsors"
         aria-labelledby="sponsors-heading"
-        className="border-t border-border bg-surface py-14"
+        className="scroll-mt-24 border-t border-border bg-surface py-14"
       >
         <div className="mx-auto max-w-6xl px-4">
           <div className="module-rule pt-3">
