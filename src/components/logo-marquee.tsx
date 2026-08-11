@@ -26,7 +26,7 @@ function LogoTile({ name, logo }: Item) {
       )}
       {/* Name pops out below the tile on hover, logo stays visible */}
       {logo && (
-        <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-sm bg-ink px-3 py-1.5 text-[11px] font-semibold leading-tight tracking-[0.06em] text-ink-foreground uppercase opacity-0 shadow-lg transition-all duration-300 group-hover/tile:translate-y-0 group-hover/tile:opacity-100">
+        <span className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 w-44 -translate-x-1/2 translate-y-1 rounded-sm bg-ink px-3 py-1.5 text-center text-[11px] font-semibold leading-tight tracking-[0.06em] text-ink-foreground uppercase opacity-0 shadow-lg transition-all duration-300 group-hover/tile:translate-y-0 group-hover/tile:opacity-100">
           {name}
         </span>
       )}
