@@ -42,6 +42,9 @@
   --color-rule: var(--rule);
   --color-surface: var(--surface);
   --color-surface-foreground: var(--surface-foreground);
+  --color-brand-tint: var(--brand-tint);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
 }
 
 :root {
@@ -52,26 +55,31 @@
   --card-foreground: oklch(0.22 0.005 250);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.005 250);
-  /* crimson */
-  --primary: oklch(0.44 0.16 20);
+  /* BVC brand navy — sampled from the crest (#023386) */
+  --primary: oklch(0.36 0.16 265);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.002 250);
-  --secondary-foreground: oklch(0.28 0.005 250);
-  --muted: oklch(0.965 0.002 250);
-  --muted-foreground: oklch(0.5 0.008 250);
-  --accent: oklch(0.94 0.004 250);
-  --accent-foreground: oklch(0.25 0.005 250);
+  --secondary: oklch(0.96 0.004 265);
+  --secondary-foreground: oklch(0.28 0.005 265);
+  --muted: oklch(0.965 0.003 265);
+  --muted-foreground: oklch(0.5 0.008 265);
+  --accent: oklch(0.94 0.012 265);
+  --accent-foreground: oklch(0.28 0.06 265);
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.003 250);
-  --input: oklch(0.88 0.003 250);
-  --ring: oklch(0.44 0.16 20);
-  /* dark institutional band */
-  --ink: oklch(0.25 0.008 250);
-  --ink-foreground: oklch(0.97 0.002 250);
-  --rule: oklch(0.78 0.004 250);
-  --surface: oklch(0.975 0.003 250);
-  --surface-foreground: oklch(0.24 0.005 250);
+  --border: oklch(0.9 0.004 265);
+  --input: oklch(0.88 0.005 265);
+  --ring: oklch(0.36 0.16 265);
+  /* dark institutional band — deep navy (#011E4F) */
+  --ink: oklch(0.25 0.09 265);
+  --ink-foreground: oklch(0.97 0.004 265);
+  --rule: oklch(0.78 0.008 265);
+  --surface: oklch(0.975 0.006 265);
+  --surface-foreground: oklch(0.24 0.01 265);
+  /* pale brand plate (#E8EEF9) */
+  --brand-tint: oklch(0.945 0.018 265);
+  /* warm gold accent for calls to action (#C8901E) */
+  --gold: oklch(0.68 0.13 78);
+  --gold-foreground: oklch(0.2 0.03 78);
 }
 
 .dark {
