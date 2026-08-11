@@ -141,17 +141,9 @@
 }
 
 @utility news-scroller {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) transparent;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
-    height: 6px;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary);
-    border-radius: 9999px;
+    display: none;
   }
 }
 
