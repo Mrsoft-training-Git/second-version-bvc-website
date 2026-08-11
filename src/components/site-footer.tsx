@@ -21,6 +21,11 @@ export function SiteFooter() {
           Subscribe
         </Link>
       </div>
+      <div className="border-t border-ink-foreground/15 px-5 py-3">
+        <p className="text-xs opacity-70">
+          © 2026 BVC. All content shown is placeholder data.
+        </p>
+      </div>
     </footer>
   );
 }
