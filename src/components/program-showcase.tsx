@@ -108,60 +108,66 @@ export function ProgramShowcase({
             type="button"
             onClick={() => go(-1)}
             aria-label="Previous program"
-            className="absolute top-1/2 left-0 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ink/15 bg-white/85 text-ink shadow-lg backdrop-blur transition-all duration-300 hover:border-primary hover:text-primary"
+            className={cn(
+              "absolute top-1/2 left-0 z-30 flex -translate-y-1/2 items-center justify-center rounded-full border border-ink/15 bg-white/85 text-ink shadow-lg backdrop-blur transition-all duration-300 hover:border-primary hover:text-primary",
+              hero ? "h-8 w-8" : "h-11 w-11",
+            )}
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className={hero ? "h-4 w-4" : "h-5 w-5"} />
           </button>
           <button
             type="button"
             onClick={() => go(1)}
             aria-label="Next program"
-            className="absolute top-1/2 right-0 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-ink/15 bg-white/85 text-ink shadow-lg backdrop-blur transition-all duration-300 hover:border-primary hover:text-primary"
+            className={cn(
+              "absolute top-1/2 right-0 z-30 flex -translate-y-1/2 items-center justify-center rounded-full border border-ink/15 bg-white/85 text-ink shadow-lg backdrop-blur transition-all duration-300 hover:border-primary hover:text-primary",
+              hero ? "h-8 w-8" : "h-11 w-11",
+            )}
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className={hero ? "h-4 w-4" : "h-5 w-5"} />
           </button>
         </div>
 
-        {/* Caption */}
-        <div key={active.slug} className="mx-auto mt-10 max-w-2xl animate-fade-in text-center">
-          <h2
-            id="program-showcase-heading"
-            className="font-display text-2xl font-bold text-ink sm:text-3xl"
-          >
-            {active.name}
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-ink/70 sm:text-base">
-            {active.body}
-          </p>
-          <p className="mt-3 text-[11px] font-semibold tracking-[0.14em] text-ink/50 uppercase">
-            {active.duration}
-          </p>
-          <Link
-            to="/admissions"
-            className="mt-6 inline-block border border-gold bg-gold px-5 py-2 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold"
-          >
-            Entry requirements
-          </Link>
-        </div>
+        {!hero && (
+          <>
+            {/* Caption */}
+            <div key={active.slug} className="mx-auto mt-10 max-w-2xl animate-fade-in text-center">
+              <h2
+                id="program-showcase-heading"
+                className="font-display text-2xl font-bold text-ink sm:text-3xl"
+              >
+                {active.name}
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-ink/70 sm:text-base">{active.body}</p>
+              <p className="mt-3 text-[11px] font-semibold tracking-[0.14em] text-ink/50 uppercase">
+                {active.duration}
+              </p>
+              <Link
+                to="/admissions"
+                className="mt-6 inline-block border border-gold bg-gold px-5 py-2 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold"
+              >
+                Entry requirements
+              </Link>
+            </div>
 
-        {/* Dots */}
-        <div className="mt-8 flex items-center justify-center gap-2">
-          {items.map((p, i) => (
-            <button
-              key={p.slug}
-              type="button"
-              aria-label={`Show ${p.name}`}
-              aria-current={i === index}
-              onClick={() => setIndex(i)}
-              className={cn(
-                "h-1.5 rounded-full transition-all duration-500",
-                i === index
-                  ? "w-8 bg-primary"
-                  : "w-1.5 bg-ink/20 hover:bg-ink/40",
-              )}
-            />
-          ))}
-        </div>
+            {/* Dots */}
+            <div className="mt-8 flex items-center justify-center gap-2">
+              {items.map((p, i) => (
+                <button
+                  key={p.slug}
+                  type="button"
+                  aria-label={`Show ${p.name}`}
+                  aria-current={i === index}
+                  onClick={() => setIndex(i)}
+                  className={cn(
+                    "h-1.5 rounded-full transition-all duration-500",
+                    i === index ? "w-8 bg-primary" : "w-1.5 bg-ink/20 hover:bg-ink/40",
+                  )}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
