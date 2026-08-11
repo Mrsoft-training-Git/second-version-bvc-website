@@ -57,6 +57,7 @@ function ProgramNotFound() {
 function ProgramDetail() {
   const { program } = Route.useLoaderData() as { program: Program };
   const image = programImage(program.slug);
+  const isND = program.award === "nd";
 
   return (
     <article>
@@ -70,11 +71,11 @@ function ProgramDetail() {
         />
         <div className="mx-auto max-w-5xl px-4 py-14 sm:py-16">
           <Link
-            to="/programs"
+            to={isND ? "/programs/national-diploma" : "/programs"}
             className="inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            All programmes
+            {isND ? "All ND programmes" : "All programmes"}
           </Link>
           <p className="mt-6 font-display text-[11px] font-semibold tracking-[0.14em] text-ink-foreground/70 uppercase">
             {program.category}
@@ -86,14 +87,15 @@ function ProgramDetail() {
             <div className="flex items-center gap-2">
               <CalendarDays className="h-4 w-4 text-gold" />
               <dt className="sr-only">Duration</dt>
-              <dd>{program.days} training days</dd>
+              <dd>{isND ? program.duration : `${program.days} training days`}</dd>
             </div>
             <div className="flex items-center gap-2">
               <BadgeCheck className="h-4 w-4 text-gold" />
               <dt className="sr-only">Awarding body</dt>
-              <dd>City &amp; Guilds accredited</dd>
+              <dd>{isND ? "NBTE approved" : "City & Guilds accredited"}</dd>
             </div>
           </dl>
+
           <Link
             to="/contact"
             className="mt-9 inline-block border border-gold bg-gold px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
@@ -157,11 +159,25 @@ function ProgramDetail() {
               <h2 className="font-display text-sm font-bold tracking-wide text-foreground uppercase">
                 Duration
               </h2>
-              <p className="mt-3 font-display text-3xl font-bold text-foreground">
-                {program.days}
-              </p>
-              <p className="text-xs tracking-wide text-muted-foreground uppercase">training days</p>
+              {isND ? (
+                <p className="mt-3 font-display text-lg font-bold leading-snug text-foreground">
+                  2 academic years
+                  <span className="mt-1 block text-xs font-semibold tracking-wide text-muted-foreground uppercase">
+                    4 semesters including SIWES
+                  </span>
+                </p>
+              ) : (
+                <>
+                  <p className="mt-3 font-display text-3xl font-bold text-foreground">
+                    {program.days}
+                  </p>
+                  <p className="text-xs tracking-wide text-muted-foreground uppercase">
+                    training days
+                  </p>
+                </>
+              )}
             </section>
+
           </aside>
         </div>
       </div>

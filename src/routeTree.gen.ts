@@ -14,12 +14,14 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as EducationRouteImport } from './routes/education'
+import { Route as DepartmentsRouteImport } from './routes/departments'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CampusLifeRouteImport } from './routes/campus-life'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
 import { Route as NewsIndexRouteImport } from './routes/news.index'
+import { Route as ProgramsNationalDiplomaRouteImport } from './routes/programs.national-diploma'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
 
@@ -46,6 +48,11 @@ const NewsRoute = NewsRouteImport.update({
 const EducationRoute = EducationRouteImport.update({
   id: '/education',
   path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DepartmentsRoute = DepartmentsRouteImport.update({
+  id: '/departments',
+  path: '/departments',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -78,6 +85,11 @@ const NewsIndexRoute = NewsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => NewsRoute,
 } as any)
+const ProgramsNationalDiplomaRoute = ProgramsNationalDiplomaRouteImport.update({
+  id: '/national-diploma',
+  path: '/national-diploma',
+  getParentRoute: () => ProgramsRoute,
+} as any)
 const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -94,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
@@ -101,6 +114,7 @@ export interface FileRoutesByFullPath {
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/programs/national-diploma': typeof ProgramsNationalDiplomaRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -109,11 +123,13 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/programs/national-diploma': typeof ProgramsNationalDiplomaRoute
   '/news': typeof NewsIndexRoute
   '/programs': typeof ProgramsIndexRoute
 }
@@ -123,6 +139,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
+  '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
@@ -130,6 +147,7 @@ export interface FileRoutesById {
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/programs/national-diploma': typeof ProgramsNationalDiplomaRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -140,6 +158,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/campus-life'
     | '/contact'
+    | '/departments'
     | '/education'
     | '/news'
     | '/programs'
@@ -147,6 +166,7 @@ export interface FileRouteTypes {
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/programs/national-diploma'
     | '/news/'
     | '/programs/'
   fileRoutesByTo: FileRoutesByTo
@@ -155,11 +175,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/campus-life'
     | '/contact'
+    | '/departments'
     | '/education'
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/programs/national-diploma'
     | '/news'
     | '/programs'
   id:
@@ -168,6 +190,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/campus-life'
     | '/contact'
+    | '/departments'
     | '/education'
     | '/news'
     | '/programs'
@@ -175,6 +198,7 @@ export interface FileRouteTypes {
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/programs/national-diploma'
     | '/news/'
     | '/programs/'
   fileRoutesById: FileRoutesById
@@ -184,6 +208,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CampusLifeRoute: typeof CampusLifeRoute
   ContactRoute: typeof ContactRoute
+  DepartmentsRoute: typeof DepartmentsRoute
   EducationRoute: typeof EducationRoute
   NewsRoute: typeof NewsRouteWithChildren
   ProgramsRoute: typeof ProgramsRouteWithChildren
@@ -228,6 +253,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/departments': {
+      id: '/departments'
+      path: '/departments'
+      fullPath: '/departments'
+      preLoaderRoute: typeof DepartmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -270,6 +302,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsIndexRouteImport
       parentRoute: typeof NewsRoute
     }
+    '/programs/national-diploma': {
+      id: '/programs/national-diploma'
+      path: '/national-diploma'
+      fullPath: '/programs/national-diploma'
+      preLoaderRoute: typeof ProgramsNationalDiplomaRouteImport
+      parentRoute: typeof ProgramsRoute
+    }
     '/programs/$slug': {
       id: '/programs/$slug'
       path: '/$slug'
@@ -301,11 +340,13 @@ const NewsRouteWithChildren = NewsRoute._addFileChildren(NewsRouteChildren)
 
 interface ProgramsRouteChildren {
   ProgramsSlugRoute: typeof ProgramsSlugRoute
+  ProgramsNationalDiplomaRoute: typeof ProgramsNationalDiplomaRoute
   ProgramsIndexRoute: typeof ProgramsIndexRoute
 }
 
 const ProgramsRouteChildren: ProgramsRouteChildren = {
   ProgramsSlugRoute: ProgramsSlugRoute,
+  ProgramsNationalDiplomaRoute: ProgramsNationalDiplomaRoute,
   ProgramsIndexRoute: ProgramsIndexRoute,
 }
 
@@ -318,6 +359,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CampusLifeRoute: CampusLifeRoute,
   ContactRoute: ContactRoute,
+  DepartmentsRoute: DepartmentsRoute,
   EducationRoute: EducationRoute,
   NewsRoute: NewsRouteWithChildren,
   ProgramsRoute: ProgramsRouteWithChildren,
@@ -327,13 +369,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

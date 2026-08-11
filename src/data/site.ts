@@ -10,11 +10,13 @@ import tcaLogo from "@/assets/logos/tca.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
+  { label: "Departments", to: "/departments" },
   { label: "Campus Life", to: "/campus-life" },
   { label: "News", to: "/news" },
   { label: "About", to: "/about" },
   { label: "Sponsors & Donors", to: "/", hash: "sponsors" },
 ] as const;
+
 
 
 export type Story = {
@@ -129,8 +131,15 @@ export const STORIES: Story[] = [
 ];
 
 // Real programme catalogue lives in ./programs
-export { PROGRAMS, PROGRAM_CATEGORIES, getProgram } from "./programs";
+export {
+  PROGRAMS,
+  PROGRAM_CATEGORIES,
+  ND_PROGRAMS,
+  CITY_GUILDS_PROGRAMS,
+  getProgram,
+} from "./programs";
 export type { Program, ProgramCategory } from "./programs";
+
 
 
 export const FACTS = [
@@ -162,9 +171,11 @@ export const DONORS = [
 export const QUICK_LINKS = [
   { label: "Contact BVC", to: "/contact" },
   { label: "Program catalogue", to: "/programs" },
+  { label: "National Diplomas", to: "/programs/national-diploma" },
+  { label: "Academic departments", to: "/departments" },
   { label: "Visit the center", to: "/visit" },
-  { label: "Industry partnerships", to: "/about" },
 ];
+
 
 // Left-panel resources, mirroring an institutional site's "Top resources for" block.
 export const TOP_RESOURCES = [

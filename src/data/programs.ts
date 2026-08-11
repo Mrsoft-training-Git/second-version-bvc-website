@@ -5,8 +5,10 @@ export type Program = {
   slug: string;
   name: string;
   category: ProgramCategory;
-  /** Duration in training days. */
-  days: number;
+  /** Awarding route. Omitted means City & Guilds. */
+  award?: "nd";
+  /** Duration in training days (City & Guilds programmes only). */
+  days?: number;
   duration: string;
   body: string;
   entry: string[];
@@ -19,8 +21,10 @@ export type ProgramCategory =
   | "ICT"
   | "Business & Education"
   | "Skills Proficiency"
-  | "Engineering";
+  | "Engineering"
+  | "National Diploma";
 
+/** City & Guilds catalogue groupings shown on the Programs page. */
 export const PROGRAM_CATEGORIES: ProgramCategory[] = [
   "Engineering",
   "Hospitality & Culinary",
@@ -29,7 +33,11 @@ export const PROGRAM_CATEGORIES: ProgramCategory[] = [
   "Skills Proficiency",
 ];
 
+
 const d = (days: number) => `${days} training days`;
+
+export const ND_DURATION = "2 academic years · 4 semesters incl. SIWES";
+
 
 export const PROGRAMS: Program[] = [
   // ---------------- Engineering ----------------
@@ -711,8 +719,203 @@ export const PROGRAMS: Program[] = [
       "Hospitality Support Staff",
     ],
   },
+
+  // ---------------- BVC approved National Diploma programmes ----------------
+  {
+    slug: "nd-mechanical-engineering-technology",
+    name: "National Diploma in Mechanical Engineering Technology",
+    category: "National Diploma",
+    award: "nd",
+    duration: ND_DURATION,
+    body:
+      "Equips students with theoretical knowledge and practical skills in mechanical systems, manufacturing, maintenance engineering, thermodynamics, fluid mechanics, welding technology, CAD, engineering drawing and industrial safety for careers in manufacturing, oil and gas, construction, marine and energy industries.",
+    entry: [
+      "Five (5) O'Level credits including English Language, Mathematics, Physics, Chemistry and one other relevant Science subject",
+      "Acceptable examinations: WAEC, NECO, NABTEB or GCE",
+      "Applicants must satisfy current NBTE admission requirements",
+    ],
+    certification: "National Diploma (ND) in Mechanical Engineering Technology",
+    careers: [
+      "Mechanical Engineering Technician",
+      "Maintenance Technician",
+      "Plant Operator",
+      "Manufacturing Technician",
+      "Mechanical Design Assistant",
+      "Production Supervisor",
+      "Marine Engineering Technician",
+      "Oil & Gas Maintenance Technician",
+      "CAD Technician",
+      "Quality Control Technician",
+    ],
+  },
+  {
+    slug: "nd-welding-and-fabrication-technology",
+    name: "National Diploma in Welding and Fabrication Technology",
+    category: "National Diploma",
+    award: "nd",
+    duration: ND_DURATION,
+    body:
+      "Develops highly skilled welding and fabrication professionals through practical training in arc welding, MIG, TIG, gas welding, fabrication drawing, metallurgy, structural fabrication, quality assurance and workplace safety for careers in construction, oil and gas, marine and manufacturing industries.",
+    entry: [
+      "Five (5) O'Level credits including English Language, Mathematics, Physics, Chemistry and one other Science subject",
+      "Acceptable examinations: WAEC, NECO, NABTEB or GCE",
+      "Applicants must satisfy current NBTE admission requirements",
+    ],
+    certification: "National Diploma (ND) in Welding and Fabrication Technology",
+    careers: [
+      "Welding Technician",
+      "Fabrication Technician",
+      "Pipe Fabricator",
+      "Steel Structure Fabricator",
+      "Welding Inspector",
+      "Offshore Fabrication Technician",
+      "Marine Fabrication Technician",
+      "Maintenance Welder",
+      "Industrial Plant Technician",
+      "Welding Entrepreneur",
+    ],
+  },
+  {
+    slug: "nd-electrical-and-electronics-engineering-technology",
+    name: "National Diploma in Electrical and Electronics Engineering Technology",
+    category: "National Diploma",
+    award: "nd",
+    duration: ND_DURATION,
+    body:
+      "Provides practical and theoretical training in electrical installation, industrial automation, electrical machines, electronics, instrumentation, PLCs, renewable energy systems, power distribution and industrial safety to prepare graduates for Nigeria's industrial and energy sectors.",
+    entry: [
+      "Five (5) O'Level credits including English Language, Mathematics, Physics, Chemistry and one other relevant Science subject",
+      "Acceptable examinations: WAEC, NECO, NABTEB or GCE",
+      "Applicants must satisfy current NBTE admission requirements",
+    ],
+    certification: "National Diploma (ND) in Electrical and Electronics Engineering Technology",
+    careers: [
+      "Electrical Technician",
+      "Electronics Technician",
+      "Power Systems Technician",
+      "Industrial Maintenance Technician",
+      "Instrumentation Technician",
+      "Renewable Energy Technician",
+      "Automation Technician",
+      "Telecommunications Technician",
+      "Electrical Installation Supervisor",
+      "Technical Support Engineer",
+    ],
+  },
+  {
+    slug: "nd-business-administration-and-management",
+    name: "National Diploma in Business Administration and Management",
+    category: "National Diploma",
+    award: "nd",
+    duration: ND_DURATION,
+    body:
+      "Develops managerial, entrepreneurial and administrative skills through studies in business management, accounting, marketing, entrepreneurship, economics, office technology, project management, customer relationship management and business communication.",
+    entry: [
+      "Five (5) O'Level credits including English Language, Mathematics, Economics or Commerce (where applicable) and two other relevant subjects",
+      "Acceptable examinations: WAEC, NECO, NABTEB or GCE",
+      "Applicants must satisfy current NBTE admission requirements",
+    ],
+    certification: "National Diploma (ND) in Business Administration and Management",
+    careers: [
+      "Administrative Officer",
+      "Human Resource Assistant",
+      "Business Development Officer",
+      "Marketing Executive",
+      "Customer Service Officer",
+      "Sales Executive",
+      "Office Manager",
+      "Operations Officer",
+      "Entrepreneur",
+      "Small Business Owner",
+    ],
+  },
+  {
+    slug: "nd-hospitality-management-technology",
+    name: "National Diploma in Hospitality Management Technology",
+    category: "National Diploma",
+    award: "nd",
+    duration: ND_DURATION,
+    body:
+      "Prepares students for careers in hotels, tourism, restaurants, catering and event management through practical training in food production, hotel administration, front office operations, housekeeping, food and beverage service, tourism, customer service and hospitality entrepreneurship.",
+    entry: [
+      "Five (5) O'Level credits including English Language, Mathematics and three other relevant subjects",
+      "Acceptable examinations: WAEC, NECO, NABTEB or GCE",
+      "Applicants must satisfy current NBTE admission requirements",
+    ],
+    certification: "National Diploma (ND) in Hospitality Management Technology",
+    careers: [
+      "Hotel Supervisor",
+      "Restaurant Manager",
+      "Front Office Executive",
+      "Housekeeping Manager",
+      "Catering Manager",
+      "Event Coordinator",
+      "Tourism Officer",
+      "Hospitality Consultant",
+      "Resort Administrator",
+      "Entrepreneur",
+    ],
+  },
+  {
+    slug: "nd-computer-science",
+    name: "National Diploma in Computer Science",
+    category: "National Diploma",
+    award: "nd",
+    duration: ND_DURATION,
+    body:
+      "Provides practical computing knowledge in programming, database management, networking, web development, cybersecurity, operating systems, software engineering, hardware maintenance, cloud computing and artificial intelligence fundamentals for careers in modern ICT.",
+    entry: [
+      "Five (5) O'Level credits including English Language, Mathematics, Physics and two other Science subjects",
+      "Acceptable examinations: WAEC, NECO, NABTEB or GCE",
+      "Applicants must satisfy current NBTE admission requirements",
+    ],
+    certification: "National Diploma (ND) in Computer Science",
+    careers: [
+      "Software Developer",
+      "Web Developer",
+      "Network Administrator",
+      "Database Administrator",
+      "IT Support Specialist",
+      "Systems Administrator",
+      "Cybersecurity Technician",
+      "Computer Hardware Technician",
+      "ICT Officer",
+      "Technology Entrepreneur",
+    ],
+  },
+  {
+    slug: "nd-building-technology",
+    name: "National Diploma in Building Technology",
+    category: "National Diploma",
+    award: "nd",
+    duration: ND_DURATION,
+    body:
+      "Prepares students to supervise, construct and maintain modern buildings through practical training in building construction, structural drawing, surveying, quantity estimation, building services, project supervision, sustainable construction and construction safety.",
+    entry: [
+      "Five (5) O'Level credits including English Language, Mathematics, Physics, Chemistry and one other relevant subject",
+      "Acceptable examinations: WAEC, NECO, NABTEB or GCE",
+      "Applicants must satisfy current NBTE admission requirements",
+    ],
+    certification: "National Diploma (ND) in Building Technology",
+    careers: [
+      "Building Technician",
+      "Site Supervisor",
+      "Construction Inspector",
+      "Project Assistant",
+      "Building Maintenance Officer",
+      "Quantity Survey Assistant",
+      "Facilities Officer",
+      "Property Maintenance Technician",
+      "Construction Materials Technician",
+      "Building Contractor",
+    ],
+  },
 ];
+
+export const ND_PROGRAMS = PROGRAMS.filter((p) => p.award === "nd");
+export const CITY_GUILDS_PROGRAMS = PROGRAMS.filter((p) => p.award !== "nd");
 
 export function getProgram(slug: string) {
   return PROGRAMS.find((p) => p.slug === slug);
 }
+
