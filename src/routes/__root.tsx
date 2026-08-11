@@ -142,7 +142,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen">
         <SiteHeader />
-        <div className="flex flex-col lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-[200px_minmax(0,1fr)] lg:items-start">
           <SiteSidebar />
           <div className="order-1 flex min-h-screen flex-col lg:order-none">
             <main className="flex-1">
