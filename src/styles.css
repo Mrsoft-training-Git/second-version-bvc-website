@@ -5,9 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * BVC design system — modeled on institutional university sites:
- * crisp white canvas, a single strong crimson accent, cool neutral grays,
- * condensed grotesque headings and a highly legible body sans.
+ * BVC design system — "Slate & Parchment":
+ * crisp white canvas, a refined slate-blue brand, warm parchment surfaces,
+ * a warm gold accent for calls to action, condensed grotesque headings and a
+ * highly legible body sans.
  */
 
 @theme inline {
@@ -50,66 +51,67 @@
 :root {
   --radius: 0.125rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.005 250);
+  --foreground: oklch(0.22 0.01 256);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.005 250);
+  --card-foreground: oklch(0.22 0.01 256);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.005 250);
-  /* BVC brand navy — sampled from the crest (#023386) */
-  --primary: oklch(0.36 0.16 265);
+  --popover-foreground: oklch(0.22 0.01 256);
+  /* BVC brand slate blue — refined, less inky than navy (#3A5A85) */
+  --primary: oklch(0.463 0.080 256);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.004 265);
-  --secondary-foreground: oklch(0.28 0.005 265);
-  --muted: oklch(0.965 0.003 265);
-  --muted-foreground: oklch(0.5 0.008 265);
-  --accent: oklch(0.94 0.012 265);
-  --accent-foreground: oklch(0.28 0.06 265);
+  --secondary: oklch(0.965 0.006 256);
+  --secondary-foreground: oklch(0.28 0.01 256);
+  --muted: oklch(0.97 0.004 256);
+  --muted-foreground: oklch(0.5 0.01 256);
+  --accent: oklch(0.94 0.01 256);
+  --accent-foreground: oklch(0.28 0.05 256);
   --destructive: oklch(0.55 0.2 25);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.004 265);
-  --input: oklch(0.88 0.005 265);
-  --ring: oklch(0.36 0.16 265);
-  /* dark institutional band — deep navy (#011E4F) */
-  --ink: oklch(0.25 0.09 265);
-  --ink-foreground: oklch(0.97 0.004 265);
-  --rule: oklch(0.78 0.008 265);
-  --surface: oklch(0.975 0.006 265);
-  --surface-foreground: oklch(0.24 0.01 265);
-  /* pale brand plate (#E8EEF9) */
-  --brand-tint: oklch(0.945 0.018 265);
+  --border: oklch(0.9 0.004 256);
+  --input: oklch(0.88 0.005 256);
+  --ring: oklch(0.463 0.080 256);
+  /* dark institutional band — deep slate (#1B2A3D) */
+  --ink: oklch(0.281 0.041 255);
+  --ink-foreground: oklch(0.97 0.004 256);
+  --rule: oklch(0.78 0.008 256);
+  /* warm parchment sidebar / surfaces (#EFE8DC) */
+  --surface: oklch(0.933 0.018 81);
+  --surface-foreground: oklch(0.24 0.01 256);
+  /* pale brand plate */
+  --brand-tint: oklch(0.95 0.012 256);
   /* warm gold accent for calls to action (#C8901E) */
-  --gold: oklch(0.68 0.13 78);
-  --gold-foreground: oklch(0.2 0.03 78);
+  --gold: oklch(0.688 0.133 79);
+  --gold-foreground: oklch(0.2 0.03 79);
 }
 
 .dark {
-  --background: oklch(0.2 0.006 250);
-  --foreground: oklch(0.97 0.002 250);
-  --card: oklch(0.24 0.006 250);
-  --card-foreground: oklch(0.97 0.002 250);
-  --popover: oklch(0.24 0.006 250);
-  --popover-foreground: oklch(0.97 0.002 250);
-  --primary: oklch(0.62 0.15 262);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.28 0.008 265);
-  --secondary-foreground: oklch(0.97 0.002 265);
-  --muted: oklch(0.28 0.008 265);
-  --muted-foreground: oklch(0.72 0.008 265);
-  --accent: oklch(0.32 0.03 265);
-  --accent-foreground: oklch(0.97 0.002 265);
+  --background: oklch(0.2 0.006 256);
+  --foreground: oklch(0.97 0.002 256);
+  --card: oklch(0.24 0.006 256);
+  --card-foreground: oklch(0.97 0.002 256);
+  --popover: oklch(0.24 0.006 256);
+  --popover-foreground: oklch(0.97 0.002 256);
+  --primary: oklch(0.66 0.08 256);
+  --primary-foreground: oklch(0.16 0.02 256);
+  --secondary: oklch(0.28 0.008 256);
+  --secondary-foreground: oklch(0.97 0.002 256);
+  --muted: oklch(0.28 0.008 256);
+  --muted-foreground: oklch(0.72 0.008 256);
+  --accent: oklch(0.32 0.015 256);
+  --accent-foreground: oklch(0.97 0.002 256);
   --destructive: oklch(0.65 0.19 25);
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(1 0 0 / 14%);
   --input: oklch(1 0 0 / 18%);
-  --ring: oklch(0.62 0.15 262);
-  --ink: oklch(0.18 0.05 265);
-  --ink-foreground: oklch(0.97 0.002 265);
+  --ring: oklch(0.66 0.08 256);
+  --ink: oklch(0.2 0.025 256);
+  --ink-foreground: oklch(0.97 0.004 256);
   --rule: oklch(1 0 0 / 22%);
-  --surface: oklch(0.24 0.012 265);
-  --surface-foreground: oklch(0.97 0.002 265);
-  --brand-tint: oklch(0.3 0.04 265);
-  --gold: oklch(0.74 0.13 78);
-  --gold-foreground: oklch(0.18 0.03 78);
+  --surface: oklch(0.26 0.012 81);
+  --surface-foreground: oklch(0.97 0.002 256);
+  --brand-tint: oklch(0.3 0.015 256);
+  --gold: oklch(0.74 0.13 79);
+  --gold-foreground: oklch(0.18 0.03 79);
 }
 
 @layer base {
@@ -133,7 +135,7 @@
   }
 }
 
-/* Thin crimson keyline used above module headings */
+/* Thin slate keyline used above module headings */
 @utility module-rule {
   border-top: 3px solid var(--color-primary);
 }
