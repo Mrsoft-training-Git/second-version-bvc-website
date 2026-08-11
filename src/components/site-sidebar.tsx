@@ -80,9 +80,6 @@ export function SiteSidebar() {
               </Link>
             </li>
           </ul>
-          <p className="mt-4 text-xs text-ink-foreground/50">
-            © 2026 BVC. All content shown is placeholder data.
-          </p>
         </div>
       </div>
     </aside>
