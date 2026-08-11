@@ -6,8 +6,9 @@ export function SiteSidebar() {
   return (
     <aside
       aria-label="Site resources"
-      className="order-2 border-t border-border bg-surface lg:order-none lg:sticky lg:top-[76px] lg:h-[calc(100vh-76px)] lg:overflow-y-auto lg:border-t-0 lg:border-r"
+      className="relative order-2 border-t border-border bg-surface lg:order-none lg:sticky lg:top-[76px] lg:h-[calc(100vh-76px)] lg:overflow-y-auto lg:border-t-0 lg:border-r"
     >
+      <div className="nav-ribbon-v pointer-events-none absolute inset-y-0 right-0 w-1 hidden lg:block" />
 
       <div className="flex min-h-full flex-col px-5 py-8">
         <div>
