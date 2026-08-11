@@ -2,6 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NAV } from "@/data/site";
+import bvcLogo from "@/assets/bvc-logo.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
