@@ -16,7 +16,6 @@ import { Route as NewsRouteImport } from './routes/news'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CampusLifeRouteImport } from './routes/campus-life'
-import { Route as AdmissionsRouteImport } from './routes/admissions'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
@@ -59,11 +58,6 @@ const CampusLifeRoute = CampusLifeRouteImport.update({
   path: '/campus-life',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AdmissionsRoute = AdmissionsRouteImport.update({
-  id: '/admissions',
-  path: '/admissions',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -98,7 +92,6 @@ const NewsSlugRoute = NewsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/admissions': typeof AdmissionsRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
   '/education': typeof EducationRoute
@@ -114,7 +107,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/admissions': typeof AdmissionsRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
   '/education': typeof EducationRoute
@@ -129,7 +121,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/admissions': typeof AdmissionsRoute
   '/campus-life': typeof CampusLifeRoute
   '/contact': typeof ContactRoute
   '/education': typeof EducationRoute
@@ -147,7 +138,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
-    | '/admissions'
     | '/campus-life'
     | '/contact'
     | '/education'
@@ -163,7 +153,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
-    | '/admissions'
     | '/campus-life'
     | '/contact'
     | '/education'
@@ -177,7 +166,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
-    | '/admissions'
     | '/campus-life'
     | '/contact'
     | '/education'
@@ -194,7 +182,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  AdmissionsRoute: typeof AdmissionsRoute
   CampusLifeRoute: typeof CampusLifeRoute
   ContactRoute: typeof ContactRoute
   EducationRoute: typeof EducationRoute
@@ -253,13 +240,6 @@ declare module '@tanstack/react-router' {
       path: '/campus-life'
       fullPath: '/campus-life'
       preLoaderRoute: typeof CampusLifeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/admissions': {
-      id: '/admissions'
-      path: '/admissions'
-      fullPath: '/admissions'
-      preLoaderRoute: typeof AdmissionsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -336,7 +316,6 @@ const ProgramsRouteWithChildren = ProgramsRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  AdmissionsRoute: AdmissionsRoute,
   CampusLifeRoute: CampusLifeRoute,
   ContactRoute: ContactRoute,
   EducationRoute: EducationRoute,
@@ -348,3 +327,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
