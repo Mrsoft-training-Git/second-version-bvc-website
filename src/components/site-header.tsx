@@ -108,6 +108,7 @@ export function SiteHeader() {
             aria-label="Primary mobile"
             className="relative overflow-hidden rounded-2xl bg-ink px-4 py-2 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)]"
           >
+            <div className="nav-ribbon pointer-events-none absolute inset-x-0 bottom-0 h-1" />
             {NAV.map((item) =>
               "hash" in item && item.hash ? (
                 <button
