@@ -38,13 +38,60 @@ function Programs() {
           Programmes at Bonny Vocational Centre
         </h1>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-          Every BVC programme leads to an internationally recognised City &amp; Guilds
-          qualification, delivered through intensive practical training in our workshops, kitchens
-          and laboratories.
+          BVC delivers NBTE-approved National Diploma programmes alongside internationally
+          recognised City &amp; Guilds qualifications, all taught through intensive practical
+          training in our workshops, kitchens and laboratories.
         </p>
 
+        {/* National Diploma promotion */}
+        <section className="mt-10 overflow-hidden rounded-2xl bg-ink text-ink-foreground">
+          <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+            <div>
+              <p className="font-display text-[11px] font-semibold tracking-[0.16em] text-gold uppercase">
+                NBTE approved
+              </p>
+              <h2 className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl">
+                National Diploma programmes
+              </h2>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-foreground/80">
+                Seven two-year diplomas across engineering, business, hospitality, computing and
+                building technology — four semesters including SIWES industrial attachment.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <Link
+                  to="/programs/national-diploma"
+                  className="group inline-flex items-center gap-2 border border-gold bg-gold px-5 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
+                >
+                  All ND programmes
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+                <Link
+                  to="/departments"
+                  className="inline-flex items-center border border-ink-foreground/30 px-5 py-2.5 font-display text-xs font-semibold tracking-[0.12em] uppercase transition-colors hover:border-gold hover:text-gold"
+                >
+                  Departments
+                </Link>
+              </div>
+            </div>
+            <ul className="space-y-2 border-t border-ink-foreground/15 pt-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8">
+              {ND_PROGRAMS.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    to="/programs/$slug"
+                    params={{ slug: p.slug }}
+                    className="block text-sm leading-snug text-ink-foreground/85 transition-colors hover:text-gold"
+                  >
+                    {p.name.replace("National Diploma in ", "")}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {PROGRAM_CATEGORIES.map((category) => {
-          const items = PROGRAMS.filter((p) => p.category === category);
+          const items = CITY_GUILDS_PROGRAMS.filter((p) => p.category === category);
+
           if (!items.length) return null;
           return (
             <section key={category} className="mt-14">
