@@ -41,45 +41,46 @@ export type Spotlight = {
   linkLabel: string;
   slug: string;
   caption: string;
-  imageKey: "workshop" | "electrical" | "graduation";
+  imageKey: "metrology" | "refrigeration" | "culinary";
   alt: string;
 };
 
 export const SPOTLIGHTS: Spotlight[] = [
   {
-    eyebrow: "Spotlight",
-    title: "Learning by making",
+    eyebrow: "Precision engineering",
+    title: "Measured to the tenth of a millimetre",
     body:
-      "In the BVC fabrication hall, second-year trainees rebuild a light-duty chassis from salvaged parts — cutting, welding and aligning every joint themselves. Every certificate at Bonny Vocational Center is earned on the shop floor.",
+      "In the metrology bay, a mechanical trainee sets a dial indicator against a machined block, checking flatness and parallelism before the part leaves the bench. Accuracy is taught with gauges in hand, not on a whiteboard.",
     linkLabel: "Full story",
     slug: "learning-by-making",
-    caption: "Second-year welding trainees in the fabrication hall. Photo: BVC",
-    imageKey: "workshop",
-    alt: "Trainees welding a chassis in the BVC fabrication hall",
+    caption: "Dimensional inspection in the BVC metrology bay. Photo: BVC",
+    imageKey: "metrology",
+    alt: "Trainee in coveralls using a dial indicator on a machined block at BVC",
   },
   {
-    eyebrow: "Facilities",
-    title: "Forty new benches, one bigger lab",
+    eyebrow: "Refrigeration & air conditioning",
+    title: "Stripping a compressor down to the last valve plate",
     body:
-      "The expanded electrical installation lab doubles bench capacity ahead of the September intake, adding three control-panel rigs so every trainee wires a live circuit in their first term.",
+      "Two trainees open up an industrial reciprocating compressor — logging every bolt, gasket and valve plate — then rebuild it to spec. Overhaul work runs on real plant equipment from day one.",
     linkLabel: "Read more",
     slug: "electrical-lab-expansion",
-    caption: "The expanded electrical installation lab. Photo: BVC",
-    imageKey: "electrical",
-    alt: "Rows of wiring benches in the BVC electrical installation lab",
+    caption: "Compressor overhaul practical in the RAC workshop. Photo: BVC",
+    imageKey: "refrigeration",
+    alt: "Two BVC trainees dismantling an industrial compressor on a workbench",
   },
   {
-    eyebrow: "Community",
-    title: "412 graduates, nine trades",
+    eyebrow: "Hospitality & culinary arts",
+    title: "Service standards, plated and presented",
     body:
-      "The class of 2026 is the largest cohort in the center's history, with 78% of graduates placed in work or apprenticeships within six months of leaving the workshop floor.",
+      "The culinary cohort presents a full assessment menu — breads, pastries, roasts and fruit carving — reviewed by their instructor against industry service standards before graduation.",
     linkLabel: "See the story",
     slug: "class-of-2026",
-    caption: "Graduation day on the BVC campus. Photo: BVC",
-    imageKey: "graduation",
-    alt: "BVC graduates celebrating at the 2026 graduation ceremony",
+    caption: "Culinary trainees at their final menu assessment. Photo: BVC",
+    imageKey: "culinary",
+    alt: "BVC culinary trainees in chef whites presenting plated dishes with their instructor",
   },
 ];
+
 
 
 export const STORIES: Story[] = [
