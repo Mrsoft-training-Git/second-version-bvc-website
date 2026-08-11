@@ -142,7 +142,7 @@ function About() {
   return (
     <div className="bg-background">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-ink px-6 pt-20 pb-32 text-ink-foreground sm:px-12">
+      <section className="relative overflow-hidden bg-ink px-6 pt-12 pb-20 text-ink-foreground sm:px-12">
         <div className="pointer-events-none absolute top-0 right-0 h-full w-1/3 opacity-10">
           <div className="grid h-full grid-cols-4 gap-2">
             <div className="h-full bg-ink-foreground/25" />
@@ -152,10 +152,10 @@ function About() {
           </div>
         </div>
         <div className="relative z-10 mx-auto max-w-5xl">
-          <span className="mb-6 inline-block bg-gold px-3 py-1 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold-foreground">
+          <span className="mb-4 inline-block bg-gold px-3 py-1 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold-foreground">
             Established 2004
           </span>
-          <h1 className="max-w-3xl font-display text-5xl leading-[0.95] font-extrabold sm:text-6xl md:text-7xl">
+          <h1 className="max-w-3xl font-display text-4xl leading-[0.95] font-extrabold sm:text-5xl md:text-6xl">
             An excellent example
             <br />
             <span className="text-primary">of a TVET institution.</span>
@@ -164,7 +164,7 @@ function About() {
       </section>
 
       {/* MISSION / VISION OVERLAY */}
-      <section className="relative z-20 -mt-16 px-6 sm:px-12">
+      <section className="relative z-20 -mt-10 px-6 sm:px-12">
         <div className="mx-auto grid max-w-5xl grid-cols-1 shadow-xl md:grid-cols-2">
           <div className="bg-primary p-10 text-primary-foreground">
             <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase opacity-75">
