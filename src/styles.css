@@ -74,8 +74,8 @@
   --ink: oklch(0.281 0.041 255);
   --ink-foreground: oklch(0.97 0.004 256);
   --rule: oklch(0.78 0.008 256);
-  /* warm parchment sidebar / surfaces (#EFE8DC) */
-  --surface: oklch(0.933 0.018 81);
+  /* cool stone sidebar / surfaces (#EFF1F3) */
+  --surface: oklch(0.949 0.005 247);
   --surface-foreground: oklch(0.24 0.01 256);
   /* pale brand plate */
   --brand-tint: oklch(0.95 0.012 256);
@@ -107,7 +107,7 @@
   --ink: oklch(0.2 0.025 256);
   --ink-foreground: oklch(0.97 0.004 256);
   --rule: oklch(1 0 0 / 22%);
-  --surface: oklch(0.26 0.012 81);
+  --surface: oklch(0.255 0.012 250);
   --surface-foreground: oklch(0.97 0.002 256);
   --brand-tint: oklch(0.3 0.015 256);
   --gold: oklch(0.74 0.13 79);
