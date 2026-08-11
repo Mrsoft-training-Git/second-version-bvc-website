@@ -116,35 +116,9 @@ function Home() {
     <>
       <SpotlightCarousel />
 
-      {/* Programs */}
-      <section aria-labelledby="programs-heading" className="mx-auto max-w-6xl px-4 py-14">
-        <div className="module-rule flex items-end justify-between pt-3">
-          <h2 id="programs-heading" className="text-2xl font-bold">
-            Programs
-          </h2>
-          <Link
-            to="/programs"
-            className="font-display text-xs font-semibold tracking-wide text-primary uppercase link-underline"
-          >
-            All programs
-          </Link>
-        </div>
-        <ul className="mt-8 grid gap-x-8 gap-y-10 grid-cols-2">
-          {PROGRAMS.slice(0, 6).map((p, i) => (
-            <li key={p.slug}>
-              <ContentCard
-                to="/programs"
-                image={programImage(p.slug, i)}
-                badge="Program"
-                title={p.name}
-                body={p.body}
-                meta={p.duration}
-                cta="Explore"
-              />
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* Programs showcase */}
+      <ProgramShowcase />
+
 
       {/* Facts band */}
       <section aria-labelledby="facts-heading" className="bg-ink text-ink-foreground">
