@@ -162,9 +162,11 @@ function Home() {
           </Link>
         </div>
 
-        <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2">
+        <ul
+          className="news-scroller mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4"
+        >
           {STORIES.slice(0, 3).map((s, i) => (
-            <li key={s.slug}>
+            <li key={s.slug} className="w-[320px] shrink-0 snap-start sm:w-[400px]">
               <ContentCard
                 to="/news/$slug"
                 params={{ slug: s.slug }}
