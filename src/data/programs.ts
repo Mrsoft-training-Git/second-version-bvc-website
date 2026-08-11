@@ -36,6 +36,9 @@ export const PROGRAM_CATEGORIES: ProgramCategory[] = [
 
 const d = (days: number) => `${days} training days`;
 
+export const ND_DURATION = "2 academic years · 4 semesters incl. SIWES";
+
+
 export const PROGRAMS: Program[] = [
   // ---------------- Engineering ----------------
   {
