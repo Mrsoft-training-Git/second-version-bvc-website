@@ -142,13 +142,13 @@ function About() {
   return (
     <div className="bg-background">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-ink px-6 pt-12 pb-20 text-ink-foreground sm:px-12">
+      <section className="relative overflow-hidden bg-primary px-6 pt-12 pb-20 text-primary-foreground sm:px-12">
         <div className="pointer-events-none absolute top-0 right-0 h-full w-1/3 opacity-10">
           <div className="grid h-full grid-cols-4 gap-2">
-            <div className="h-full bg-ink-foreground/25" />
-            <div className="h-full translate-y-12 bg-ink-foreground/25" />
-            <div className="h-full bg-ink-foreground/25" />
-            <div className="h-full translate-y-24 bg-ink-foreground/25" />
+            <div className="h-full bg-primary-foreground/25" />
+            <div className="h-full translate-y-12 bg-primary-foreground/25" />
+            <div className="h-full bg-primary-foreground/25" />
+            <div className="h-full translate-y-24 bg-primary-foreground/25" />
           </div>
         </div>
         <div className="relative z-10 mx-auto max-w-5xl">
@@ -158,7 +158,7 @@ function About() {
           <h1 className="max-w-3xl font-display text-4xl leading-[0.95] font-extrabold sm:text-5xl md:text-6xl">
             An excellent example
             <br />
-            <span className="text-primary">of a TVET institution.</span>
+            <span className="text-gold">of a TVET institution.</span>
           </h1>
         </div>
       </section>
@@ -166,8 +166,8 @@ function About() {
       {/* MISSION / VISION OVERLAY */}
       <section className="relative z-20 -mt-10 px-6 sm:px-12">
         <div className="mx-auto grid max-w-5xl grid-cols-1 shadow-xl md:grid-cols-2">
-          <div className="bg-primary p-10 text-primary-foreground">
-            <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase opacity-75">
+          <div className="bg-ink p-10 text-ink-foreground">
+            <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold">
               Our Mission
             </h2>
             <p className="text-xl leading-relaxed font-light">
@@ -176,14 +176,15 @@ function About() {
               that empowers youths across Bonny Kingdom, NLNG&rsquo;s GTS Communities, and Nigeria.
             </p>
           </div>
-          <div className="bg-ink p-10 text-ink-foreground">
-            <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase opacity-75">
+          <div className="bg-surface p-10 text-surface-foreground">
+            <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase text-primary">
               Our Vision
             </h2>
-            <p className="text-xl leading-relaxed font-light text-gold">
+            <p className="text-xl leading-relaxed font-medium text-ink">
               To become a leading TVET institution in the region, supplying the manpower
               requirements of relevant industries within and beyond Bonny Island.
             </p>
+            <div className="mt-6 h-1 w-16 bg-gold" />
           </div>
         </div>
       </section>
