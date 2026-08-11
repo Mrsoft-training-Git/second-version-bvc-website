@@ -10,7 +10,20 @@ import { cn } from "@/lib/utils";
  * neighbouring slides peeking in behind it, arrow controls on either side, and
  * the title/description sitting underneath with dot indicators.
  */
-export function ProgramShowcase({ className }: { className?: string }) {
+export function ProgramShowcase({
+  className,
+  hero,
+  eyebrow,
+  title,
+  intro,
+}: {
+  className?: string;
+  /** Render as a page hero: adds a headline block above the carousel. */
+  hero?: boolean;
+  eyebrow?: string;
+  title?: string;
+  intro?: string;
+}) {
   const items = PROGRAMS;
   const [index, setIndex] = useState(0);
 
