@@ -41,23 +41,15 @@ export function ProgramShowcase({
 
   return (
     <section
-      aria-labelledby="program-showcase-heading"
+      {...(hero
+        ? { "aria-label": "Program highlights" }
+        : { "aria-labelledby": "program-showcase-heading" })}
       className={cn("relative overflow-hidden bg-white text-ink", className)}
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px nav-ribbon" />
 
-      <div className={cn("mx-auto max-w-6xl px-4 pb-14", hero ? "pt-10" : "pt-12")}>
-        {hero ? (
-          <div className="max-w-3xl">
-            <p className="font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase">
-              {eyebrow ?? "Programs"}
-            </p>
-            {title && (
-              <h1 className="mt-3 font-display text-4xl font-bold text-ink sm:text-5xl">{title}</h1>
-            )}
-            {intro && <p className="mt-5 text-lg leading-relaxed text-ink/70">{intro}</p>}
-          </div>
-        ) : (
+      <div className={cn("mx-auto max-w-6xl px-4", hero ? "py-6" : "pt-12 pb-14")}>
+        {!hero && (
           <div className="flex items-end justify-between">
             <p className="font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase">
               Programs
@@ -72,7 +64,15 @@ export function ProgramShowcase({
         )}
 
         {/* Stage */}
-        <div className="relative mt-8 h-[240px] sm:h-[340px] lg:h-[420px]">
+        <div
+          className={cn(
+            "relative",
+            hero
+              ? "mx-auto max-w-3xl h-[130px] sm:h-[170px] lg:h-[200px]"
+              : "mt-8 h-[240px] sm:h-[340px] lg:h-[420px]",
+          )}
+        >
+
           {items.map((p, i) => {
             const offset = ((i - index + items.length) % items.length);
             const rel = offset > items.length / 2 ? offset - items.length : offset;
