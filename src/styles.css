@@ -135,7 +135,7 @@
   }
 }
 
-/* Thin crimson keyline used above module headings */
+/* Thin slate keyline used above module headings */
 @utility module-rule {
   border-top: 3px solid var(--color-primary);
 }
