@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
 import spotlightImg from "@/assets/spotlight-workshop.jpg";
 import judeImg from "@/assets/people/Mr._Jude.png.asset.json";
+import daggoImg from "@/assets/people/Se-Alabo.png.asset.json";
+import tonyeImg from "@/assets/people/Dr._Tonye.png.asset.json";
+import lucyImg from "@/assets/people/Dame_Lucy.png.asset.json";
 import morganImg from "@/assets/people/Mr._Morgan.png.asset.json";
 import opeyemiImg from "@/assets/people/Dr._Opeyemi.jpg.asset.json";
 import francescaImg from "@/assets/people/Francesca.png.asset.json";
@@ -119,9 +122,9 @@ const MANAGEMENT = [
 type Person = { name: string; role: string; img?: string };
 
 const TRUSTEES: Person[] = [
-  { name: "Se-Alabo Daggo B. Adda-Allison", role: "Chairman" },
-  { name: "Dr. Tonye Willie-Pepple", role: "Member" },
-  { name: "Dame Lucy Jamaica", role: "Member" },
+  { name: "Se-Alabo Daggo B. Adda-Allison", role: "Chairman", img: daggoImg.url },
+  { name: "Dr. Tonye Willie-Pepple", role: "Member", img: tonyeImg.url },
+  { name: "Dame Lucy Jamaica", role: "Member", img: lucyImg.url },
   { name: "Mr. Jude Ieekaa", role: "Member", img: judeImg.url },
   { name: "Mr. Morgan Brown", role: "Member", img: morganImg.url },
   { name: "Dr. Opeyemi M. Adeyemi", role: "Member", img: opeyemiImg.url },
