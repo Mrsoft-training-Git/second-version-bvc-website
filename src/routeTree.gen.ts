@@ -21,6 +21,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
 import { Route as NewsIndexRouteImport } from './routes/news.index'
+import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
 
 const VisitRoute = VisitRouteImport.update({
@@ -83,6 +84,11 @@ const NewsIndexRoute = NewsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => NewsRoute,
 } as any)
+const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ProgramsRoute,
+} as any)
 const NewsSlugRoute = NewsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
+  '/programs/$slug': typeof ProgramsSlugRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -114,6 +121,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
+  '/programs/$slug': typeof ProgramsSlugRoute
   '/news': typeof NewsIndexRoute
   '/programs': typeof ProgramsIndexRoute
 }
@@ -130,6 +138,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
+  '/programs/$slug': typeof ProgramsSlugRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -147,6 +156,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
+    | '/programs/$slug'
     | '/news/'
     | '/programs/'
   fileRoutesByTo: FileRoutesByTo
@@ -160,6 +170,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
+    | '/programs/$slug'
     | '/news'
     | '/programs'
   id:
@@ -175,6 +186,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
+    | '/programs/$slug'
     | '/news/'
     | '/programs/'
   fileRoutesById: FileRoutesById
@@ -278,6 +290,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsIndexRouteImport
       parentRoute: typeof NewsRoute
     }
+    '/programs/$slug': {
+      id: '/programs/$slug'
+      path: '/$slug'
+      fullPath: '/programs/$slug'
+      preLoaderRoute: typeof ProgramsSlugRouteImport
+      parentRoute: typeof ProgramsRoute
+    }
     '/news/$slug': {
       id: '/news/$slug'
       path: '/$slug'
@@ -301,10 +320,12 @@ const NewsRouteChildren: NewsRouteChildren = {
 const NewsRouteWithChildren = NewsRoute._addFileChildren(NewsRouteChildren)
 
 interface ProgramsRouteChildren {
+  ProgramsSlugRoute: typeof ProgramsSlugRoute
   ProgramsIndexRoute: typeof ProgramsIndexRoute
 }
 
 const ProgramsRouteChildren: ProgramsRouteChildren = {
+  ProgramsSlugRoute: ProgramsSlugRoute,
   ProgramsIndexRoute: ProgramsIndexRoute,
 }
 

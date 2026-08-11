@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Award, BadgeCheck, Briefcase, CalendarDays, ClipboardList } from "lucide-react";
 
-import { getProgram } from "@/data/programs";
+import { getProgram, type Program } from "@/data/programs";
 import { programImage } from "@/lib/program-images";
 
 export const Route = createFileRoute("/programs/$slug")({
@@ -55,7 +55,7 @@ function ProgramNotFound() {
 }
 
 function ProgramDetail() {
-  const { program } = Route.useLoaderData();
+  const { program } = Route.useLoaderData() as { program: Program };
   const image = programImage(program.slug);
 
   return (
