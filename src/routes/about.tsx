@@ -249,27 +249,6 @@ function About() {
           </section>
 
           <aside className="space-y-10">
-            <img
-              src={spotlightImg}
-              alt="Instructor and trainees at a welding bench at Bonny Vocational Centre"
-              loading="lazy"
-              width={1600}
-              height={1008}
-              className="w-full rounded-xl object-cover shadow-sm"
-            />
-            <div>
-              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Achievements
-              </h2>
-              <dl className="mt-4 text-sm">
-                {ACHIEVEMENTS.map((f) => (
-                  <div key={f.label} className="flex justify-between gap-4 border-b border-border py-2.5">
-                    <dt className="text-muted-foreground">{f.label}</dt>
-                    <dd className="font-display font-semibold whitespace-nowrap">{f.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
             <div>
               <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
                 Accreditation &amp; recognition
