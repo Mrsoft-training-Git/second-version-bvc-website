@@ -171,9 +171,11 @@ export const DONORS = [
 export const QUICK_LINKS = [
   { label: "Contact BVC", to: "/contact" },
   { label: "Program catalogue", to: "/programs" },
+  { label: "National Diplomas", to: "/programs/national-diploma" },
+  { label: "Academic departments", to: "/departments" },
   { label: "Visit the center", to: "/visit" },
-  { label: "Industry partnerships", to: "/about" },
 ];
+
 
 // Left-panel resources, mirroring an institutional site's "Top resources for" block.
 export const TOP_RESOURCES = [
