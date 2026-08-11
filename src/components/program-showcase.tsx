@@ -138,12 +138,9 @@ export function ProgramShowcase({
               >
                 {active.name}
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-ink/70 sm:text-base">{active.body}</p>
-              <p className="mt-3 text-[11px] font-semibold tracking-[0.14em] text-ink/50 uppercase">
-                {active.duration}
-              </p>
               <Link
-                to="/contact"
+                to="/programs/$slug"
+                params={{ slug: active.slug }}
                 className="mt-6 inline-block border border-gold bg-gold px-5 py-2 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold"
               >
                 Entry requirements
