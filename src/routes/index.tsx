@@ -215,7 +215,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-8 space-y-2">
           <LogoMarquee items={SPONSORS} direction="left" speed={38} />
           <LogoMarquee items={DONORS} direction="right" speed={46} />
         </div>
