@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 type ProgramCardProps = {
   to: any;
-  params?: Record<string, string>;
+  params?: any;
   image: string;
   alt?: string;
   title: string;
