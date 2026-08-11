@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { ContentCard } from "@/components/content-card";
+import { ProgramCard } from "@/components/program-card";
 import { PROGRAMS } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { ProgramShowcase } from "@/components/program-showcase";
