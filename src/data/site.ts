@@ -128,62 +128,10 @@ export const STORIES: Story[] = [
   },
 ];
 
-export const PROGRAMS = [
-  {
-    slug: "welding",
-    name: "Welding & Fabrication",
-    duration: "12 months",
-    body: "Arc, MIG and TIG welding, plate and pipe work, blueprint reading, and structural fabrication.",
-  },
-  {
-    slug: "electrical",
-    name: "Electrical Installation",
-    duration: "12 months",
-    body: "Domestic and industrial wiring, control panels, motor circuits, and inspection standards.",
-  },
-  {
-    slug: "mechanical",
-    name: "Mechanical Fitting",
-    duration: "18 months",
-    body: "Bearings, pumps, alignment, hydraulics and pneumatics, with planned-maintenance practice.",
-  },
-  {
-    slug: "ict",
-    name: "ICT & Digital Skills",
-    duration: "9 months",
-    body: "Hardware support, networking fundamentals, office productivity and introductory programming.",
-  },
-  {
-    slug: "instrumentation",
-    name: "Instrumentation & Control",
-    duration: "18 months",
-    body: "Sensors, loop calibration, PLC basics and process-control troubleshooting.",
-  },
-  {
-    slug: "catering",
-    name: "Catering & Hospitality",
-    duration: "9 months",
-    body: "Commercial kitchen practice, food safety, costing and front-of-house service.",
-  },
-  {
-    slug: "tailoring",
-    name: "Garment Making",
-    duration: "9 months",
-    body: "Pattern drafting, industrial machine operation, finishing and small-business basics.",
-  },
-  {
-    slug: "plumbing",
-    name: "Plumbing & Pipefitting",
-    duration: "12 months",
-    body: "Pipe layout, threading and jointing, sanitary systems, and pressure testing.",
-  },
-  {
-    slug: "carpentry",
-    name: "Carpentry & Joinery",
-    duration: "12 months",
-    body: "Hand and machine woodwork, joinery, roofing carpentry and site setting-out.",
-  },
-];
+// Real programme catalogue lives in ./programs
+export { PROGRAMS, PROGRAM_CATEGORIES, getProgram } from "./programs";
+export type { Program, ProgramCategory } from "./programs";
+
 
 export const FACTS = [
   { value: "9", label: "Trade areas" },
