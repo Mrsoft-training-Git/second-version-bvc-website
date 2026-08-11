@@ -17,7 +17,7 @@ function LogoTile({ name, logo }: Item) {
           src={logo}
           alt={name}
           loading="lazy"
-          className="relative max-h-[68%] max-w-[80%] object-contain opacity-90 grayscale transition-all duration-300 group-hover/tile:opacity-100 group-hover/tile:grayscale-0"
+          className="relative max-h-[68%] max-w-[80%] object-contain transition-transform duration-300 group-hover/tile:scale-105"
         />
       ) : (
         <span className="relative px-4 text-center font-display text-xs font-bold tracking-[0.12em] text-muted-foreground uppercase">
