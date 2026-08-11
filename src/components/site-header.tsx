@@ -106,7 +106,7 @@ export function SiteHeader() {
         <div className="mx-auto mt-2 max-w-7xl px-1 lg:hidden">
           <nav
             aria-label="Primary mobile"
-            className="overflow-hidden rounded-2xl border-b-4 border-gold bg-ink px-4 py-2 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)]"
+            className="relative overflow-hidden rounded-2xl bg-ink px-4 py-2 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)]"
           >
             {NAV.map((item) =>
               "hash" in item && item.hash ? (
