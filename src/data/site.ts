@@ -1,4 +1,12 @@
 // Mock content for the BVC site. Replace with real copy/assets later.
+import nlngLogo from "@/assets/logos/nlng.png.asset.json";
+import hyundaiLogo from "@/assets/logos/hyundai.png.asset.json";
+import abbLogo from "@/assets/logos/abb.png.asset.json";
+import schneiderLogo from "@/assets/logos/schneider.png.asset.json";
+import samsungLogo from "@/assets/logos/samsung.png.asset.json";
+import ncdmbLogo from "@/assets/logos/ncdmb.jpg.asset.json";
+import amanyanaboLogo from "@/assets/logos/amanyanabo.png.asset.json";
+import tcaLogo from "@/assets/logos/tca.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
@@ -185,27 +193,22 @@ export const FACTS = [
   { value: "2004", label: "Founded" },
 ];
 
-// Placeholder sponsor/donor names — swap for real logos when assets arrive.
 export const SPONSORS = [
-  { name: "Bonny Energy" },
-  { name: "Delta Marine" },
-  { name: "Harcourt Steel" },
-  { name: "Riverline LNG" },
-  { name: "Atlas Fabrication" },
-  { name: "Kono Logistics" },
-  { name: "Ogbia Power" },
-  { name: "Finima Works" },
+  { name: "Nigeria LNG Limited", logo: nlngLogo.url },
+  { name: "Hyundai Heavy Industries", logo: hyundaiLogo.url },
+  { name: "ABB Nigeria Limited", logo: abbLogo.url },
+  { name: "Schneider Electric", logo: schneiderLogo.url },
+  { name: "Samsung", logo: samsungLogo.url },
+  { name: "NCDMB", logo: ncdmbLogo.url },
 ];
 
 export const DONORS = [
-  { name: "Bonny Trust" },
-  { name: "Island Foundation" },
-  { name: "Skills for Nigeria" },
-  { name: "Mangrove Fund" },
-  { name: "Opuoma Charity" },
-  { name: "Ijaw Education Board" },
-  { name: "Peterside Family" },
-  { name: "Coastal Alumni" },
+  { name: "Amanyanabo-in-Council", logo: amanyanaboLogo.url },
+  { name: "Titled Citizens' Assembly", logo: tcaLogo.url },
+  { name: "NCDMB", logo: ncdmbLogo.url },
+  { name: "Nigeria LNG Limited", logo: nlngLogo.url },
+  { name: "Schneider Electric", logo: schneiderLogo.url },
+  { name: "ABB Nigeria Limited", logo: abbLogo.url },
 ];
 
 
