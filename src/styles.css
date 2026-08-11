@@ -5,9 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * BVC design system — modeled on institutional university sites:
- * crisp white canvas, a single strong crimson accent, cool neutral grays,
- * condensed grotesque headings and a highly legible body sans.
+ * BVC design system — "Slate & Parchment":
+ * crisp white canvas, a refined slate-blue brand, warm parchment surfaces,
+ * a warm gold accent for calls to action, condensed grotesque headings and a
+ * highly legible body sans.
  */
 
 @theme inline {
