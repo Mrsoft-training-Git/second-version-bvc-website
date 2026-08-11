@@ -1,10 +1,24 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NAV } from "@/data/site";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const scrollToSponsors = () => {
+    setOpen(false);
+    const scroll = () => {
+      const el = document.getElementById("sponsors");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    };
+    if (window.location.pathname !== "/") {
+      navigate({ to: "/" }).then(() => setTimeout(scroll, 300));
+    } else {
+      scroll();
+    }
+  };
 
   return (
     <header className="sticky top-0 z-40 bg-primary text-primary-foreground">
@@ -64,16 +78,27 @@ export function SiteHeader() {
       {open && (
         <nav aria-label="Primary mobile" className="border-t border-rule/30 lg:hidden">
           <div className="px-5 py-2">
-            {NAV.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="block border-b border-rule/20 py-3 font-display text-sm font-semibold tracking-wide uppercase last:border-b-0"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV.map((item) =>
+              "hash" in item && item.hash ? (
+                <button
+                  key={item.label}
+                  type="button"
+                  onClick={scrollToSponsors}
+                  className="block w-full text-left border-b border-rule/20 py-3 font-display text-sm font-semibold tracking-wide uppercase last:border-b-0"
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="block border-b border-rule/20 py-3 font-display text-sm font-semibold tracking-wide uppercase last:border-b-0"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
         </nav>
       )}
