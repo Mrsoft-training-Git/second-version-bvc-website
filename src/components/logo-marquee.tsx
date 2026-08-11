@@ -17,10 +17,16 @@ function LogoTile({ name, logo }: Item) {
           src={logo}
           alt={name}
           loading="lazy"
-          className="relative max-h-[68%] max-w-[80%] object-contain transition-transform duration-300 group-hover/tile:scale-105"
+          className="relative max-h-[68%] max-w-[80%] object-contain transition-all duration-300 group-hover/tile:scale-105 group-hover/tile:opacity-0"
         />
       ) : (
         <span className="relative px-4 text-center font-display text-xs font-bold tracking-[0.12em] text-muted-foreground uppercase">
+          {name}
+        </span>
+      )}
+      {/* Name overlay shown on hover */}
+      {logo && (
+        <span className="pointer-events-none absolute inset-0 flex items-center justify-center px-3 text-center font-display text-[11px] font-semibold leading-tight tracking-[0.08em] text-foreground uppercase opacity-0 transition-opacity duration-300 group-hover/tile:opacity-100">
           {name}
         </span>
       )}
