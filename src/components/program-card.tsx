@@ -3,8 +3,8 @@ import { ArrowRight, BarChart3, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type ProgramCardProps = {
-  to: string;
-  params?: Record<string, string>;
+  to: any;
+  params?: any;
   image: string;
   alt?: string;
   title: string;
