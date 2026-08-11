@@ -10,12 +10,11 @@ import tcaLogo from "@/assets/logos/tca.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
-  { label: "Education", to: "/education" },
-  { label: "Programs", to: "/programs" },
   { label: "Admissions", to: "/admissions" },
   { label: "Campus Life", to: "/campus-life" },
   { label: "News", to: "/news" },
   { label: "About", to: "/about" },
+  { label: "Sponsors & Donors", to: "/", hash: "sponsors" },
 ] as const;
 
 
