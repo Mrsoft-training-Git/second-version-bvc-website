@@ -306,9 +306,6 @@ function About() {
               <PersonCard key={p.name} person={p} />
             ))}
           </div>
-          <p className="mt-3 text-xs text-muted-foreground">
-            Portraits for some trustees are pending.
-          </p>
         </section>
 
         <section className="mt-16">
