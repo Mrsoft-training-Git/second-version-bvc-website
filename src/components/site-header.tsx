@@ -25,8 +25,8 @@ export function SiteHeader() {
     "group/nav relative font-display text-sm font-medium tracking-wide text-primary-foreground/85 transition-colors duration-300 hover:text-gold aria-[current=page]:text-gold aria-[current=page]:[&>span]:w-full";
 
   return (
-    <header className="sticky top-0 z-40 px-3 pt-1 lg:px-6 lg:pt-1.5">
-      <div className="relative mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 overflow-hidden rounded-2xl border-b-4 border-gold bg-primary px-4 py-3 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-primary)_35%,transparent)] transition-shadow duration-300 hover:shadow-[0_24px_60px_color-mix(in_oklab,var(--color-primary)_45%,transparent)] lg:h-20 lg:px-8">
+    <header className="sticky top-0 z-40 px-1 pt-1 lg:px-2 lg:pt-1.5">
+      <div className="relative mx-auto flex h-16 w-full items-center justify-between gap-4 overflow-hidden rounded-2xl border-b-4 border-gold bg-primary px-4 py-3 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-primary)_35%,transparent)] transition-shadow duration-300 hover:shadow-[0_24px_60px_color-mix(in_oklab,var(--color-primary)_45%,transparent)] lg:h-20 lg:px-8">
         {/* Subtle gold radial mesh */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] bg-[radial-gradient(circle_at_top_right,var(--color-gold)_0%,transparent_55%)]" />
 
