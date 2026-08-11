@@ -122,9 +122,9 @@ const MANAGEMENT = [
 type Person = { name: string; role: string; img?: string };
 
 const TRUSTEES: Person[] = [
-  { name: "Se-Alabo Daggo B. Adda-Allison", role: "Chairman" },
-  { name: "Dr. Tonye Willie-Pepple", role: "Member" },
-  { name: "Dame Lucy Jamaica", role: "Member" },
+  { name: "Se-Alabo Daggo B. Adda-Allison", role: "Chairman", img: daggoImg.url },
+  { name: "Dr. Tonye Willie-Pepple", role: "Member", img: tonyeImg.url },
+  { name: "Dame Lucy Jamaica", role: "Member", img: lucyImg.url },
   { name: "Mr. Jude Ieekaa", role: "Member", img: judeImg.url },
   { name: "Mr. Morgan Brown", role: "Member", img: morganImg.url },
   { name: "Dr. Opeyemi M. Adeyemi", role: "Member", img: opeyemiImg.url },
