@@ -26,7 +26,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 px-1 pt-1 lg:px-2 lg:pt-1.5">
-      <div className="relative mx-auto flex h-16 w-full items-center justify-between gap-4 overflow-hidden rounded-2xl border-b-4 border-gold bg-primary px-4 py-3 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-primary)_35%,transparent)] transition-shadow duration-300 hover:shadow-[0_24px_60px_color-mix(in_oklab,var(--color-primary)_45%,transparent)] lg:h-20 lg:px-8">
+      <div className="relative mx-auto flex h-16 w-full items-center justify-between gap-4 overflow-hidden rounded-2xl border-b-4 border-gold bg-ink px-4 py-3 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)] transition-shadow duration-300 hover:shadow-[0_24px_60px_color-mix(in_oklab,var(--color-ink)_45%,transparent)] lg:h-20 lg:px-8">
         {/* Subtle gold radial mesh */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] bg-[radial-gradient(circle_at_top_right,var(--color-gold)_0%,transparent_55%)]" />
 
@@ -104,7 +104,7 @@ export function SiteHeader() {
         <div className="mx-auto mt-2 max-w-7xl px-1 lg:hidden">
           <nav
             aria-label="Primary mobile"
-            className="overflow-hidden rounded-2xl border-b-4 border-gold bg-primary px-4 py-2 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-primary)_35%,transparent)]"
+            className="overflow-hidden rounded-2xl border-b-4 border-gold bg-ink px-4 py-2 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)]"
           >
             {NAV.map((item) =>
               "hash" in item && item.hash ? (
