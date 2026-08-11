@@ -5,8 +5,10 @@ export type Program = {
   slug: string;
   name: string;
   category: ProgramCategory;
-  /** Duration in training days. */
-  days: number;
+  /** Awarding route. Omitted means City & Guilds. */
+  award?: "nd";
+  /** Duration in training days (City & Guilds programmes only). */
+  days?: number;
   duration: string;
   body: string;
   entry: string[];
@@ -19,8 +21,10 @@ export type ProgramCategory =
   | "ICT"
   | "Business & Education"
   | "Skills Proficiency"
-  | "Engineering";
+  | "Engineering"
+  | "National Diploma";
 
+/** City & Guilds catalogue groupings shown on the Programs page. */
 export const PROGRAM_CATEGORIES: ProgramCategory[] = [
   "Engineering",
   "Hospitality & Culinary",
@@ -28,6 +32,7 @@ export const PROGRAM_CATEGORIES: ProgramCategory[] = [
   "Business & Education",
   "Skills Proficiency",
 ];
+
 
 const d = (days: number) => `${days} training days`;
 
