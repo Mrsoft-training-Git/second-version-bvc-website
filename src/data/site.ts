@@ -166,6 +166,19 @@ export const DONORS = [
   { name: "ABB Nigeria Limited", logo: abbLogo.url },
 ];
 
+export const CLIENTS = [
+  { name: "ARCO Maintenance and Engineering Limited", logo: arcoLogo.url },
+  { name: "Arewa Innovative Solutions Limited", logo: arewaLogo.url },
+  { name: "Bonny Utility Company Limited", logo: bucLogo.url },
+  { name: "Catering & Facilities Solutions Limited", logo: cfsLogo.url },
+  { name: "Courdeau Catering Nigeria Limited", logo: courdeauLogo.url },
+  { name: "Delattre Bezons Nigeria Limited", logo: dbnLogo.url },
+  { name: "Dexterous Applied Training Institute", logo: dexterousLogo.url },
+  { name: "ENS Catering & Supermarket Limited", logo: ensLogo.url },
+  { name: "FMX Integrated Services Limited", logo: fmxLogo.url },
+  { name: "Hyundai Heavy Industries Company Limited", logo: hyundaiClientLogo.url },
+];
+
 
 export const QUICK_LINKS = [
   { label: "Contact BVC", to: "/contact" },
