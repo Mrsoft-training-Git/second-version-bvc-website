@@ -43,7 +43,7 @@ export type Spotlight = {
   linkLabel: string;
   slug: string;
   caption: string;
-  imageKey: "metrology" | "refrigeration" | "culinary";
+  imageKey: "metrology" | "refrigeration" | "welding";
   alt: string;
 };
 
@@ -71,15 +71,15 @@ export const SPOTLIGHTS: Spotlight[] = [
     alt: "Two BVC trainees dismantling an industrial compressor on a workbench",
   },
   {
-    eyebrow: "Hospitality & culinary arts",
-    title: "Service standards, plated and presented",
+    eyebrow: "Welding & fabrication",
+    title: "Every weld laid down under supervision",
     body:
-      "The culinary cohort presents a full assessment menu — breads, pastries, roasts and fruit carving — reviewed by their instructor against industry service standards before graduation.",
+      "Behind the darkened lens, a fabrication trainee runs a bead on a steel section — controlling arc length, travel speed and heat input until the joint passes visual inspection. Coded welding is taught bench by bench, in full PPE, on live equipment.",
     linkLabel: "See the story",
-    slug: "class-of-2026",
-    caption: "Culinary trainees at their final menu assessment. Photo: BVC",
-    imageKey: "culinary",
-    alt: "BVC culinary trainees in chef whites presenting plated dishes with their instructor",
+    slug: "learning-by-making",
+    caption: "Arc welding practical in the BVC fabrication hall. Photo: BVC",
+    imageKey: "welding",
+    alt: "BVC trainee in a welding helmet and leather apron striking an arc on a steel section",
   },
 ];
 
