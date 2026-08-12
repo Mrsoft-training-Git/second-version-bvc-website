@@ -7,6 +7,10 @@ import culinaryKitchenAsset from "@/assets/Picture74.jpg.asset.json";
 import culinarySupervisionAsset from "@/assets/Picture75-2.jpg.asset.json";
 import barServiceAsset from "@/assets/Picture46.jpg.asset.json";
 import serviceTeamAsset from "@/assets/Picture47.jpg.asset.json";
+import itSupportAsset from "@/assets/Picture38.jpg.asset.json";
+import itHardwareAsset from "@/assets/Picture41.jpg.asset.json";
+import itLabAsset from "@/assets/Picture48.jpg.asset.json";
+import itNetworkAsset from "@/assets/Picture51.jpg.asset.json";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
@@ -35,6 +39,10 @@ const BY_SLUG: Record<string, string> = {
   "culinary-arts-supervision-l3": culinarySupervisionAsset.url,
   "professional-patisserie-confectionery-l3": culinarySupervisionAsset.url,
   "food-safety-in-catering-l2": serviceTeamAsset.url,
+  "it-systems-support-l2": itSupportAsset.url,
+  "it-systems-support-l3": itHardwareAsset.url,
+  "ict-professionals-systems-principles-l4": itNetworkAsset.url,
+  "ict-professionals-systems-principles-l4-unit-route": itLabAsset.url,
 };
 
 export function programImage(slug: string, index = 0) {
