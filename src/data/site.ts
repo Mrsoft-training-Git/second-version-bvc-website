@@ -7,6 +7,16 @@ import samsungLogo from "@/assets/logos/samsung.png.asset.json";
 import ncdmbLogo from "@/assets/logos/ncdmb.jpg.asset.json";
 import amanyanaboLogo from "@/assets/logos/amanyanabo.png.asset.json";
 import tcaLogo from "@/assets/logos/tca.png.asset.json";
+import arcoLogo from "@/assets/clients/arco_maintenance_and_engineering_limited.png.asset.json";
+import arewaLogo from "@/assets/clients/arewa_innovative_solutions_limited.png.asset.json";
+import bucLogo from "@/assets/clients/bonny_utility_company_limited.png.asset.json";
+import cfsLogo from "@/assets/clients/catering_facilities_solutions_limited.png.asset.json";
+import courdeauLogo from "@/assets/clients/courdeau_catering_nigeria_limited.png.asset.json";
+import dbnLogo from "@/assets/clients/delattre_bezons_nigeria_limited.jpg.asset.json";
+import dexterousLogo from "@/assets/clients/dexterous_applied_training_institute.png.asset.json";
+import ensLogo from "@/assets/clients/ens_catering_suppermarket_limited.jpg.asset.json";
+import fmxLogo from "@/assets/clients/fmx_integrated_services_limited.png.asset.json";
+import hyundaiClientLogo from "@/assets/clients/hyundai_heavy_industries_company_limited.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
