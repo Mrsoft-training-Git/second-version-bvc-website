@@ -157,29 +157,6 @@ function ProgramDetail() {
               </p>
             </section>
 
-            <section className="rounded-xl border border-border bg-card p-6">
-              <h2 className="font-display text-sm font-bold tracking-wide text-foreground uppercase">
-                Duration
-              </h2>
-              {isND ? (
-                <p className="mt-3 font-display text-lg font-bold leading-snug text-foreground">
-                  2 academic years
-                  <span className="mt-1 block text-xs font-semibold tracking-wide text-muted-foreground uppercase">
-                    4 semesters including SIWES
-                  </span>
-                </p>
-              ) : (
-                <>
-                  <p className="mt-3 font-display text-3xl font-bold text-foreground">
-                    {program.days}
-                  </p>
-                  <p className="text-xs tracking-wide text-muted-foreground uppercase">
-                    training days
-                  </p>
-                </>
-              )}
-            </section>
-
           </aside>
         </div>
 
