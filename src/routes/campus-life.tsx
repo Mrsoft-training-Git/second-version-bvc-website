@@ -6,13 +6,13 @@ import graduationImg from "@/assets/news-graduation.jpg";
 export const Route = createFileRoute("/campus-life")({
   head: () => ({
     meta: [
-      { title: "Campus Life — Bonny Vocational Center" },
+      { title: "Campus Life - Bonny Vocational Center" },
       {
         name: "description",
         content:
           "Hostels, clubs, sport, chaplaincy and student support at Bonny Vocational Center's Finima Road campus.",
       },
-      { property: "og:title", content: "Campus Life — Bonny Vocational Center" },
+      { property: "og:title", content: "Campus Life - Bonny Vocational Center" },
       {
         property: "og:description",
         content: "Nine workshops, two hostels and a student body drawn from across the Niger Delta.",

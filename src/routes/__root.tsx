@@ -81,21 +81,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Bonny Vocational Center — Skilled trades training on Bonny Island" },
+      { title: "Bonny Vocational Center - Skilled trades training on Bonny Island" },
       {
         name: "description",
         content:
           "BVC trains welders, electricians, fitters, technicians and hospitality professionals through hands-on workshop instruction and industry placement.",
       },
       { name: "author", content: "Bonny Vocational Center" },
-      { property: "og:title", content: "Bonny Vocational Center — Skilled trades training on Bonny Island" },
+      { property: "og:title", content: "Bonny Vocational Center - Skilled trades training on Bonny Island" },
       {
         property: "og:description",
         content: "BVC trains welders, electricians, fitters, technicians and hospitality professionals through hands-on workshop instruction and industry placement.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Bonny Vocational Center — Skilled trades training on Bonny Island" },
+      { name: "twitter:title", content: "Bonny Vocational Center - Skilled trades training on Bonny Island" },
       { name: "twitter:description", content: "BVC trains welders, electricians, fitters, technicians and hospitality professionals through hands-on workshop instruction and industry placement." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/25045dd7-2f81-441f-a157-59db7a40352a/id-preview-4cc33a60--8874681a-bfc8-4044-97f7-4cd859285d5b.lovable.app-1785249664845.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/25045dd7-2f81-441f-a157-59db7a40352a/id-preview-4cc33a60--8874681a-bfc8-4044-97f7-4cd859285d5b.lovable.app-1785249664845.png" },

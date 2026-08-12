@@ -6,13 +6,13 @@ import { DEPARTMENTS } from "@/data/departments";
 export const Route = createFileRoute("/departments")({
   head: () => ({
     meta: [
-      { title: "Academic Departments — Bonny Vocational Centre" },
+      { title: "Academic Departments - Bonny Vocational Centre" },
       {
         name: "description",
         content:
           "The seven academic departments of Bonny Vocational Centre, each delivering an NBTE-approved National Diploma in engineering, business, hospitality, computing and building technology.",
       },
-      { property: "og:title", content: "Academic Departments — Bonny Vocational Centre" },
+      { property: "og:title", content: "Academic Departments - Bonny Vocational Centre" },
       {
         property: "og:description",
         content:

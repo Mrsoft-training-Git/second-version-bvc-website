@@ -16,13 +16,13 @@ export const Route = createFileRoute("/programs/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Programme not found — Bonny Vocational Centre" },
+          { title: "Programme not found - Bonny Vocational Centre" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const { program } = loaderData;
-    const title = `${program.name} — Bonny Vocational Centre`;
+    const title = `${program.name} - Bonny Vocational Centre`;
     const description = program.body.slice(0, 155);
     return {
       meta: [

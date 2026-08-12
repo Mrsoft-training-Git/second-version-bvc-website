@@ -43,7 +43,7 @@ export const PROGRAMS: Program[] = [
   // ---------------- Engineering ----------------
   {
     slug: "engineering-fabrication-welding-l3",
-    name: "Level 3 Diploma in Engineering — Fabrication and Welding",
+    name: "Level 3 Diploma in Engineering - Fabrication and Welding",
     category: "Engineering",
     days: 130,
     duration: d(130),
@@ -70,7 +70,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "engineering-maintenance-technology-l2",
-    name: "Level 2 Diploma in Engineering — Maintenance Technology",
+    name: "Level 2 Diploma in Engineering - Maintenance Technology",
     category: "Engineering",
     days: 70,
     duration: d(70),
@@ -98,7 +98,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "engineering-electrical-electronic-l3",
-    name: "Level 3 Diploma in Engineering — Electrical and Electronic Engineering",
+    name: "Level 3 Diploma in Engineering - Electrical and Electronic Engineering",
     category: "Engineering",
     days: 90,
     duration: d(90),
@@ -126,7 +126,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "engineering-maintenance-installation-commissioning-l3",
-    name: "Level 3 Diploma in Engineering — Maintenance, Installation and Commissioning",
+    name: "Level 3 Diploma in Engineering - Maintenance, Installation and Commissioning",
     category: "Engineering",
     days: 90,
     duration: d(90),
@@ -185,7 +185,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "culinary-arts-patisserie-l2",
-    name: "Level 2 Diploma in Food Preparation and Culinary Arts — Patisserie",
+    name: "Level 2 Diploma in Food Preparation and Culinary Arts - Patisserie",
     category: "Hospitality & Culinary",
     days: 90,
     duration: d(90),
@@ -380,7 +380,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "ict-professionals-systems-principles-l4",
-    name: "Level 4 Diploma for ICT Professionals — Systems and Principles",
+    name: "Level 4 Diploma for ICT Professionals - Systems and Principles",
     category: "ICT",
     days: 120,
     duration: d(120),
@@ -408,7 +408,7 @@ export const PROGRAMS: Program[] = [
   },
   {
     slug: "ict-professionals-systems-principles-l4-unit-route",
-    name: "Level 4 Diploma for ICT Professionals — Systems and Principles (Unit Route)",
+    name: "Level 4 Diploma for ICT Professionals - Systems and Principles (Unit Route)",
     category: "ICT",
     days: 80,
     duration: d(80),

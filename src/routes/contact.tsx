@@ -5,13 +5,13 @@ import { PageHeader } from "@/components/page-header";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Visit — Bonny Vocational Center" },
+      { title: "Contact & Visit - Bonny Vocational Center" },
       {
         name: "description",
         content:
           "Reach BVC admissions, placement or workshop staff, or arrange a campus visit on Finima Road, Bonny Island.",
       },
-      { property: "og:title", content: "Contact & Visit — Bonny Vocational Center" },
+      { property: "og:title", content: "Contact & Visit - Bonny Vocational Center" },
       {
         property: "og:description",
         content: "Office hours, department contacts and campus visit information for BVC.",
@@ -47,7 +47,7 @@ function Contact() {
             </h2>
             {sent ? (
               <p className="mt-6 border border-border bg-surface p-6 text-sm">
-                Thank you — this demo form doesn't submit anywhere yet. Wire it up once the real
+                Thank you - this demo form doesn't submit anywhere yet. Wire it up once the real
                 contact address is confirmed.
               </p>
             ) : (

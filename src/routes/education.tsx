@@ -5,13 +5,13 @@ import ictImg from "@/assets/news-ict.jpg";
 export const Route = createFileRoute("/education")({
   head: () => ({
     meta: [
-      { title: "Education — Bonny Vocational Center" },
+      { title: "Education - Bonny Vocational Center" },
       {
         name: "description",
         content:
           "How BVC teaches: competency-based instruction, 70% workshop time, industry-assessed practical exams and supervised placement.",
       },
-      { property: "og:title", content: "Education — Bonny Vocational Center" },
+      { property: "og:title", content: "Education - Bonny Vocational Center" },
       {
         property: "og:description",
         content: "Competency-based trade instruction with 70% of contact hours in the workshop.",

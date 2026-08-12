@@ -17,7 +17,7 @@ import { ProgramShowcase } from "@/components/program-showcase";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bonny Vocational Center — Skilled trades training on Bonny Island" },
+      { title: "Bonny Vocational Center - Skilled trades training on Bonny Island" },
       {
         name: "description",
         content:
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Bonny Vocational Center — Skilled trades training on Bonny Island",
+        content: "Bonny Vocational Center - Skilled trades training on Bonny Island",
       },
       {
         property: "og:description",
@@ -227,7 +227,7 @@ function Home() {
             </h2>
             <p className="mt-4 text-muted-foreground">
               Applications for all nine trade areas close on 15 August. No prior workshop experience
-              is required — entry assessments cover literacy, numeracy and practical aptitude.
+              is required - entry assessments cover literacy, numeracy and practical aptitude.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link

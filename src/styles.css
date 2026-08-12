@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * BVC design system — "Slate & Parchment":
+ * BVC design system - "Slate & Parchment":
  * crisp white canvas, a refined slate-blue brand, warm parchment surfaces,
  * a warm gold accent for calls to action, condensed grotesque headings and a
  * highly legible body sans.
@@ -56,7 +56,7 @@
   --card-foreground: oklch(0.22 0.01 256);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.01 256);
-  /* BVC brand slate blue — refined, less inky than navy (#3A5A85) */
+  /* BVC brand slate blue - refined, less inky than navy (#3A5A85) */
   --primary: oklch(0.463 0.080 256);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.965 0.006 256);
@@ -70,7 +70,7 @@
   --border: oklch(0.9 0.004 256);
   --input: oklch(0.88 0.005 256);
   --ring: oklch(0.463 0.080 256);
-  /* dark institutional band — deep slate (#1B2A3D) */
+  /* dark institutional band - deep slate (#1B2A3D) */
   --ink: oklch(0.281 0.041 255);
   --ink-foreground: oklch(0.97 0.004 256);
   --rule: oklch(0.78 0.008 256);
