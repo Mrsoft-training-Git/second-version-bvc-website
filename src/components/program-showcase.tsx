@@ -154,25 +154,9 @@ export function ProgramShowcase({
 
         {!hero && (
           <>
-            {/* Caption */}
-            <div key={active.slug} className="mx-auto mt-10 max-w-2xl animate-fade-in text-center">
-              <h2
-                id="program-showcase-heading"
-                className="font-display text-2xl font-bold text-ink sm:text-3xl"
-              >
-                {active.name}
-              </h2>
-              <Link
-                to="/programs/$slug"
-                params={{ slug: active.slug }}
-                className="mt-6 inline-block border border-gold bg-gold px-5 py-2 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold"
-              >
-                Entry requirements
-              </Link>
-            </div>
-
             {/* Dots */}
             <div className="mt-8 flex items-center justify-center gap-2">
+
               {items.map((p, i) => (
                 <button
                   key={p.slug}
