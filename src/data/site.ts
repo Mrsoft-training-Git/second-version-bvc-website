@@ -172,7 +172,6 @@ export const QUICK_LINKS = [
   { label: "Program catalogue", to: "/programs" },
   
   { label: "Academic departments", to: "/departments" },
-  { label: "Visit the center", to: "/visit" },
 ];
 
 
@@ -184,9 +183,7 @@ export const TOP_RESOURCES = [
 ];
 
 export const PANEL_LINKS = [
-  { label: "Visit", to: "/visit" },
   { label: "People", to: "/about" },
-  { label: "Jobs", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
 
