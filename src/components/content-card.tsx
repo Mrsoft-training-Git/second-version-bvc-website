@@ -39,7 +39,7 @@ export function ContentCard({
       to={to}
       params={params}
       className={cn(
-        "group block overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl",
+        "group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl",
         className,
       )}
     >
@@ -52,7 +52,7 @@ export function ContentCard({
         />
       </div>
 
-      <div className="p-5">
+      <div className="flex flex-1 flex-col p-5">
         <span
           className={cn(
             "inline-block rounded-sm px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider",
@@ -68,9 +68,9 @@ export function ContentCard({
           {title}
         </h3>
 
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+        <p className="mt-2 mb-5 text-sm leading-relaxed text-muted-foreground">{body}</p>
 
-        <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
+        <div className="mt-auto flex items-center justify-between border-t border-border pt-4">
           {meta ? (
             <span className="text-xs font-medium text-muted-foreground">{meta}</span>
           ) : (
