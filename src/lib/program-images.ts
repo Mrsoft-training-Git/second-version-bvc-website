@@ -25,6 +25,12 @@ const BY_SLUG: Record<string, string> = {
   "engineering-maintenance-technology-l2": maintenanceAsset.url,
   "engineering-electrical-electronic-l3": electricalAsset.url,
   "engineering-maintenance-installation-commissioning-l3": commissioningAsset.url,
+  "food-preparation-culinary-arts-l2": culinaryKitchenAsset.url,
+  "culinary-arts-patisserie-l2": culinaryKitchenAsset.url,
+  "food-and-beverage-service-l2": barServiceAsset.url,
+  "culinary-arts-supervision-l3": culinarySupervisionAsset.url,
+  "professional-patisserie-confectionery-l3": culinarySupervisionAsset.url,
+  "food-safety-in-catering-l2": serviceTeamAsset.url,
 };
 
 export function programImage(slug: string, index = 0) {
