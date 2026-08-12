@@ -23,7 +23,7 @@ export const Route = createFileRoute("/news/")({
   component: NewsIndex,
 });
 
-const IMAGES = [electricalImg, ictImg, graduationImg];
+
 
 function NewsIndex() {
   return (
