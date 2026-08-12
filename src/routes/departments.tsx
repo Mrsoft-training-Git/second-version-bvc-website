@@ -133,17 +133,17 @@ function Departments() {
 
         <div className="mt-14 rounded-2xl border border-border bg-muted/60 p-8 text-center">
           <h2 className="font-display text-xl font-bold text-foreground">
-            Looking for the full National Diploma details?
+            Explore the full programme catalogue
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Admission requirements, duration and career outcomes for all seven diplomas are listed
-            together on the National Diploma page.
+            Browse every National Diploma and City &amp; Guilds qualification delivered across the
+            seven departments.
           </p>
           <Link
-            to="/programs/national-diploma"
+            to="/programs"
             className="mt-6 inline-block border border-gold bg-gold px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
           >
-            ND programmes
+            All programmes
           </Link>
         </div>
       </div>

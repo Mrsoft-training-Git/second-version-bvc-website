@@ -78,11 +78,11 @@ function ProgramDetail() {
         />
         <div className="mx-auto max-w-5xl px-4 py-14 sm:py-16">
           <Link
-            to={isND ? "/programs/national-diploma" : "/programs"}
+            to={isND ? "/departments" : "/programs"}
             className="inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            {isND ? "All ND programmes" : "All programmes"}
+            {isND ? "Academic departments" : "All programmes"}
           </Link>
           <p className="mt-6 font-display text-[11px] font-semibold tracking-[0.14em] text-ink-foreground/70 uppercase">
             {program.category}
