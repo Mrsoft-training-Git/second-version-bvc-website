@@ -110,7 +110,7 @@ export function ProgramShowcase({
                 }}
               >
                 <img
-                  src={programImage(p.slug, i)}
+                  src={programImage(p.imageSlug, i)}
                   alt={p.name}
                   loading={i === 0 ? "eager" : "lazy"}
                   className="h-full w-full object-cover"
@@ -122,7 +122,7 @@ export function ProgramShowcase({
                   <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/95 via-ink/70 to-transparent p-5 pt-16 sm:p-8 sm:pt-24">
                     <div key={p.slug} className="animate-fade-in">
                       <p className="font-display text-[10px] font-semibold tracking-[0.16em] text-gold uppercase">
-                        City &amp; Guilds
+                        Programme area
                       </p>
                       <h2
                         id="program-showcase-heading"
@@ -131,13 +131,14 @@ export function ProgramShowcase({
                         {p.name}
                       </h2>
                       <Link
-                        to="/programs/$slug"
-                        params={{ slug: p.slug }}
+                        to="/programs"
+                        hash={p.slug}
                         className="mt-4 inline-block border border-gold bg-gold px-5 py-2 font-display text-[11px] font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold sm:mt-5"
                       >
-                        Entry requirements
+                        Explore programmes
                       </Link>
                     </div>
+
                   </figcaption>
                 )}
               </figure>
