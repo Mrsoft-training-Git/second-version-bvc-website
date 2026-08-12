@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const CARD_IMAGES = [electricalImg, ictImg, graduationImg];
+
 
 const SPOTLIGHT_IMAGES: Record<string, string> = {
   metrology: metrologyImg.url,
@@ -168,7 +168,7 @@ function Home() {
               <ContentCard
                 to="/news/$slug"
                 params={{ slug: s.slug }}
-                image={CARD_IMAGES[i % CARD_IMAGES.length]}
+                image={newsImage(s.slug, i)}
                 badge={s.category}
                 badgeVariant="neutral"
                 title={s.title}
