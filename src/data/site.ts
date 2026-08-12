@@ -208,6 +208,7 @@ export const CLIENTS = [
   { name: "Samsung Heavy Industries Company Limited", logo: samsungClientLogo.url },
   { name: "Shell Petroleum Development Company of Nigeria Limited", logo: shellLogo.url },
   { name: "Thompson Grace Investment Limited", logo: thompsonGraceLogo.url },
+  { name: "UNOPS Nigeria Office", logo: unopsLogo.url },
 ];
 
 
