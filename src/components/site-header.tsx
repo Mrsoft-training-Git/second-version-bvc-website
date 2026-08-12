@@ -101,7 +101,7 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* Mobile menu — floating panel */}
+      {/* Mobile menu - floating panel */}
       {open && (
         <div className="mx-auto mt-2 max-w-7xl px-1 lg:hidden">
           <nav

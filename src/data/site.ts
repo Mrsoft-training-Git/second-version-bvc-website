@@ -30,7 +30,7 @@ export const SPOTLIGHT = {
   eyebrow: "Spotlight",
   title: "Learning by making",
   body:
-    "In the BVC fabrication hall, second-year trainees rebuild a light-duty chassis from salvaged parts — cutting, welding and aligning every joint themselves. Every certificate at Bonny Vocational Center is earned on the shop floor.",
+    "In the BVC fabrication hall, second-year trainees rebuild a light-duty chassis from salvaged parts - cutting, welding and aligning every joint themselves. Every certificate at Bonny Vocational Center is earned on the shop floor.",
   linkLabel: "Full story",
   linkTo: "/news/learning-by-making",
 };
@@ -62,7 +62,7 @@ export const SPOTLIGHTS: Spotlight[] = [
     eyebrow: "Refrigeration & air conditioning",
     title: "Stripping a compressor down to the last valve plate",
     body:
-      "Two trainees open up an industrial reciprocating compressor — logging every bolt, gasket and valve plate — then rebuild it to spec. Overhaul work runs on real plant equipment from day one.",
+      "Two trainees open up an industrial reciprocating compressor - logging every bolt, gasket and valve plate - then rebuild it to spec. Overhaul work runs on real plant equipment from day one.",
     linkLabel: "Read more",
     slug: "electrical-lab-expansion",
     caption: "Compressor overhaul practical in the RAC workshop. Photo: BVC",
@@ -73,7 +73,7 @@ export const SPOTLIGHTS: Spotlight[] = [
     eyebrow: "Welding & fabrication",
     title: "Every weld laid down under supervision",
     body:
-      "Behind the darkened lens, a fabrication trainee runs a bead on a steel section — controlling arc length, travel speed and heat input until the joint passes visual inspection. Coded welding is taught bench by bench, in full PPE, on live equipment.",
+      "Behind the darkened lens, a fabrication trainee runs a bead on a steel section - controlling arc length, travel speed and heat input until the joint passes visual inspection. Coded welding is taught bench by bench, in full PPE, on live equipment.",
     linkLabel: "See the story",
     slug: "learning-by-making",
     caption: "Arc welding practical in the BVC fabrication hall. Photo: BVC",

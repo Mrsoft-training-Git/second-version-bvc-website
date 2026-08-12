@@ -17,7 +17,7 @@ type ContentCardProps = {
 };
 
 /**
- * Clean elevated content card — bordered surface, soft shadow, hover lift,
+ * Clean elevated content card - bordered surface, soft shadow, hover lift,
  * image zoom, a small uppercase badge, and a divider footer with an arrow CTA.
  * Shared by Programs and News across the homepage, /programs and /news.
  */

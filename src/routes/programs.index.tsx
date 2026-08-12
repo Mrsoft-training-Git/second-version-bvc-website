@@ -10,13 +10,13 @@ import { ProgramShowcase } from "@/components/program-showcase";
 export const Route = createFileRoute("/programs/")({
   head: () => ({
     meta: [
-      { title: "Programs — Bonny Vocational Centre" },
+      { title: "Programs - Bonny Vocational Centre" },
       {
         name: "description",
         content:
           "City & Guilds accredited programmes at BVC across engineering, hospitality and culinary arts, ICT, business and education, and short skills proficiency certificates.",
       },
-      { property: "og:title", content: "Programs — Bonny Vocational Centre" },
+      { property: "og:title", content: "Programs - Bonny Vocational Centre" },
       {
         property: "og:description",
         content:
@@ -55,7 +55,7 @@ function Programs() {
               </h2>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-foreground/80">
                 Seven two-year diplomas across engineering, business, hospitality, computing and
-                building technology — four semesters including SIWES industrial attachment.
+                building technology - four semesters including SIWES industrial attachment.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link

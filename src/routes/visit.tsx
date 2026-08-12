@@ -13,13 +13,13 @@ import graduationImg from "@/assets/news-graduation.jpg";
 export const Route = createFileRoute("/visit")({
   head: () => ({
     meta: [
-      { title: "Visit BVC — A guided tour of the campus" },
+      { title: "Visit BVC - A guided tour of the campus" },
       {
         name: "description",
         content:
           "Take a stop-by-stop guided tour of Bonny Vocational Center: the gate, fabrication hall, electrical labs, ICT centre, training kitchen, hostels and the quad.",
       },
-      { property: "og:title", content: "Visit BVC — A guided tour of the campus" },
+      { property: "og:title", content: "Visit BVC - A guided tour of the campus" },
       {
         property: "og:description",
         content:
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/visit")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Visit BVC — A guided tour of the campus" },
+      { name: "twitter:title", content: "Visit BVC - A guided tour of the campus" },
       {
         name: "twitter:description",
         content: "A stop-by-stop guided tour of Bonny Vocational Center.",
@@ -69,7 +69,7 @@ const STOPS: Stop[] = [
     image: campusImg,
     alt: "The main walkway and quad on the BVC campus",
     body:
-      "Past the gate the walkway opens onto the quad — the centre of campus life, where roll call happens each morning and graduation is held every June.",
+      "Past the gate the walkway opens onto the quad - the centre of campus life, where roll call happens each morning and graduation is held every June.",
     details: ["Morning roll call at 7:30", "Notice boards for intake dates", "Shaded seating and refectory"],
   },
   {

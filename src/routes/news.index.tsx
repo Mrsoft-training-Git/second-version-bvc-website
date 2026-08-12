@@ -7,13 +7,13 @@ import { newsImage } from "@/lib/news-images";
 export const Route = createFileRoute("/news/")({
   head: () => ({
     meta: [
-      { title: "Newsroom — Bonny Vocational Center" },
+      { title: "Newsroom - Bonny Vocational Center" },
       {
         name: "description",
         content:
           "Announcements, workshop stories and partnership news from Bonny Vocational Center.",
       },
-      { property: "og:title", content: "Newsroom — Bonny Vocational Center" },
+      { property: "og:title", content: "Newsroom - Bonny Vocational Center" },
       {
         property: "og:description",
         content: "The latest from BVC's workshops, labs and industry partners.",

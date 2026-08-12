@@ -14,13 +14,13 @@ import emeraldImg from "@/assets/people/Emerald.png.asset.json";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About BVC — Bonny Vocational Centre" },
+      { title: "About BVC - Bonny Vocational Centre" },
       {
         name: "description",
         content:
           "Bonny Vocational Centre: established in 2004 by Nigeria LNG Limited with Bonny Kingdom. Our vision, mission, core values, management team and Board of Trustees.",
       },
-      { property: "og:title", content: "About BVC — Bonny Vocational Centre" },
+      { property: "og:title", content: "About BVC - Bonny Vocational Centre" },
       {
         property: "og:description",
         content:

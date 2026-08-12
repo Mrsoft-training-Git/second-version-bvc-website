@@ -11,13 +11,13 @@ export const Route = createFileRoute("/news/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Story unavailable — BVC" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Story unavailable - BVC" }, { name: "robots", content: "noindex" }],
       };
     }
     const { story } = loaderData;
     return {
       meta: [
-        { title: `${story.title} — BVC News` },
+        { title: `${story.title} - BVC News` },
         { name: "description", content: story.dek },
         { property: "og:title", content: story.title },
         { property: "og:description", content: story.dek },
@@ -57,7 +57,7 @@ function StoryPage() {
         <p>
           Instructors describe the change as practical rather than ceremonial. Trainees who complete
           the module leave with a signed task list, a portfolio of finished work and a placement
-          report from a partner employer — the three documents that matter most when they walk onto a
+          report from a partner employer - the three documents that matter most when they walk onto a
           site for the first time.
         </p>
         <p>
