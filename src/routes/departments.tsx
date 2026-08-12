@@ -74,9 +74,16 @@ function Departments() {
             >
               <div className="grid gap-0 lg:grid-cols-[1.6fr_1fr]">
                 <div className="p-7 sm:p-9">
-                  <span className="font-display text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
-                    Department {String(i + 1).padStart(2, "0")}
-                  </span>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="font-display text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
+                      Department {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="h-px w-6 bg-border" aria-hidden="true" />
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 font-display text-[11px] font-semibold tracking-[0.12em] text-foreground uppercase">
+                      <GraduationCap className="h-3.5 w-3.5 text-gold" />
+                      {dept.programSlugs.length + 1} Programmes
+                    </span>
+                  </div>
                   <h2 className="mt-3 font-display text-2xl font-bold leading-tight text-foreground">
                     {dept.name}
                   </h2>
