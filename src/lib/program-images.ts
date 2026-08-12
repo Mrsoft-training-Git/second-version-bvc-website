@@ -47,6 +47,11 @@ const BY_SLUG: Record<string, string> = {
   "it-systems-support-l3": itHardwareAsset.url,
   "ict-professionals-systems-principles-l4": itNetworkAsset.url,
   "ict-professionals-systems-principles-l4-unit-route": itLabAsset.url,
+  "principles-business-administration-l2": adminBindingAsset.url,
+  "principles-business-administration-l3": adminOfficeAsset.url,
+  "business-support-l2": adminCopyAsset.url,
+  "business-support-l3": adminBindingAsset.url,
+  "teaching-training-assessing-learning-l3": adminTrainingAsset.url,
 };
 
 export function programImage(slug: string, index = 0) {
