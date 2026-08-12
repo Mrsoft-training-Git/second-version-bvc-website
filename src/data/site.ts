@@ -27,6 +27,7 @@ import sjabedLogo from "@/assets/clients/s.j._abed_general_enterprises_limited.p
 import samsungClientLogo from "@/assets/clients/samsung_heavy_industries_company_limited.png.asset.json";
 import shellLogo from "@/assets/clients/shell_petroleum_development_company_of_nigeria_limited.png.asset.json";
 import thompsonGraceLogo from "@/assets/clients/thompson_grace_investment_limited.png.asset.json";
+import unopsLogo from "@/assets/clients/unops_nigeria_office.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
@@ -207,6 +208,7 @@ export const CLIENTS = [
   { name: "Samsung Heavy Industries Company Limited", logo: samsungClientLogo.url },
   { name: "Shell Petroleum Development Company of Nigeria Limited", logo: shellLogo.url },
   { name: "Thompson Grace Investment Limited", logo: thompsonGraceLogo.url },
+  { name: "UNOPS Nigeria Office", logo: unopsLogo.url },
 ];
 
 
