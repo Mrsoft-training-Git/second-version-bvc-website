@@ -7,11 +7,11 @@ import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
-import { DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { CITY_GUILDS_PROGRAMS, DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ContentCard } from "@/components/content-card";
-import { ProgramShowcase } from "@/components/program-showcase";
+
 
 
 
