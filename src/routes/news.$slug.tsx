@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { STORIES } from "@/data/site";
-import spotlightImg from "@/assets/spotlight-workshop.jpg";
+import { newsImage } from "@/lib/news-images";
 
 export const Route = createFileRoute("/news/$slug")({
   loader: ({ params }) => {
@@ -38,8 +38,8 @@ function StoryPage() {
       <p className="mt-3 text-sm text-muted-foreground">{story.date} · BVC Communications</p>
 
       <img
-        src={spotlightImg}
-        alt=""
+        src={newsImage(story.slug)}
+        alt={story.title}
         loading="lazy"
         width={1600}
         height={1008}

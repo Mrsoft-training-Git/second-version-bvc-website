@@ -2,9 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/page-header";
 import { ContentCard } from "@/components/content-card";
 import { STORIES } from "@/data/site";
-import electricalImg from "@/assets/news-electrical.jpg";
-import ictImg from "@/assets/news-ict.jpg";
-import graduationImg from "@/assets/news-graduation.jpg";
+import { newsImage } from "@/lib/news-images";
 
 export const Route = createFileRoute("/news/")({
   head: () => ({
@@ -25,7 +23,7 @@ export const Route = createFileRoute("/news/")({
   component: NewsIndex,
 });
 
-const IMAGES = [electricalImg, ictImg, graduationImg];
+
 
 function NewsIndex() {
   return (
@@ -42,7 +40,7 @@ function NewsIndex() {
               <ContentCard
                 to="/news/$slug"
                 params={{ slug: s.slug }}
-                image={IMAGES[i % IMAGES.length]}
+                image={newsImage(s.slug, i)}
                 badge={s.category}
                 badgeVariant="neutral"
                 title={s.title}
