@@ -15,6 +15,11 @@ import adminBindingAsset from "@/assets/Picture14.jpg.asset.json";
 import adminCopyAsset from "@/assets/Picture15.jpg.asset.json";
 import adminTrainingAsset from "@/assets/Picture16.jpg.asset.json";
 import adminOfficeAsset from "@/assets/Picture19.jpg.asset.json";
+import plumbingAsset from "@/assets/Picture54.jpg.asset.json";
+import racAsset from "@/assets/Picture11.jpg.asset.json";
+import electricalInstallAsset from "@/assets/Picture22.jpg.asset.json";
+import scaffoldingAsset from "@/assets/Picture56.jpg.asset.json";
+import foodPrepAsset from "@/assets/Picture74-2.jpg.asset.json";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
@@ -52,6 +57,11 @@ const BY_SLUG: Record<string, string> = {
   "business-support-l2": adminCopyAsset.url,
   "business-support-l3": adminBindingAsset.url,
   "teaching-training-assessing-learning-l3": adminTrainingAsset.url,
+  "basic-plumbing": plumbingAsset.url,
+  "basic-refrigeration-air-conditioning": racAsset.url,
+  "basic-electrical-installation": electricalInstallAsset.url,
+  scaffolding: scaffoldingAsset.url,
+  "food-preparation-proficiency": foodPrepAsset.url,
 };
 
 export function programImage(slug: string, index = 0) {
