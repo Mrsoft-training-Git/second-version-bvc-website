@@ -94,7 +94,15 @@ function Programs() {
 
           if (!items.length) return null;
           return (
-            <section key={category} className="mt-14">
+            <section
+              key={category}
+              id={category
+                .toLowerCase()
+                .replace(/&/g, "and")
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/(^-|-$)/g, "")}
+              className="mt-14 scroll-mt-28"
+            >
               <div className="flex items-end justify-between border-b border-border pb-3">
                 <h2 className="font-display text-xl font-bold text-foreground">{category}</h2>
                 <span className="font-display text-[11px] font-semibold tracking-[0.14em] text-muted-foreground uppercase">
