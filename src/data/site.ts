@@ -17,6 +17,16 @@ import dexterousLogo from "@/assets/clients/dexterous_applied_training_institute
 import ensLogo from "@/assets/clients/ens_catering_suppermarket_limited.jpg.asset.json";
 import fmxLogo from "@/assets/clients/fmx_integrated_services_limited.png.asset.json";
 import hyundaiClientLogo from "@/assets/clients/hyundai_heavy_industries_company_limited.png.asset.json";
+import nsmlLogo from "@/assets/clients/nlng_ship_management_limited.png.asset.json";
+import nnpcLogo from "@/assets/clients/nnpc_exploration_production_limited.png.asset.json";
+import panLogo from "@/assets/clients/pan_nigeria_limited.jpg.asset.json";
+import pivotLogo from "@/assets/clients/pivot_gis_limited.png.asset.json";
+import ponticelliLogo from "@/assets/clients/ponticelli_nigeria_limited.png.asset.json";
+import rssdaLogo from "@/assets/clients/rivers_state_sustainable_development_agency.png.asset.json";
+import sjabedLogo from "@/assets/clients/s.j._abed_general_enterprises_limited.png.asset.json";
+import samsungClientLogo from "@/assets/clients/samsung_heavy_industries_company_limited.png.asset.json";
+import shellLogo from "@/assets/clients/shell_petroleum_development_company_of_nigeria_limited.png.asset.json";
+import thompsonGraceLogo from "@/assets/clients/thompson_grace_investment_limited.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
@@ -187,6 +197,16 @@ export const CLIENTS = [
   { name: "ENS Catering & Supermarket Limited", logo: ensLogo.url },
   { name: "FMX Integrated Services Limited", logo: fmxLogo.url },
   { name: "Hyundai Heavy Industries Company Limited", logo: hyundaiClientLogo.url },
+  { name: "NLNG Ship Management Limited", logo: nsmlLogo.url },
+  { name: "NNPC Exploration & Production Limited", logo: nnpcLogo.url },
+  { name: "Pan Nigeria Limited", logo: panLogo.url },
+  { name: "Pivot GIS Limited", logo: pivotLogo.url },
+  { name: "Ponticelli Nigeria Limited", logo: ponticelliLogo.url },
+  { name: "Rivers State Sustainable Development Agency", logo: rssdaLogo.url },
+  { name: "S.J. Abed General Enterprises Limited", logo: sjabedLogo.url },
+  { name: "Samsung Heavy Industries Company Limited", logo: samsungClientLogo.url },
+  { name: "Shell Petroleum Development Company of Nigeria Limited", logo: shellLogo.url },
+  { name: "Thompson Grace Investment Limited", logo: thompsonGraceLogo.url },
 ];
 
 
