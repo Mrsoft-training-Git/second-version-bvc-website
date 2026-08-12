@@ -147,7 +147,7 @@ function Home() {
       </section>
 
       {/* News modules */}
-      <section aria-labelledby="news-heading" className="mx-auto max-w-6xl px-4 py-14">
+      <section id="news" aria-labelledby="news-heading" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-14">
         <div className="module-rule flex items-end justify-between pt-3">
           <h2 id="news-heading" className="text-2xl font-bold">
             News
