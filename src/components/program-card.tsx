@@ -66,12 +66,9 @@ export function ProgramCard({
         {body}
       </p>
 
-      <div className="mt-6 flex items-center gap-3 text-sm">
-        <span className="inline-flex items-center gap-1.5 font-medium text-muted-foreground transition-colors duration-300 group-hover:text-ink-foreground/80">
-          <Clock className="h-4 w-4" />
-          {duration}
-        </span>
-      </div>
+      <div className="mt-6" />
+
+
 
       <div className="mt-auto flex items-center justify-between border-t border-border pt-5 transition-colors duration-300 group-hover:border-ink-foreground/20">
         <span className="text-xs font-bold uppercase tracking-wider text-foreground transition-colors duration-300 group-hover:text-ink-foreground">
