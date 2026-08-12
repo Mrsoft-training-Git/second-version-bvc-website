@@ -1,9 +1,21 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { CITY_GUILDS_PROGRAMS } from "@/data/site";
+import { PROGRAM_CATEGORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { cn } from "@/lib/utils";
+
+/** One representative programme photo per category. */
+const CATEGORY_IMAGE_SLUG: Record<string, string> = {
+  Engineering: "engineering-fabrication-welding-l3",
+  "Hospitality & Culinary": "culinary-arts-supervision-l3",
+  ICT: "ict-professionals-systems-principles-l4",
+  "Business & Education": "principles-business-administration-l3",
+  "Skills Proficiency": "basic-electrical-installation",
+};
+
+const slugify = (s: string) =>
+  s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 /**
  * Dark "product showcase" carousel: one large centred visual with the two
@@ -24,7 +36,11 @@ export function ProgramShowcase({
   title?: string;
   intro?: string;
 }) {
-  const items = CITY_GUILDS_PROGRAMS;
+  const items = PROGRAM_CATEGORIES.map((c) => ({
+    slug: slugify(c),
+    name: c,
+    imageSlug: CATEGORY_IMAGE_SLUG[c] ?? "",
+  }));
   const [index, setIndex] = useState(0);
 
   const go = useCallback(
@@ -36,6 +52,7 @@ export function ProgramShowcase({
     const id = setInterval(() => go(1), 8000);
     return () => clearInterval(id);
   }, [go]);
+
 
 
   return (
