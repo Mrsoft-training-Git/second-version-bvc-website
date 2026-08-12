@@ -209,43 +209,6 @@ function Home() {
 
 
 
-      {/* Campus / contact call */}
-      <section aria-labelledby="visit-heading" className="border-t border-border bg-surface">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2">
-          <img
-            src={campusImg}
-            alt="Walkway between workshop buildings on the BVC campus"
-            loading="lazy"
-            width={1600}
-            height={912}
-            className="w-full object-cover"
-          />
-          <div>
-            <p className="eyebrow">Get in touch</p>
-            <h2 id="visit-heading" className="mt-3 text-3xl font-bold">
-              The September intake is open
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              Applications for all nine trade areas close on 15 August. No prior workshop experience
-              is required - entry assessments cover literacy, numeracy and practical aptitude.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="bg-gold px-5 py-2.5 font-display text-sm font-semibold tracking-wide text-gold-foreground uppercase shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
-              >
-                How to apply
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-input px-5 py-2.5 font-display text-sm font-semibold tracking-wide uppercase hover:border-primary hover:text-primary"
-              >
-                Talk to admissions
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
