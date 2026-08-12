@@ -206,6 +206,29 @@ function Home() {
         </div>
       </section>
 
+      {/* Major clients */}
+      <section
+        id="clients"
+        aria-labelledby="clients-heading"
+        className="scroll-mt-24 border-t border-border py-14"
+      >
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="module-rule pt-3">
+            <h2 id="clients-heading" className="text-2xl font-bold">
+              Major Clients
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
+              Organisations that engage Bonny Vocational Center for workforce training,
+              assessment and technical skills development.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <ClientMarquee items={CLIENTS} speed={42} />
+        </div>
+      </section>
+
 
 
 
