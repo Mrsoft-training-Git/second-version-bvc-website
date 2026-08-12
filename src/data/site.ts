@@ -181,7 +181,6 @@ export const QUICK_LINKS = [
 export const TOP_RESOURCES = [
   { label: "programs", to: "/programs" },
   { label: "departments", to: "/departments" },
-  { label: "all resources", to: "/education" },
   { label: "events", to: "/campus-life" },
 ];
 
