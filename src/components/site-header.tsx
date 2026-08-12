@@ -8,10 +8,10 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
-  const scrollToSponsors = () => {
+  const scrollToSection = (id: string) => {
     setOpen(false);
     const scroll = () => {
-      const el = document.getElementById("sponsors");
+      const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     };
     if (window.location.pathname !== "/") {
@@ -61,7 +61,7 @@ export function SiteHeader() {
               <button
                 key={item.label}
                 type="button"
-                onClick={() => scrollToSponsors()}
+                onClick={() => scrollToSection(item.hash)}
                 className={navLinkClass}
               >
                 {item.label}
@@ -114,7 +114,7 @@ export function SiteHeader() {
                 <button
                   key={item.label}
                   type="button"
-                  onClick={scrollToSponsors}
+                  onClick={() => scrollToSection(item.hash)}
                   className="block w-full border-b border-primary-foreground/15 py-3 text-left font-display text-sm font-semibold uppercase tracking-wide text-primary-foreground/90 transition-colors last:border-b-0 hover:text-gold"
                 >
                   {item.label}

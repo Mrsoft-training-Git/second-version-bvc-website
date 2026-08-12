@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 import metrologyImg from "@/assets/Picture67.jpg.asset.json";
 import refrigerationImg from "@/assets/Picture70.jpg.asset.json";
 import weldingImg from "@/assets/Picture69.jpg.asset.json";
-import electricalImg from "@/assets/news-electrical.jpg";
-import ictImg from "@/assets/news-ict.jpg";
-import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
 import { DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
+import { newsImage } from "@/lib/news-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ContentCard } from "@/components/content-card";
 import { ProgramShowcase } from "@/components/program-showcase";
@@ -38,7 +36,7 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const CARD_IMAGES = [electricalImg, ictImg, graduationImg];
+
 
 const SPOTLIGHT_IMAGES: Record<string, string> = {
   metrology: metrologyImg.url,
@@ -149,7 +147,7 @@ function Home() {
       </section>
 
       {/* News modules */}
-      <section aria-labelledby="news-heading" className="mx-auto max-w-6xl px-4 py-14">
+      <section id="news" aria-labelledby="news-heading" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-14">
         <div className="module-rule flex items-end justify-between pt-3">
           <h2 id="news-heading" className="text-2xl font-bold">
             News
@@ -170,7 +168,7 @@ function Home() {
               <ContentCard
                 to="/news/$slug"
                 params={{ slug: s.slug }}
-                image={CARD_IMAGES[i % CARD_IMAGES.length]}
+                image={newsImage(s.slug, i)}
                 badge={s.category}
                 badgeVariant="neutral"
                 title={s.title}
