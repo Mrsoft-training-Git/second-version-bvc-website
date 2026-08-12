@@ -20,7 +20,15 @@ const BY_CATEGORY: Record<string, string> = {
   "Skills Proficiency": electricalImg,
 };
 
+const BY_SLUG: Record<string, string> = {
+  "engineering-fabrication-welding-l3": weldingAsset.url,
+  "engineering-maintenance-technology-l2": maintenanceAsset.url,
+  "engineering-electrical-electronic-l3": electricalAsset.url,
+  "engineering-maintenance-installation-commissioning-l3": commissioningAsset.url,
+};
+
 export function programImage(slug: string, index = 0) {
+  if (BY_SLUG[slug]) return BY_SLUG[slug];
   const category = getProgram(slug)?.category;
   return (category && BY_CATEGORY[category]) || POOL[index % POOL.length];
 }
