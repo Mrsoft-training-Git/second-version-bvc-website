@@ -7,11 +7,11 @@ import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
 import campusImg from "@/assets/campus.jpg";
-import { CITY_GUILDS_PROGRAMS, DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ContentCard } from "@/components/content-card";
-
+import { ProgramShowcase } from "@/components/program-showcase";
 
 
 
@@ -127,40 +127,8 @@ function Home() {
     <>
       <SpotlightCarousel />
 
-      {/* Programs */}
-      <section aria-labelledby="programs-heading" className="mx-auto max-w-6xl px-4 py-14">
-        <div className="module-rule flex items-end justify-between pt-3">
-          <h2 id="programs-heading" className="text-2xl font-bold">
-            Programs
-          </h2>
-          <Link
-            to="/programs"
-            className="font-display text-xs font-semibold tracking-wide text-primary uppercase link-underline"
-          >
-            All programs
-          </Link>
-        </div>
-
-        <ul className="news-scroller mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
-          {CITY_GUILDS_PROGRAMS.map((p, i) => (
-            <li key={p.slug} className="w-[300px] shrink-0 snap-start sm:w-[420px]">
-              <ContentCard
-                to="/programs/$slug"
-                params={{ slug: p.slug }}
-                image={programImage(p.slug, i)}
-                alt={p.name}
-                badge={p.category}
-                badgeVariant="primary"
-                title={p.name}
-                body={p.body}
-                meta={p.duration}
-                cta="Entry requirements"
-              />
-            </li>
-          ))}
-        </ul>
-      </section>
-
+      {/* Programs showcase */}
+      <ProgramShowcase />
 
 
       {/* Facts band */}
