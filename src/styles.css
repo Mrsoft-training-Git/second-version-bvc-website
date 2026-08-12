@@ -183,6 +183,7 @@
   }
   to {
     transform: translateX(0);
+  }
 }
 
 /* Major clients: gentle staggered float, synced to the marquee cadence */
