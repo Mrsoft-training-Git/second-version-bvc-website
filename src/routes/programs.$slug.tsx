@@ -92,11 +92,6 @@ function ProgramDetail() {
           </h1>
           <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm">
             <div className="flex items-center gap-2">
-              <CalendarDays className="h-4 w-4 text-gold" />
-              <dt className="sr-only">Duration</dt>
-              <dd>{isND ? program.duration : `${program.days} training days`}</dd>
-            </div>
-            <div className="flex items-center gap-2">
               <BadgeCheck className="h-4 w-4 text-gold" />
               <dt className="sr-only">Awarding body</dt>
               <dd>{isND ? "NBTE approved" : "City & Guilds accredited"}</dd>
