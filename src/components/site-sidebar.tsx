@@ -74,11 +74,6 @@ export function SiteSidebar() {
                 Privacy
               </Link>
             </li>
-            <li>
-              <Link to="/about" className="link-underline">
-                Accessibility
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
