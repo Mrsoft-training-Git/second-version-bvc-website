@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import metrologyImg from "@/assets/Picture67.jpg.asset.json";
 import refrigerationImg from "@/assets/Picture70.jpg.asset.json";
-import culinaryImg from "@/assets/Picture75.jpg.asset.json";
+import weldingImg from "@/assets/Picture69.jpg.asset.json";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
@@ -43,7 +43,7 @@ const CARD_IMAGES = [electricalImg, ictImg, graduationImg];
 const SPOTLIGHT_IMAGES: Record<string, string> = {
   metrology: metrologyImg.url,
   refrigeration: refrigerationImg.url,
-  culinary: culinaryImg.url,
+  welding: weldingImg.url,
 };
 
 function SpotlightCarousel() {
