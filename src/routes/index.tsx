@@ -48,7 +48,7 @@ function SpotlightCarousel() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % SPOTLIGHTS.length), 120000);
+    const id = setInterval(() => setIndex((i) => (i + 1) % SPOTLIGHTS.length), 60000);
     return () => clearInterval(id);
   }, []);
 
