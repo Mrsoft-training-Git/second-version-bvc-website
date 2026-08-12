@@ -100,6 +100,30 @@ export function ProgramShowcase({
                   className="h-full w-full object-cover"
                 />
                 {!isActive && <span className="absolute inset-0 bg-ink/50" />}
+
+                {/* Overlaid caption on the active slide */}
+                {isActive && !hero && (
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/95 via-ink/70 to-transparent p-5 pt-16 sm:p-8 sm:pt-24">
+                    <div key={p.slug} className="animate-fade-in">
+                      <p className="font-display text-[10px] font-semibold tracking-[0.16em] text-gold uppercase">
+                        City &amp; Guilds
+                      </p>
+                      <h2
+                        id="program-showcase-heading"
+                        className="mt-2 max-w-xl font-display text-xl font-bold leading-tight text-ink-foreground sm:text-2xl lg:text-3xl"
+                      >
+                        {p.name}
+                      </h2>
+                      <Link
+                        to="/programs/$slug"
+                        params={{ slug: p.slug }}
+                        className="mt-4 inline-block border border-gold bg-gold px-5 py-2 font-display text-[11px] font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold sm:mt-5"
+                      >
+                        Entry requirements
+                      </Link>
+                    </div>
+                  </figcaption>
+                )}
               </figure>
             );
           })}
