@@ -37,7 +37,6 @@ export function ProgramShowcase({
     return () => clearInterval(id);
   }, [go]);
 
-  const active = items[index];
 
   return (
     <section
