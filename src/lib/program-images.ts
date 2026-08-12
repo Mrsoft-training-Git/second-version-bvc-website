@@ -69,6 +69,13 @@ const BY_SLUG: Record<string, string> = {
   "basic-electrical-installation": electricalInstallAsset.url,
   scaffolding: scaffoldingAsset.url,
   "food-preparation-proficiency": foodPrepAsset.url,
+  "nd-mechanical-engineering-technology": ndMechanicalAsset.url,
+  "nd-electrical-and-electronics-engineering-technology": ndElectricalAsset.url,
+  "nd-computer-science": ndComputerAsset.url,
+  "nd-hospitality-management-technology": ndHospitalityAsset.url,
+  "nd-welding-and-fabrication-technology": ndWeldingAsset.url,
+  "nd-building-technology": ndBuildingAsset.url,
+  "nd-business-administration-and-management": ndBusinessAsset.url,
 };
 
 export function programImage(slug: string, index = 0) {
