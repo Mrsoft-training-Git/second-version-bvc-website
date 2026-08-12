@@ -59,17 +59,11 @@ function Programs() {
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
-                  to="/programs/national-diploma"
+                  to="/departments"
                   className="group inline-flex items-center gap-2 border border-gold bg-gold px-5 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
                 >
-                  All ND programmes
+                  Academic departments
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
-                <Link
-                  to="/departments"
-                  className="inline-flex items-center border border-ink-foreground/30 px-5 py-2.5 font-display text-xs font-semibold tracking-[0.12em] uppercase transition-colors hover:border-gold hover:text-gold"
-                >
-                  Departments
                 </Link>
               </div>
             </div>
