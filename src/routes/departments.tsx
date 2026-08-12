@@ -1,10 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, GraduationCap, UserRound } from "lucide-react";
 
-import { ProgramCard } from "@/components/program-card";
 import { DEPARTMENTS } from "@/data/departments";
-import { getProgram } from "@/data/programs";
-import { programImage } from "@/lib/program-images";
 
 export const Route = createFileRoute("/departments")({
   head: () => ({
