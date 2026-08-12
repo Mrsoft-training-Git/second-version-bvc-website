@@ -70,7 +70,7 @@ export function ContentCard({
 
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
 
-        <div className="mt-auto flex items-center justify-between border-t border-border pt-4 mt-auto">
+        <div className="mt-auto flex items-center justify-between border-t border-border pt-4">
           {meta ? (
             <span className="text-xs font-medium text-muted-foreground">{meta}</span>
           ) : (
