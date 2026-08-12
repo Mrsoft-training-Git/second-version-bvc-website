@@ -11,6 +11,8 @@ export type Department = {
   /** Slug of the ND programme offered by this department. */
   programSlug: string;
   programName: string;
+  /** City & Guilds / Skills Proficiency programmes delivered by this department. */
+  programSlugs: string[];
 };
 
 export const DEPARTMENTS: Department[] = [
@@ -23,6 +25,11 @@ export const DEPARTMENTS: Department[] = [
     hodRemit:
       "Provides academic leadership, oversees curriculum implementation, promotes quality assurance, coordinates industry engagement, and ensures students receive high-quality education aligned with NBTE standards and industry expectations.",
     programSlug: "nd-mechanical-engineering-technology",
+    programSlugs: [
+      "engineering-maintenance-technology-l2",
+      "engineering-maintenance-installation-commissioning-l3",
+      "basic-refrigeration-air-conditioning",
+    ],
     programName: "National Diploma in Mechanical Engineering Technology",
   },
   {
@@ -34,6 +41,9 @@ export const DEPARTMENTS: Department[] = [
     hodRemit:
       "Provides leadership in academic planning, workshop management, curriculum development, industry collaboration, student mentorship and quality assurance.",
     programSlug: "nd-welding-and-fabrication-technology",
+    programSlugs: [
+      "engineering-fabrication-welding-l3",
+    ],
     programName: "National Diploma in Welding and Fabrication Technology",
   },
   {
@@ -45,6 +55,10 @@ export const DEPARTMENTS: Department[] = [
     hodRemit:
       "Oversees curriculum implementation, laboratory development, academic quality, staff development and partnerships with industry.",
     programSlug: "nd-electrical-and-electronics-engineering-technology",
+    programSlugs: [
+      "engineering-electrical-electronic-l3",
+      "basic-electrical-installation",
+    ],
     programName: "National Diploma in Electrical and Electronics Engineering Technology",
   },
   {
@@ -56,6 +70,12 @@ export const DEPARTMENTS: Department[] = [
     hodRemit:
       "Provides strategic academic leadership, supports curriculum innovation, strengthens industry partnerships and promotes excellence in business education.",
     programSlug: "nd-business-administration-and-management",
+    programSlugs: [
+      "principles-business-administration-l2",
+      "principles-business-administration-l3",
+      "business-support-l2",
+      "business-support-l3",
+    ],
     programName: "National Diploma in Business Administration and Management",
   },
   {
@@ -67,6 +87,15 @@ export const DEPARTMENTS: Department[] = [
     hodRemit:
       "Leads academic planning, coordinates hospitality training, strengthens industry partnerships and ensures quality delivery of hospitality education.",
     programSlug: "nd-hospitality-management-technology",
+    programSlugs: [
+      "food-preparation-culinary-arts-l2",
+      "culinary-arts-patisserie-l2",
+      "food-and-beverage-service-l2",
+      "culinary-arts-supervision-l3",
+      "professional-patisserie-confectionery-l3",
+      "food-safety-in-catering-l2",
+      "food-preparation-proficiency",
+    ],
     programName: "National Diploma in Hospitality Management Technology",
   },
   {
@@ -78,6 +107,12 @@ export const DEPARTMENTS: Department[] = [
     hodRemit:
       "Provides academic leadership, oversees curriculum implementation, supports innovation and strengthens collaboration with the ICT industry.",
     programSlug: "nd-computer-science",
+    programSlugs: [
+      "it-systems-support-l2",
+      "it-systems-support-l3",
+      "ict-professionals-systems-principles-l4",
+      "ict-professionals-systems-principles-l4-unit-route",
+    ],
     programName: "National Diploma in Computer Science",
   },
   {
@@ -89,6 +124,14 @@ export const DEPARTMENTS: Department[] = [
     hodRemit:
       "Provides academic and administrative leadership, ensures quality assurance, promotes industry engagement and supports continuous improvement in teaching and practical training.",
     programSlug: "nd-building-technology",
+    programSlugs: [
+      "basic-plumbing",
+      "scaffolding",
+    ],
     programName: "National Diploma in Building Technology",
   },
 ];
+
+export function departmentForProgram(slug: string) {
+  return DEPARTMENTS.find((d) => d.programSlug === slug || d.programSlugs.includes(slug));
+}
