@@ -11,6 +11,10 @@ import itSupportAsset from "@/assets/Picture38.jpg.asset.json";
 import itHardwareAsset from "@/assets/Picture41.jpg.asset.json";
 import itLabAsset from "@/assets/Picture48.jpg.asset.json";
 import itNetworkAsset from "@/assets/Picture51.jpg.asset.json";
+import adminBindingAsset from "@/assets/Picture14.jpg.asset.json";
+import adminCopyAsset from "@/assets/Picture15.jpg.asset.json";
+import adminTrainingAsset from "@/assets/Picture16.jpg.asset.json";
+import adminOfficeAsset from "@/assets/Picture19.jpg.asset.json";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
@@ -43,6 +47,11 @@ const BY_SLUG: Record<string, string> = {
   "it-systems-support-l3": itHardwareAsset.url,
   "ict-professionals-systems-principles-l4": itNetworkAsset.url,
   "ict-professionals-systems-principles-l4-unit-route": itLabAsset.url,
+  "principles-business-administration-l2": adminBindingAsset.url,
+  "principles-business-administration-l3": adminOfficeAsset.url,
+  "business-support-l2": adminCopyAsset.url,
+  "business-support-l3": adminBindingAsset.url,
+  "teaching-training-assessing-learning-l3": adminTrainingAsset.url,
 };
 
 export function programImage(slug: string, index = 0) {
