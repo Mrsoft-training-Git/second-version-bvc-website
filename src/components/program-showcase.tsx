@@ -1,9 +1,21 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { CITY_GUILDS_PROGRAMS } from "@/data/site";
+import { PROGRAM_CATEGORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { cn } from "@/lib/utils";
+
+/** One representative programme photo per category. */
+const CATEGORY_IMAGE_SLUG: Record<string, string> = {
+  Engineering: "engineering-fabrication-welding-l3",
+  "Hospitality & Culinary": "culinary-arts-supervision-l3",
+  ICT: "ict-professionals-systems-principles-l4",
+  "Business & Education": "principles-business-administration-l3",
+  "Skills Proficiency": "basic-electrical-installation",
+};
+
+const slugify = (s: string) =>
+  s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 /**
  * Dark "product showcase" carousel: one large centred visual with the two
@@ -24,7 +36,11 @@ export function ProgramShowcase({
   title?: string;
   intro?: string;
 }) {
-  const items = CITY_GUILDS_PROGRAMS;
+  const items = PROGRAM_CATEGORIES.map((c) => ({
+    slug: slugify(c),
+    name: c,
+    imageSlug: CATEGORY_IMAGE_SLUG[c] ?? "",
+  }));
   const [index, setIndex] = useState(0);
 
   const go = useCallback(
@@ -36,6 +52,7 @@ export function ProgramShowcase({
     const id = setInterval(() => go(1), 8000);
     return () => clearInterval(id);
   }, [go]);
+
 
 
   return (
@@ -93,7 +110,7 @@ export function ProgramShowcase({
                 }}
               >
                 <img
-                  src={programImage(p.slug, i)}
+                  src={programImage(p.imageSlug, i)}
                   alt={p.name}
                   loading={i === 0 ? "eager" : "lazy"}
                   className="h-full w-full object-cover"
@@ -105,7 +122,7 @@ export function ProgramShowcase({
                   <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/95 via-ink/70 to-transparent p-5 pt-16 sm:p-8 sm:pt-24">
                     <div key={p.slug} className="animate-fade-in">
                       <p className="font-display text-[10px] font-semibold tracking-[0.16em] text-gold uppercase">
-                        City &amp; Guilds
+                        Programme area
                       </p>
                       <h2
                         id="program-showcase-heading"
@@ -114,13 +131,14 @@ export function ProgramShowcase({
                         {p.name}
                       </h2>
                       <Link
-                        to="/programs/$slug"
-                        params={{ slug: p.slug }}
+                        to="/programs"
+                        hash={p.slug}
                         className="mt-4 inline-block border border-gold bg-gold px-5 py-2 font-display text-[11px] font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-all duration-300 hover:bg-transparent hover:text-gold sm:mt-5"
                       >
-                        Entry requirements
+                        Explore programmes
                       </Link>
                     </div>
+
                   </figcaption>
                 )}
               </figure>
