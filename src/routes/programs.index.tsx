@@ -110,9 +110,12 @@ function Programs() {
                 </span>
               </div>
 
-              <ul className="mt-7 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <ul className="news-scroller mt-7 -mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-2">
                 {items.map((p, i) => (
-                  <li key={p.slug}>
+                  <li
+                    key={p.slug}
+                    className="w-[280px] shrink-0 snap-start sm:w-[320px] lg:w-[340px]"
+                  >
                     <ProgramCard
                       to="/programs/$slug"
                       params={{ slug: p.slug }}
