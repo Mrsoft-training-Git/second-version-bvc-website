@@ -1,6 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Award, BadgeCheck, Briefcase, CalendarDays, ClipboardList } from "lucide-react";
 
+import { ProgramCard } from "@/components/program-card";
+import { departmentForProgram } from "@/data/departments";
 import { getProgram, type Program } from "@/data/programs";
 import { programImage } from "@/lib/program-images";
 
@@ -58,6 +60,11 @@ function ProgramDetail() {
   const { program } = Route.useLoaderData() as { program: Program };
   const image = programImage(program.slug);
   const isND = program.award === "nd";
+  const department = departmentForProgram(program.slug);
+  const siblings = (department?.programSlugs ?? [])
+    .filter((s) => s !== program.slug)
+    .map((s) => getProgram(s))
+    .filter((p): p is Program => Boolean(p));
 
   return (
     <article>
@@ -180,6 +187,48 @@ function ProgramDetail() {
 
           </aside>
         </div>
+
+        {department && (
+          <section className="mt-16 border-t border-border pt-10">
+            <p className="font-display text-[11px] font-semibold tracking-[0.16em] text-primary uppercase">
+              {isND ? "Delivered by" : "Department"}
+            </p>
+            <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
+              <h2 className="font-display text-xl font-bold text-foreground">{department.name}</h2>
+              <Link
+                to="/departments"
+                hash={department.slug}
+                className="font-display text-[11px] font-semibold tracking-[0.14em] text-primary uppercase hover:text-gold"
+              >
+                Department overview
+              </Link>
+            </div>
+
+            {siblings.length > 0 && (
+              <>
+                <h3 className="mt-8 border-b border-border pb-3 font-display text-base font-bold text-foreground">
+                  {isND ? "Programmes under this diploma" : "Other programmes in this department"}
+                </h3>
+                <ul className="news-scroller mt-6 -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-2">
+                  {siblings.map((p, i) => (
+                    <li key={p.slug} className="w-[260px] shrink-0 snap-start sm:w-[300px]">
+                      <ProgramCard
+                        to="/programs/$slug"
+                        params={{ slug: p.slug }}
+                        image={programImage(p.slug, i)}
+                        alt={p.name}
+                        title={p.name}
+                        body={p.body}
+                        duration={p.duration}
+                        cta="Programme details"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </section>
+        )}
       </div>
     </article>
   );
