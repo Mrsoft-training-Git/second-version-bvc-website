@@ -4,10 +4,11 @@ import metrologyImg from "@/assets/Picture67.jpg.asset.json";
 import refrigerationImg from "@/assets/Picture70.jpg.asset.json";
 import weldingImg from "@/assets/Picture69.jpg.asset.json";
 
-import { DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { CLIENTS, DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { newsImage } from "@/lib/news-images";
 import { LogoMarquee } from "@/components/logo-marquee";
+import { ClientMarquee } from "@/components/client-marquee";
 import { ContentCard } from "@/components/content-card";
 import { ProgramShowcase } from "@/components/program-showcase";
 
@@ -203,6 +204,29 @@ function Home() {
         <div className="mt-8 space-y-2">
           <LogoMarquee items={SPONSORS} direction="left" speed={38} />
           <LogoMarquee items={DONORS} direction="right" speed={46} />
+        </div>
+      </section>
+
+      {/* Major clients */}
+      <section
+        id="clients"
+        aria-labelledby="clients-heading"
+        className="scroll-mt-24 border-t border-border py-14"
+      >
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="module-rule pt-3">
+            <h2 id="clients-heading" className="text-2xl font-bold">
+              Major Clients
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
+              Organisations that engage Bonny Vocational Center for workforce training,
+              assessment and technical skills development.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <ClientMarquee items={CLIENTS} speed={42} />
         </div>
       </section>
 

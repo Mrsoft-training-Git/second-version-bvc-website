@@ -7,6 +7,16 @@ import samsungLogo from "@/assets/logos/samsung.png.asset.json";
 import ncdmbLogo from "@/assets/logos/ncdmb.jpg.asset.json";
 import amanyanaboLogo from "@/assets/logos/amanyanabo.png.asset.json";
 import tcaLogo from "@/assets/logos/tca.png.asset.json";
+import arcoLogo from "@/assets/clients/arco_maintenance_and_engineering_limited.png.asset.json";
+import arewaLogo from "@/assets/clients/arewa_innovative_solutions_limited.png.asset.json";
+import bucLogo from "@/assets/clients/bonny_utility_company_limited.png.asset.json";
+import cfsLogo from "@/assets/clients/catering_facilities_solutions_limited.png.asset.json";
+import courdeauLogo from "@/assets/clients/courdeau_catering_nigeria_limited.png.asset.json";
+import dbnLogo from "@/assets/clients/delattre_bezons_nigeria_limited.jpg.asset.json";
+import dexterousLogo from "@/assets/clients/dexterous_applied_training_institute.png.asset.json";
+import ensLogo from "@/assets/clients/ens_catering_suppermarket_limited.jpg.asset.json";
+import fmxLogo from "@/assets/clients/fmx_integrated_services_limited.png.asset.json";
+import hyundaiClientLogo from "@/assets/clients/hyundai_heavy_industries_company_limited.png.asset.json";
 
 export const NAV = [
   { label: "Home", to: "/" },
@@ -164,6 +174,19 @@ export const DONORS = [
   { name: "Nigeria LNG Limited", logo: nlngLogo.url },
   { name: "Schneider Electric", logo: schneiderLogo.url },
   { name: "ABB Nigeria Limited", logo: abbLogo.url },
+];
+
+export const CLIENTS = [
+  { name: "ARCO Maintenance and Engineering Limited", logo: arcoLogo.url },
+  { name: "Arewa Innovative Solutions Limited", logo: arewaLogo.url },
+  { name: "Bonny Utility Company Limited", logo: bucLogo.url },
+  { name: "Catering & Facilities Solutions Limited", logo: cfsLogo.url },
+  { name: "Courdeau Catering Nigeria Limited", logo: courdeauLogo.url },
+  { name: "Delattre Bezons Nigeria Limited", logo: dbnLogo.url },
+  { name: "Dexterous Applied Training Institute", logo: dexterousLogo.url },
+  { name: "ENS Catering & Supermarket Limited", logo: ensLogo.url },
+  { name: "FMX Integrated Services Limited", logo: fmxLogo.url },
+  { name: "Hyundai Heavy Industries Company Limited", logo: hyundaiClientLogo.url },
 ];
 
 
