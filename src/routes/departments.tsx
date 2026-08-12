@@ -1,10 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, GraduationCap, UserRound } from "lucide-react";
 
-import { ProgramCard } from "@/components/program-card";
 import { DEPARTMENTS } from "@/data/departments";
-import { getProgram } from "@/data/programs";
-import { programImage } from "@/lib/program-images";
 
 export const Route = createFileRoute("/departments")({
   head: () => ({
@@ -128,41 +125,8 @@ function Departments() {
                 </aside>
               </div>
 
-              {dept.programSlugs.length > 0 && (
-                <div className="border-t border-border p-7 sm:p-9">
-                  <div className="flex items-end justify-between border-b border-border pb-3">
-                    <h3 className="font-display text-base font-bold text-foreground">
-                      Programmes in this department
-                    </h3>
-                    <span className="font-display text-[11px] font-semibold tracking-[0.14em] text-muted-foreground uppercase">
-                      {dept.programSlugs.length + 1} programmes
-                    </span>
-                  </div>
-                  <ul className="news-scroller mt-6 -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-2">
-                    {[dept.programSlug, ...dept.programSlugs].map((slug, j) => {
-                      const p = getProgram(slug);
-                      if (!p) return null;
-                      return (
-                        <li
-                          key={slug}
-                          className="w-[260px] shrink-0 snap-start sm:w-[300px]"
-                        >
-                          <ProgramCard
-                            to="/programs/$slug"
-                            params={{ slug: p.slug }}
-                            image={programImage(p.slug, j)}
-                            alt={p.name}
-                            title={p.name}
-                            body={p.body}
-                            duration={p.duration}
-                            cta="Programme details"
-                          />
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              )}
+
+
             </li>
           ))}
         </ul>
