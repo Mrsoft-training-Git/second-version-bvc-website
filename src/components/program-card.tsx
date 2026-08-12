@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, Clock } from "lucide-react";
+import { ArrowRight, BarChart3 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type ProgramCardProps = {
@@ -9,7 +9,7 @@ type ProgramCardProps = {
   alt?: string;
   title: string;
   body: string;
-  duration: string;
+  duration?: string;
   cta?: string;
   className?: string;
 };
@@ -25,7 +25,6 @@ export function ProgramCard({
   alt = "",
   title,
   body,
-  duration,
   cta = "View curriculum",
   className,
 }: ProgramCardProps) {
