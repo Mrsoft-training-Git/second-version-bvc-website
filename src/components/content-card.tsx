@@ -68,7 +68,7 @@ export function ContentCard({
           {title}
         </h3>
 
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+        <p className="mt-2 mb-5 text-sm leading-relaxed text-muted-foreground">{body}</p>
 
         <div className="mt-auto flex items-center justify-between border-t border-border pt-4">
           {meta ? (

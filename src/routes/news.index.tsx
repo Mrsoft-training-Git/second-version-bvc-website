@@ -36,7 +36,7 @@ function NewsIndex() {
       <div className="mx-auto max-w-6xl px-4 py-14">
         <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {STORIES.map((s, i) => (
-            <li key={s.slug}>
+            <li key={s.slug} className="h-full">
               <ContentCard
                 to="/news/$slug"
                 params={{ slug: s.slug }}
