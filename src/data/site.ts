@@ -187,6 +187,16 @@ export const CLIENTS = [
   { name: "ENS Catering & Supermarket Limited", logo: ensLogo.url },
   { name: "FMX Integrated Services Limited", logo: fmxLogo.url },
   { name: "Hyundai Heavy Industries Company Limited", logo: hyundaiClientLogo.url },
+  { name: "NLNG Ship Management Limited", logo: nsmlLogo.url },
+  { name: "NNPC Exploration & Production Limited", logo: nnpcLogo.url },
+  { name: "Pan Nigeria Limited", logo: panLogo.url },
+  { name: "Pivot GIS Limited", logo: pivotLogo.url },
+  { name: "Ponticelli Nigeria Limited", logo: ponticelliLogo.url },
+  { name: "Rivers State Sustainable Development Agency", logo: rssdaLogo.url },
+  { name: "S.J. Abed General Enterprises Limited", logo: sjabedLogo.url },
+  { name: "Samsung Heavy Industries Company Limited", logo: samsungClientLogo.url },
+  { name: "Shell Petroleum Development Company of Nigeria Limited", logo: shellLogo.url },
+  { name: "Thompson Grace Investment Limited", logo: thompsonGraceLogo.url },
 ];
 
 
