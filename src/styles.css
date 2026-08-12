@@ -183,6 +183,16 @@
   }
   to {
     transform: translateX(0);
+}
+
+/* Major clients: gentle staggered float, synced to the marquee cadence */
+@keyframes client-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
 
