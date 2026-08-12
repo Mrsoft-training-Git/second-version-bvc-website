@@ -20,6 +20,13 @@ import racAsset from "@/assets/Picture11.jpg.asset.json";
 import electricalInstallAsset from "@/assets/Picture22.jpg.asset.json";
 import scaffoldingAsset from "@/assets/Picture56.jpg.asset.json";
 import foodPrepAsset from "@/assets/Picture74-2.jpg.asset.json";
+import ndMechanicalAsset from "@/assets/Picture67.jpg.asset.json";
+import ndElectricalAsset from "@/assets/Picture13.jpg.asset.json";
+import ndComputerAsset from "@/assets/Picture48.jpg.asset.json";
+import ndHospitalityAsset from "@/assets/Picture75.jpg.asset.json";
+import ndWeldingAsset from "@/assets/Picture68.jpg.asset.json";
+import ndBuildingAsset from "@/assets/Picture56.jpg.asset.json";
+import ndBusinessAsset from "@/assets/Picture16.jpg.asset.json";
 import electricalImg from "@/assets/news-electrical.jpg";
 import ictImg from "@/assets/news-ict.jpg";
 import graduationImg from "@/assets/news-graduation.jpg";
@@ -62,6 +69,13 @@ const BY_SLUG: Record<string, string> = {
   "basic-electrical-installation": electricalInstallAsset.url,
   scaffolding: scaffoldingAsset.url,
   "food-preparation-proficiency": foodPrepAsset.url,
+  "nd-mechanical-engineering-technology": ndMechanicalAsset.url,
+  "nd-electrical-and-electronics-engineering-technology": ndElectricalAsset.url,
+  "nd-computer-science": ndComputerAsset.url,
+  "nd-hospitality-management-technology": ndHospitalityAsset.url,
+  "nd-welding-and-fabrication-technology": ndWeldingAsset.url,
+  "nd-building-technology": ndBuildingAsset.url,
+  "nd-business-administration-and-management": ndBusinessAsset.url,
 };
 
 export function programImage(slug: string, index = 0) {
