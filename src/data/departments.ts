@@ -28,7 +28,6 @@ export const DEPARTMENTS: Department[] = [
     programSlugs: [
       "engineering-maintenance-technology-l2",
       "engineering-maintenance-installation-commissioning-l3",
-      "basic-refrigeration-air-conditioning",
     ],
     programName: "National Diploma in Mechanical Engineering Technology",
   },
@@ -56,8 +55,9 @@ export const DEPARTMENTS: Department[] = [
       "Oversees curriculum implementation, laboratory development, academic quality, staff development and partnerships with industry.",
     programSlug: "nd-electrical-and-electronics-engineering-technology",
     programSlugs: [
-      "engineering-electrical-electronic-l3",
       "basic-electrical-installation",
+      "basic-refrigeration-air-conditioning",
+      "engineering-electrical-electronic-l3",
     ],
     programName: "National Diploma in Electrical and Electronics Engineering Technology",
   },
@@ -75,6 +75,7 @@ export const DEPARTMENTS: Department[] = [
       "principles-business-administration-l3",
       "business-support-l2",
       "business-support-l3",
+      "teaching-training-assessing-learning-l3",
     ],
     programName: "National Diploma in Business Administration and Management",
   },
