@@ -40,7 +40,7 @@ function NewsIndex() {
               <ContentCard
                 to="/news/$slug"
                 params={{ slug: s.slug }}
-                image={IMAGES[i % IMAGES.length]}
+                image={newsImage(s.slug, i)}
                 badge={s.category}
                 badgeVariant="neutral"
                 title={s.title}
