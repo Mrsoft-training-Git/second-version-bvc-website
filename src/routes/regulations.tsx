@@ -333,10 +333,10 @@ function Regulations() {
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
-                  to="/contact"
+                  to="/apply"
                   className="inline-block border border-gold bg-gold px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
                 >
-                  Contact admissions
+                  Start an application
                 </Link>
                 <Link
                   to="/departments"
