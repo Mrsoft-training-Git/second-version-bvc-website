@@ -116,6 +116,7 @@ const MANAGEMENT = [
   {
     name: "Dr. Micah Dappa Ibiama",
     role: "Technical Director",
+    img: micahImg.url,
     bio: [
       "Dr. Micah Dappa Ibiama is the Technical Director at Bonny Vocational Centre, with 25 years of experience in technical education, quality assurance, and educational management.",
       "He holds a Master of Education in Educational Management, a Master of Science in Technical Education (Building Technology), and a Doctor of Philosophy in Administration of Higher Education. He also holds professional certifications including the CIPD Level 7 Diploma in Human Resource Development, Certified ISO 21001 Lead Implementer, and Certified Educational Management Professional.",
@@ -125,6 +126,7 @@ const MANAGEMENT = [
   {
     name: "Mr. Filla Enoch Bobo",
     role: "Head, Academics",
+    img: fillaImg.url,
     bio: [
       "Mr. Filla Enoch Bobo is the Head, Academics at Bonny Vocational Centre and an experienced education professional with over twenty years of experience in teaching, academic leadership, and curriculum development.",
       "He holds a Postgraduate Diploma in Technical and Science Education and a B.Sc. in Computer Science/Mathematics. He is a Project Management Professional (PMP), a Project Monitoring and Evaluation Professional, and holds an Advanced Diploma in Teaching, Training and Assessing Competences.",
@@ -134,6 +136,7 @@ const MANAGEMENT = [
   {
     name: "Mr. Christian Halliday",
     role: "Head, Corporate & Consultancy",
+    img: christianImg.url,
     bio: [
       "Mr. Christian Halliday is a seasoned accountant and administrative professional with nineteen years of working experience in the education sector, having served in both lecturing and administrative roles across finance, accounting, administration, contracts and procurement, and strategic management.",
       "He holds a B.Sc. in Accounting, an M.Sc. in Business Administration, an MBA in Management, an M.Sc. in Accounting, and a Ph.D. in Accounting (in view).",
@@ -305,10 +308,20 @@ function About() {
               }`}
             >
               <div className="w-full shrink-0 md:w-1/3">
-                <div className="flex aspect-3/4 w-full items-center justify-center bg-ink shadow-xl">
-                  <span className="font-display text-5xl font-bold tracking-wide text-gold/70">
-                    {initials(m.name)}
-                  </span>
+                <div className="relative flex aspect-3/4 w-full items-center justify-center overflow-hidden bg-ink shadow-xl">
+                  {m.img ? (
+                    <img
+                      src={m.img}
+                      alt={`${m.name}, ${m.role}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover object-top"
+                    />
+                  ) : (
+                    <span className="font-display text-5xl font-bold tracking-wide text-gold/70">
+                      {initials(m.name)}
+                    </span>
+                  )}
+                  <div className="absolute bottom-0 left-0 h-1 w-full bg-gold" />
                 </div>
               </div>
               <div className="w-full md:w-2/3">
