@@ -10,6 +10,10 @@ import kingsleyImg from "@/assets/people/Kingsley.png.asset.json";
 import estherImg from "@/assets/people/Esther.png.asset.json";
 import ibieneboImg from "@/assets/people/Ibinebo.png.asset.json";
 import emeraldImg from "@/assets/people/Emerald.png.asset.json";
+import nbteImg from "@/assets/accreditors/National_Board_for_Technical_Education.png.asset.json";
+import nabtebImg from "@/assets/accreditors/National_Business_and_Technical_Examination.png.asset.json";
+import cityGuildsImg from "@/assets/accreditors/City_Guilds_of_London_Institute.png.asset.json";
+import ilmImg from "@/assets/accreditors/Institute_of_Leadership_and_Management_London.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
