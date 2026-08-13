@@ -32,7 +32,6 @@ import unopsLogo from "@/assets/clients/unops_nigeria_office.png.asset.json";
 export const NAV = [
   { label: "Home", to: "/" },
   { label: "Departments", to: "/departments" },
-  { label: "Regulations", to: "/regulations" },
   { label: "News", to: "/", hash: "news" },
   { label: "About", to: "/about" },
   { label: "Sponsors & Donors", to: "/", hash: "sponsors" },
