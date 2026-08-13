@@ -33,13 +33,30 @@ export const Route = createFileRoute("/about")({
   component: About,
 });
 
-const ACCREDITORS = [
-  "Rivers State Government",
-  "National Board for Technical Education (NBTE)",
-  "National Business and Technical Examinations Board (NABTEB)",
-  "City & Guilds of London Institute (C&G)",
-  "Institute of Leadership and Management (ILM), London",
+const ACCREDITORS: { name: string; short: string; logo?: string }[] = [
+  { name: "Rivers State Government", short: "RSG" },
+  {
+    name: "National Board for Technical Education",
+    short: "NBTE",
+    logo: nbteImg.url,
+  },
+  {
+    name: "National Business and Technical Examinations Board",
+    short: "NABTEB",
+    logo: nabtebImg.url,
+  },
+  {
+    name: "City & Guilds of London Institute",
+    short: "City & Guilds",
+    logo: cityGuildsImg.url,
+  },
+  {
+    name: "Institute of Leadership and Management, London",
+    short: "ILM",
+    logo: ilmImg.url,
+  },
 ];
+
 
 const SECTORS = [
   "Building Services",
