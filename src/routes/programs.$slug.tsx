@@ -99,7 +99,7 @@ function ProgramDetail() {
           </dl>
 
           <Link
-            to="/contact"
+            to="/regulations"
             className="mt-9 inline-block border border-gold bg-gold px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
           >
             Apply for this programme
