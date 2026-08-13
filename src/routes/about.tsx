@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import judeImg from "@/assets/people/Mr._Jude.png.asset.json";
+import micahImg from "@/assets/people/Micah_Ibiama.png.asset.json";
+import fillaImg from "@/assets/people/Enoch_Fila.png.asset.json";
+import christianImg from "@/assets/people/Christian_Halliday.png.asset.json";
 import daggoImg from "@/assets/people/Se-Alabo.png.asset.json";
 import tonyeImg from "@/assets/people/Dr._Tonye.png.asset.json";
 import lucyImg from "@/assets/people/Dame_Lucy.png.asset.json";
