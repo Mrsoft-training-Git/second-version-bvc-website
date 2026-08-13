@@ -14,6 +14,15 @@ import nbteImg from "@/assets/accreditors/National_Board_for_Technical_Education
 import nabtebImg from "@/assets/accreditors/National_Business_and_Technical_Examination.png.asset.json";
 import cityGuildsImg from "@/assets/accreditors/City_Guilds_of_London_Institute.png.asset.json";
 import ilmImg from "@/assets/accreditors/Institute_of_Leadership_and_Management_London.png.asset.json";
+import gcdcImg from "@/assets/partners/Government_Crafts_Development_Centre_Port_Harcourt.png.asset.json";
+import juliusBergerImg from "@/assets/partners/Julius_Berger_Plc.png.asset.json";
+import mandilasImg from "@/assets/partners/Mandilas_Enterprises_Limited.png.asset.json";
+
+const PARTNERS: { name: string; logo: string }[] = [
+  { name: "Government Crafts Development Centre, Port Harcourt", logo: gcdcImg.url },
+  { name: "Julius Berger Plc", logo: juliusBergerImg.url },
+  { name: "Mandilas Enterprises Limited", logo: mandilasImg.url },
+];
 
 export const Route = createFileRoute("/about")({
   head: () => ({
