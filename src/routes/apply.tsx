@@ -77,8 +77,14 @@ const applicationSchema = z.object({
   source: z.string().trim().max(80).optional().or(z.literal("")),
   declarationName: z.string().trim().min(1, REQUIRED).max(120),
   declarationDate: z.string().trim().min(1, REQUIRED),
-  declaration: z.literal("on", { message: "You must accept the declaration" }),
-  regulations: z.literal("on", { message: "You must accept the academic regulations" }),
+  declaration: z.preprocess(
+    (v) => v === "on",
+    z.boolean().refine((v) => v, { message: "You must accept the declaration" }),
+  ),
+  regulations: z.preprocess(
+    (v) => v === "on",
+    z.boolean().refine((v) => v, { message: "You must accept the academic regulations" }),
+  ),
 });
 
 /* --------------------------------- options -------------------------------- */
