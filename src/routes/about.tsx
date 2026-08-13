@@ -47,7 +47,6 @@ export const Route = createFileRoute("/about")({
 });
 
 const ACCREDITORS: { name: string; short: string; logo?: string }[] = [
-  { name: "Rivers State Government", short: "RSG" },
   {
     name: "National Board for Technical Education",
     short: "NBTE",
@@ -420,7 +419,7 @@ function About() {
                 Quality assured
               </span>
               <h2 className="font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
-                Accreditation bodies
+                Accreditation & Awarding bodies
               </h2>
               <div className="mt-5 h-1 w-20 bg-gold" />
             </div>
