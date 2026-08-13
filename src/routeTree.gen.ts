@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisitRouteImport } from './routes/visit'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RegulationsRouteImport } from './routes/regulations'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as EducationRouteImport } from './routes/education'
@@ -32,6 +33,11 @@ const VisitRoute = VisitRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegulationsRoute = RegulationsRouteImport.update({
+  id: '/regulations',
+  path: '/regulations',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProgramsRoute = ProgramsRouteImport.update({
@@ -104,6 +110,7 @@ export interface FileRoutesByFullPath {
   '/education': typeof EducationRoute
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
+  '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
@@ -118,6 +125,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
+  '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
@@ -135,6 +143,7 @@ export interface FileRoutesById {
   '/education': typeof EducationRoute
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
+  '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
@@ -153,6 +162,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/news'
     | '/programs'
+    | '/regulations'
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
@@ -167,6 +177,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/departments'
     | '/education'
+    | '/regulations'
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
@@ -183,6 +194,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/news'
     | '/programs'
+    | '/regulations'
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
@@ -200,6 +212,7 @@ export interface RootRouteChildren {
   EducationRoute: typeof EducationRoute
   NewsRoute: typeof NewsRouteWithChildren
   ProgramsRoute: typeof ProgramsRouteWithChildren
+  RegulationsRoute: typeof RegulationsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VisitRoute: typeof VisitRoute
 }
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/regulations': {
+      id: '/regulations'
+      path: '/regulations'
+      fullPath: '/regulations'
+      preLoaderRoute: typeof RegulationsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/programs': {
@@ -342,6 +362,7 @@ const rootRouteChildren: RootRouteChildren = {
   EducationRoute: EducationRoute,
   NewsRoute: NewsRouteWithChildren,
   ProgramsRoute: ProgramsRouteWithChildren,
+  RegulationsRoute: RegulationsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VisitRoute: VisitRoute,
 }
