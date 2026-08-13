@@ -14,6 +14,15 @@ import nbteImg from "@/assets/accreditors/National_Board_for_Technical_Education
 import nabtebImg from "@/assets/accreditors/National_Business_and_Technical_Examination.png.asset.json";
 import cityGuildsImg from "@/assets/accreditors/City_Guilds_of_London_Institute.png.asset.json";
 import ilmImg from "@/assets/accreditors/Institute_of_Leadership_and_Management_London.png.asset.json";
+import gcdcImg from "@/assets/partners/Government_Crafts_Development_Centre_Port_Harcourt.png.asset.json";
+import juliusBergerImg from "@/assets/partners/Julius_Berger_Plc.png.asset.json";
+import mandilasImg from "@/assets/partners/Mandilas_Enterprises_Limited.png.asset.json";
+
+const PARTNERS: { name: string; logo: string }[] = [
+  { name: "Government Crafts Development Centre, Port Harcourt", logo: gcdcImg.url },
+  { name: "Julius Berger Plc", logo: juliusBergerImg.url },
+  { name: "Mandilas Enterprises Limited", logo: mandilasImg.url },
+];
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -452,6 +461,46 @@ function About() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PARTNERS */}
+      <section className="mx-auto max-w-5xl px-6 py-24 sm:px-12">
+        <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span className="mb-3 inline-block bg-ink px-3 py-1 font-display text-[10px] font-bold tracking-[0.18em] uppercase text-gold">
+              Working together
+            </span>
+            <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl">
+              Partners
+            </h2>
+            <div className="mt-5 h-1 w-20 bg-primary" />
+          </div>
+          <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
+            Institutions and industry partners we collaborate with on training delivery, industrial
+            attachment, and workforce development.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-px bg-ink/10 sm:grid-cols-3">
+          {PARTNERS.map((p) => (
+            <article
+              key={p.name}
+              className="group flex flex-col gap-5 bg-surface p-8 transition-colors hover:bg-brand-tint"
+            >
+              <div className="flex h-20 items-center">
+                <img
+                  src={p.logo}
+                  alt={`${p.name} logo`}
+                  loading="lazy"
+                  className="max-h-20 max-w-[70%] object-contain grayscale transition-all duration-500 group-hover:grayscale-0"
+                />
+              </div>
+              <h3 className="mt-auto font-display text-base font-bold leading-snug text-ink">
+                {p.name}
+              </h3>
+            </article>
+          ))}
         </div>
       </section>
 
