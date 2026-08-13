@@ -385,42 +385,76 @@ function About() {
         </div>
       </section>
 
-      {/* SECTORS + ACCREDITATION */}
-      <section className="mx-auto grid max-w-5xl grid-cols-12 gap-10 px-6 py-20 sm:px-12">
-        <div className="col-span-12 md:col-span-8">
-          <h2 className="mb-8 font-display text-xl font-bold uppercase tracking-[0.16em]">
-            Sectors covered
-          </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-            {SECTORS.map((s) => (
-              <div
-                key={s}
-                className="bg-surface p-4 font-display text-[11px] font-bold uppercase text-primary transition-colors hover:bg-brand-tint"
+      {/* SECTORS */}
+      <section className="mx-auto max-w-5xl px-6 py-20 sm:px-12">
+        <h2 className="mb-8 font-display text-xl font-bold uppercase tracking-[0.16em]">
+          Sectors covered
+        </h2>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+          {SECTORS.map((s) => (
+            <div
+              key={s}
+              className="bg-surface p-4 font-display text-[11px] font-bold uppercase text-primary transition-colors hover:bg-brand-tint"
+            >
+              {s}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ACCREDITATION BODIES */}
+      <section className="bg-surface px-6 py-24 sm:px-12">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="mb-3 inline-block bg-gold px-3 py-1 font-display text-[10px] font-bold tracking-[0.18em] uppercase text-gold-foreground">
+                Quality assured
+              </span>
+              <h2 className="font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
+                Accreditation bodies
+              </h2>
+              <div className="mt-5 h-1 w-20 bg-gold" />
+            </div>
+            <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
+              Every qualification delivered at BVC is externally quality assured by a recognised
+              national or international awarding body.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
+            {ACCREDITORS.map((a) => (
+              <article
+                key={a.name}
+                className="group flex flex-col gap-5 bg-background p-8 transition-colors hover:bg-brand-tint"
               >
-                {s}
-              </div>
+                <div className="flex h-20 items-center">
+                  {a.logo ? (
+                    <img
+                      src={a.logo}
+                      alt={`${a.short} logo`}
+                      loading="lazy"
+                      className="max-h-20 max-w-[70%] object-contain grayscale transition-all duration-500 group-hover:grayscale-0"
+                    />
+                  ) : (
+                    <span className="flex h-16 w-16 items-center justify-center bg-ink font-display text-sm font-bold text-gold">
+                      {a.short}
+                    </span>
+                  )}
+                </div>
+                <div className="mt-auto">
+                  <p className="mb-1 font-display text-[10px] font-bold tracking-[0.18em] uppercase text-gold">
+                    {a.short}
+                  </p>
+                  <h3 className="font-display text-base font-bold leading-snug text-ink">
+                    {a.name}
+                  </h3>
+                </div>
+              </article>
             ))}
           </div>
         </div>
-        <div className="col-span-12 bg-ink p-8 text-ink-foreground md:col-span-4">
-          <h2 className="mb-6 font-display text-lg font-bold uppercase tracking-[0.16em]">
-            Accreditations
-          </h2>
-          <ul className="space-y-4 text-xs text-ink-foreground/65">
-            {ACCREDITORS.map((a, i) => (
-              <li
-                key={a}
-                className={`flex items-start gap-3 ${
-                  i < ACCREDITORS.length - 1 ? "border-b border-ink-foreground/10 pb-3" : ""
-                }`}
-              >
-                <span className="mt-1 h-2 w-2 shrink-0 bg-gold" />
-                {a}
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
+
     </div>
   );
 }
