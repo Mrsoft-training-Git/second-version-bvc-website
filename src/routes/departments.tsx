@@ -41,19 +41,19 @@ function Departments() {
           <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 font-display text-sm">
             <div>
               <dd className="text-2xl font-bold text-gold">7</dd>
-              <dt className="text-xs tracking-[0.14em] text-ink-foreground/70 uppercase">
+              <dt className="text-xs tracking-[0.14em] text-primary-foreground/70 uppercase">
                 Departments
               </dt>
             </div>
             <div>
               <dd className="text-2xl font-bold text-gold">7</dd>
-              <dt className="text-xs tracking-[0.14em] text-ink-foreground/70 uppercase">
+              <dt className="text-xs tracking-[0.14em] text-primary-foreground/70 uppercase">
                 ND programmes
               </dt>
             </div>
             <div>
               <dd className="text-2xl font-bold text-gold">NBTE</dd>
-              <dt className="text-xs tracking-[0.14em] text-ink-foreground/70 uppercase">
+              <dt className="text-xs tracking-[0.14em] text-primary-foreground/70 uppercase">
                 Approved
               </dt>
             </div>
