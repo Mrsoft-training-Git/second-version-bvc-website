@@ -228,7 +228,6 @@ export const TOP_RESOURCES = [
 ];
 
 export const PANEL_LINKS = [
-  { label: "People", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
 
