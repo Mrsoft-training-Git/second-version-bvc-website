@@ -205,33 +205,45 @@ function Contact() {
             </div>
 
             {/* Email + Social */}
-            <div>
-              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Email
-              </h2>
-              <div className="mt-4 flex items-center gap-4">
-                <a
-                  href="mailto:info@bvcbonny.edu.ng"
-                  className="font-display font-semibold transition-colors hover:text-primary"
-                >
-                  info@bvcbonny.edu.ng
-                </a>
-                <span className="h-6 w-px bg-border" aria-hidden />
-                {SOCIAL_LINKS.map((s) => (
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              <div>
+                <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
+                  Email
+                </h2>
+                <p className="mt-4 text-sm">
                   <a
-                    key={s.label}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${s.label} - ${s.handle}`}
-                    className="inline-flex items-center gap-2 font-display font-semibold transition-colors hover:text-primary"
+                    href="mailto:info@bvcbonny.edu.ng"
+                    className="font-display font-semibold transition-colors hover:text-primary"
                   >
-                    <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-gold text-gold-foreground transition-transform duration-300 hover:scale-110">
-                      <Facebook className="h-4 w-4" aria-hidden />
-                    </span>
-                    <span className="hidden text-xs text-muted-foreground sm:inline">{s.handle}</span>
+                    info@bvcbonny.edu.ng
                   </a>
-                ))}
+                </p>
+              </div>
+              <div>
+                <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
+                  Social
+                </h2>
+                <ul className="mt-4 text-sm">
+                  {SOCIAL_LINKS.map((s) => (
+                    <li key={s.label}>
+                      <a
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${s.label} - ${s.handle}`}
+                        className="inline-flex items-center gap-3 font-display font-semibold transition-colors hover:text-primary"
+                      >
+                        <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-gold text-gold-foreground transition-transform duration-300 hover:scale-110">
+                          <Facebook className="h-4 w-4" aria-hidden />
+                        </span>
+                        <span>
+                          <span className="block text-gold">{s.label}</span>
+                          <span className="text-xs text-muted-foreground">{s.handle}</span>
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
