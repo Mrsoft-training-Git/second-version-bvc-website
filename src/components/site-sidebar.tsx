@@ -6,7 +6,7 @@ export function SiteSidebar() {
   return (
     <aside
       aria-label="Site resources"
-      className="relative order-2 border-t border-ink bg-ink text-ink-foreground lg:order-none lg:fixed lg:top-20 lg:left-0 lg:h-[calc(100vh-80px)] lg:overflow-y-auto lg:border-t-0"
+      className="relative order-2 border-t border-ink bg-ink text-ink-foreground lg:order-none lg:sticky lg:top-20 lg:h-[calc(100vh-80px)] lg:overflow-y-auto lg:border-t-0"
     >
       <div className="nav-ribbon-v pointer-events-none absolute inset-y-0 right-0 w-px hidden lg:block" />
 
