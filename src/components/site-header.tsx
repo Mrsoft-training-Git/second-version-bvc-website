@@ -6,6 +6,7 @@ import bvcLogo from "@/assets/bvc-logo.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
 
   const scrollToSection = (id: string) => {
