@@ -34,7 +34,7 @@ export function SiteHeader() {
 
         {/* Logo + wordmark */}
         <Link to="/" className="relative z-10 flex shrink-0 items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground p-1 shadow-inner">
+          <span className="flex h-10 w-10 items-center justify-center bg-primary-foreground p-1 shadow-inner">
             <img
               src={bvcLogo.url}
               alt="Bonny Vocational Centre crest"
