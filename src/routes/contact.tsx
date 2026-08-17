@@ -303,9 +303,8 @@ function Contact() {
                 Monday - Friday, 7:30 AM - 4:30 PM
               </p>
               <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.mapQuery)}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`https://maps.google.com/maps?saddr=Current+Location&daddr=${encodeURIComponent(office.mapQuery)}`}
+                target="_top"
                 className="border border-gold px-4 py-2 font-display text-xs font-semibold tracking-[0.12em] uppercase text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:text-gold-foreground"
               >
                 Get directions
