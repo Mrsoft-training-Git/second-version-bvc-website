@@ -80,25 +80,52 @@ export function SiteHeader() {
 
         {/* Right side: search (mobile) + CTA + mobile toggle */}
         <div className="relative z-10 flex shrink-0 items-center gap-2 lg:gap-3">
-          {/* Mobile search */}
-          <form
-            role="search"
-            className="flex flex-1 items-center lg:hidden"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <label htmlFor="header-search" className="sr-only">
-              Search BVC
-            </label>
-            <div className="relative w-full max-w-[180px]">
-              <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-primary-foreground/50" />
-              <input
-                id="header-search"
-                type="search"
-                placeholder="Search BVC"
-                className="w-full border border-primary-foreground/25 bg-transparent py-1.5 pl-8 pr-2 text-xs text-primary-foreground placeholder:text-primary-foreground/50 focus:border-gold focus:outline-none"
-              />
-            </div>
-          </form>
+          {/* Mobile search - collapsed by default */}
+          <div className="flex items-center lg:hidden">
+            {searchOpen ? (
+              <form
+                role="search"
+                className="flex items-center"
+                onSubmit={(e) => e.preventDefault()}
+              >
+                <label htmlFor="header-search" className="sr-only">
+                  Search BVC
+                </label>
+                <div className="relative w-[170px]">
+                  <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-primary-foreground/50" />
+                  <input
+                    id="header-search"
+                    type="search"
+                    autoFocus
+                    placeholder="Search BVC"
+                    onBlur={(e) => {
+                      if (!e.currentTarget.value) setSearchOpen(false);
+                    }}
+                    className="w-full border border-primary-foreground/25 bg-transparent py-1.5 pl-8 pr-7 text-xs text-primary-foreground placeholder:text-primary-foreground/50 focus:border-gold focus:outline-none"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setSearchOpen(false)}
+                    aria-label="Close search"
+                    className="absolute right-1.5 top-1/2 -translate-y-1/2 text-primary-foreground/60 hover:text-gold"
+                  >
+                    <X className="size-3.5" />
+                  </button>
+                </div>
+              </form>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setSearchOpen(true)}
+                aria-label="Open search"
+                aria-expanded={false}
+                className="flex h-9 w-9 items-center justify-center text-primary-foreground/80 transition-colors hover:text-gold"
+              >
+                <Search className="h-5 w-5" />
+              </button>
+            )}
+          </div>
+
           <Link
             to="/contact"
             className="hidden bg-gold px-5 py-2.5 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
