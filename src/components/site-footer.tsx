@@ -19,8 +19,11 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-lg font-bold">Want more about BVC?</p>
           <p className="mt-1 text-sm opacity-80">
-            Explore the program catalogue, or subscribe for intake dates and
-            newsroom updates.
+            Explore the{" "}
+            <Link to="/programs" className="underline underline-offset-4">
+              program catalogue
+            </Link>
+            , or subscribe for intake dates and newsroom updates.
           </p>
         </div>
 
