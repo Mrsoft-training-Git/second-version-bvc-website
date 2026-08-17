@@ -1,13 +1,21 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, Search, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NAV } from "@/data/site";
 import bvcLogo from "@/assets/bvc-logo.png.asset.json";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const scrollToSection = (id: string) => {
     setOpen(false);
@@ -23,36 +31,39 @@ export function SiteHeader() {
   };
 
   const navLinkClass =
-    "group/nav relative font-display text-sm font-medium tracking-wide text-primary-foreground/85 transition-colors duration-300 hover:text-gold aria-[current=page]:text-gold aria-[current=page]:[&>span]:w-full";
+    "text-[0.6875rem] xl:text-xs font-display font-bold uppercase tracking-[0.15em] text-foreground transition-colors hover:text-primary aria-[current=page]:text-primary";
 
   return (
-    <header className="sticky top-0 z-40">
-      <div className="relative flex h-16 w-full items-center justify-between gap-4 overflow-hidden bg-ink px-4 py-3 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)] transition-shadow duration-300 hover:shadow-[0_24px_60px_color-mix(in_oklab,var(--color-ink)_45%,transparent)] lg:h-20 lg:px-8">
-        {/* Subtle gold radial mesh */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.12] bg-[radial-gradient(circle_at_top_right,var(--color-gold)_0%,transparent_55%)]" />
-        {/* Flowing 3-color accent ribbon */}
-        <div className="nav-ribbon pointer-events-none absolute inset-x-0 bottom-0 h-1" />
-
+    <header
+      className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "bg-ink py-2.5 shadow-[0_18px_45px_color-mix(in_oklab,var(--color-ink)_38%,transparent)]"
+          : "bg-transparent py-4 lg:py-5"
+      }`}
+    >
+      <div className="mx-auto flex w-full max-w-[1560px] items-center justify-between gap-4 px-4 lg:px-8">
         {/* Logo + wordmark */}
-        <Link to="/" className="relative z-10 flex shrink-0 items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center bg-primary-foreground p-1 shadow-inner">
+        <Link to="/" className="flex shrink-0 items-center gap-3">
+          <span
+            className={`flex items-center justify-center bg-primary-foreground p-1 shadow-inner transition-all duration-300 ${
+              scrolled ? "h-9 w-9" : "h-11 w-11"
+            }`}
+          >
             <img
               src={bvcLogo.url}
               alt="Bonny Vocational Centre crest"
               className="h-full w-full object-contain"
             />
           </span>
-          <span className="hidden leading-none sm:flex sm:flex-col">
-            <span className="font-display text-lg font-bold uppercase tracking-tight text-primary-foreground">
-              BVC
-            </span>
+          <span className="hidden font-display text-lg font-bold uppercase leading-none tracking-tight text-ink-foreground sm:inline">
+            BVC
           </span>
         </Link>
 
-        {/* Centered nav */}
+        {/* Floating pill nav */}
         <nav
           aria-label="Primary"
-          className="relative z-10 hidden flex-1 flex-wrap items-center justify-center gap-x-8 gap-y-2 lg:flex"
+          className="hidden items-center gap-6 rounded-full border border-border bg-background px-6 py-3.5 shadow-sm lg:flex xl:gap-8 xl:px-8"
         >
           {NAV.map((item) =>
             "hash" in item && item.hash ? (
@@ -63,7 +74,6 @@ export function SiteHeader() {
                 className={navLinkClass}
               >
                 {item.label}
-                <span className="absolute -bottom-1.5 left-0 h-0.5 w-0 bg-gold transition-all duration-300 group-hover/nav:w-full" />
               </button>
             ) : (
               <Link
@@ -73,15 +83,13 @@ export function SiteHeader() {
                 activeOptions={item.to === "/" ? { exact: true } : undefined}
               >
                 {item.label}
-                <span className="absolute -bottom-1.5 left-0 h-0.5 w-0 bg-gold transition-all duration-300 group-hover/nav:w-full" />
               </Link>
             )
           )}
         </nav>
 
         {/* Right side: search (mobile) + CTA + mobile toggle */}
-        <div className="relative z-10 flex shrink-0 items-center gap-2 lg:gap-3">
-          {/* Mobile search - collapsed by default */}
+        <div className="flex shrink-0 items-center gap-2 lg:gap-3">
           <div className="flex items-center lg:hidden">
             {searchOpen ? (
               <form
@@ -93,7 +101,7 @@ export function SiteHeader() {
                   Search BVC
                 </label>
                 <div className="relative w-[170px]">
-                  <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-primary-foreground/50" />
+                  <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-ink-foreground/50" />
                   <input
                     id="header-search"
                     type="search"
@@ -102,13 +110,13 @@ export function SiteHeader() {
                     onBlur={(e) => {
                       if (!e.currentTarget.value) setSearchOpen(false);
                     }}
-                    className="w-full border border-primary-foreground/25 bg-transparent py-1.5 pl-8 pr-7 text-xs text-primary-foreground placeholder:text-primary-foreground/50 focus:border-gold focus:outline-none"
+                    className="w-full rounded-full border border-ink-foreground/25 bg-ink/60 py-1.5 pl-8 pr-7 text-xs text-ink-foreground placeholder:text-ink-foreground/50 focus:border-gold focus:outline-none"
                   />
                   <button
                     type="button"
                     onClick={() => setSearchOpen(false)}
                     aria-label="Close search"
-                    className="absolute right-1.5 top-1/2 -translate-y-1/2 text-primary-foreground/60 hover:text-gold"
+                    className="absolute right-1.5 top-1/2 -translate-y-1/2 text-ink-foreground/60 hover:text-gold"
                   >
                     <X className="size-3.5" />
                   </button>
@@ -120,7 +128,7 @@ export function SiteHeader() {
                 onClick={() => setSearchOpen(true)}
                 aria-label="Open search"
                 aria-expanded={false}
-                className="flex h-9 w-9 items-center justify-center text-primary-foreground/80 transition-colors hover:text-gold"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/50 text-ink-foreground/85 transition-colors hover:text-gold"
               >
                 <Search className="h-5 w-5" />
               </button>
@@ -129,14 +137,14 @@ export function SiteHeader() {
 
           <Link
             to="/contact"
-            className="hidden bg-gold px-5 py-2.5 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
+            className="hidden rounded-full bg-gold px-6 py-3.5 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
           >
             PORTAL
           </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center text-primary-foreground/80 transition-colors hover:text-gold lg:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/50 text-ink-foreground/85 transition-colors hover:text-gold lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
@@ -147,10 +155,10 @@ export function SiteHeader() {
 
       {/* Mobile menu - floating panel */}
       {open && (
-        <div className="mx-auto mt-2 max-w-7xl px-1 lg:hidden">
+        <div className="mx-auto mt-2 max-w-[1560px] px-4 lg:hidden">
           <nav
             aria-label="Primary mobile"
-            className="relative overflow-hidden bg-ink px-4 py-2 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)]"
+            className="relative overflow-hidden rounded-2xl bg-ink px-4 py-2 shadow-[0_20px_50px_color-mix(in_oklab,var(--color-ink)_35%,transparent)]"
           >
             <div className="nav-ribbon pointer-events-none absolute inset-x-0 bottom-0 h-1" />
             {NAV.map((item) =>
@@ -159,7 +167,7 @@ export function SiteHeader() {
                   key={item.label}
                   type="button"
                   onClick={() => scrollToSection(item.hash)}
-                  className="block w-full border-b border-primary-foreground/15 py-3 text-left font-display text-sm font-semibold uppercase tracking-wide text-primary-foreground/90 transition-colors last:border-b-0 hover:text-gold"
+                  className="block w-full border-b border-ink-foreground/15 py-3 text-left font-display text-sm font-semibold uppercase tracking-wide text-ink-foreground/90 transition-colors last:border-b-0 hover:text-gold"
                 >
                   {item.label}
                 </button>
@@ -169,7 +177,7 @@ export function SiteHeader() {
                   to={item.to}
                   onClick={() => setOpen(false)}
                   activeOptions={item.to === "/" ? { exact: true } : undefined}
-                  className="block border-b border-primary-foreground/15 py-3 font-display text-sm font-semibold uppercase tracking-wide text-primary-foreground/90 transition-colors last:border-b-0 aria-[current=page]:text-gold hover:text-gold"
+                  className="block border-b border-ink-foreground/15 py-3 font-display text-sm font-semibold uppercase tracking-wide text-ink-foreground/90 transition-colors last:border-b-0 aria-[current=page]:text-gold hover:text-gold"
                 >
                   {item.label}
                 </Link>
@@ -178,7 +186,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-3 block bg-gold px-5 py-3 text-center text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-95"
+              className="mt-3 block rounded-full bg-gold px-5 py-3 text-center text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-95"
             >
               PORTAL
             </Link>
