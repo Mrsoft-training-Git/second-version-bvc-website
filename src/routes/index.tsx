@@ -90,62 +90,64 @@ function SpotlightCarousel() {
   const item = SPOTLIGHTS[index];
 
   return (
-    <section aria-labelledby="spotlight-heading" className="border-b border-border">
-      <figure className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9]">
-          {SPOTLIGHTS.map((s, i) => (
-            <img
-              key={s.slug}
-              src={SPOTLIGHT_IMAGES[s.imageKey]}
-              alt={s.alt}
-              loading={i === 0 ? "eager" : "lazy"}
-              className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ease-out ${
-                i === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
-              }`}
-            />
-          ))}
+    <section
+      aria-labelledby="spotlight-heading"
+      className="relative h-[calc(100svh-4rem)] w-full overflow-hidden border-b border-border lg:h-[calc(100svh-5rem)]"
+    >
+      {SPOTLIGHTS.map((s, i) => (
+        <img
+          key={s.slug}
+          src={SPOTLIGHT_IMAGES[s.imageKey]}
+          alt={s.alt}
+          loading={i === 0 ? "eager" : "lazy"}
+          className={`absolute inset-0 h-full w-full object-cover object-center transition-all duration-1000 ease-out ${
+            i === index ? "scale-100 opacity-100" : "scale-105 opacity-0"
+          }`}
+        />
+      ))}
 
-          {/* Scrim */}
-          <div
-            aria-hidden
-            className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/10"
-          />
+      {/* Scrim */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/65 to-ink/5"
+      />
 
-          {/* Overlaid copy */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full px-6 py-8 sm:px-10 lg:px-14">
-              <div key={item.slug} className="max-w-2xl animate-fade-in text-ink-foreground">
-                <h1
-                  id="spotlight-heading"
-                  className="mt-3 font-display text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl"
-                >
-                  {item.title}
-                </h1>
-                <p className="mt-4 hidden max-w-xl text-sm leading-relaxed text-ink-foreground/85 sm:block sm:text-base">
-                  {item.body}
-                </p>
-              </div>
+      {/* Overlaid copy */}
+      <div className="absolute inset-0 flex items-center">
+        <div className="mx-auto w-full max-w-6xl px-6 py-8 sm:px-10 lg:px-14">
+          <div key={item.slug} className="max-w-2xl animate-fade-in text-ink-foreground">
+            <h1
+              id="spotlight-heading"
+              className="mt-3 font-display text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl"
+            >
+              {item.title}
+            </h1>
+            <p className="mt-4 hidden max-w-xl text-sm leading-relaxed text-ink-foreground/85 sm:block sm:text-base">
+              {item.body}
+            </p>
+          </div>
 
-              <div className="mt-8 flex items-center gap-3">
-                {SPOTLIGHTS.map((s, i) => (
-                  <button
-                    key={s.slug}
-                    type="button"
-                    aria-label={`Show spotlight: ${s.title}`}
-                    aria-current={i === index}
-                    onClick={() => setIndex(i)}
-                    className={`h-0.5 transition-all duration-500 ${
-                      i === index ? "w-16 bg-gold" : "w-8 bg-ink-foreground/40 hover:bg-ink-foreground/70"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+          <div className="mt-8 flex items-center gap-3">
+            {SPOTLIGHTS.map((s, i) => (
+              <button
+                key={s.slug}
+                type="button"
+                aria-label={`Show spotlight: ${s.title}`}
+                aria-current={i === index}
+                onClick={() => setIndex(i)}
+                className={`h-0.5 transition-all duration-500 ${
+                  i === index ? "w-16 bg-gold" : "w-8 bg-ink-foreground/40 hover:bg-ink-foreground/70"
+                }`}
+              />
+            ))}
           </div>
         </div>
-        <figcaption className="pt-2 pb-8 text-xs text-muted-foreground">{item.caption}</figcaption>
-      </figure>
+      </div>
 
+      {/* Caption */}
+      <figcaption className="absolute bottom-3 right-4 text-xs text-ink-foreground/70">
+        {item.caption}
+      </figcaption>
     </section>
   );
 }
