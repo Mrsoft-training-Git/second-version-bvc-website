@@ -85,7 +85,11 @@
   /* warm gold accent for calls to action (#C8901E) */
   --gold: oklch(0.688 0.133 79);
   --gold-foreground: oklch(0.2 0.03 79);
+  /* BVC crest blue (#023386) - used on page hero bands */
+  --hero: oklch(0.352 0.147 261);
+  --hero-foreground: oklch(0.99 0 0);
 }
+
 
 .dark {
   --background: oklch(0.2 0.006 256);
