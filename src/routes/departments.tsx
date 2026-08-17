@@ -122,21 +122,6 @@ function Departments() {
           ))}
         </ul>
 
-        <div className="mt-14 border border-border bg-muted/60 p-8 text-center">
-          <h2 className="font-display text-xl font-bold text-foreground">
-            Explore the full programme catalogue
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Browse every National Diploma and City &amp; Guilds qualification delivered across the
-            seven departments.
-          </p>
-          <Link
-            to="/programs"
-            className="mt-6 inline-block border border-gold bg-gold px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
-          >
-            All programmes
-          </Link>
-        </div>
       </div>
     </div>
   );
