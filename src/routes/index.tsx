@@ -4,7 +4,7 @@ import metrologyImg from "@/assets/Picture67.jpg.asset.json";
 import refrigerationImg from "@/assets/Picture70.jpg.asset.json";
 import weldingImg from "@/assets/Picture69.jpg.asset.json";
 
-import { CLIENTS, DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { CLIENTS, DONORS, FACTS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { newsImage } from "@/lib/news-images";
 import { LogoMarquee } from "@/components/logo-marquee";
