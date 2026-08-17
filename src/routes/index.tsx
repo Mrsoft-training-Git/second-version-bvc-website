@@ -198,23 +198,6 @@ function Home() {
 
 
 
-      {/* Facts band */}
-      <section aria-labelledby="facts-heading" className="bg-ink text-ink-foreground">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <h2 id="facts-heading" className="sr-only">
-            BVC at a glance
-          </h2>
-          <dl className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {FACTS.map((f) => (
-              <div key={f.label}>
-                <dd className="font-display text-4xl font-bold">{f.value}</dd>
-                <dt className="mt-1 text-xs tracking-[0.12em] uppercase opacity-70">{f.label}</dt>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
       {/* News modules */}
       <section id="news" aria-labelledby="news-heading" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-14">
         <div className="module-rule flex items-end justify-between pt-3">
