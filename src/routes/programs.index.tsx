@@ -1,8 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
 
 import { ProgramCard } from "@/components/program-card";
-import { CITY_GUILDS_PROGRAMS, ND_PROGRAMS, PROGRAM_CATEGORIES } from "@/data/programs";
+import { CITY_GUILDS_PROGRAMS, PROGRAM_CATEGORIES } from "@/data/programs";
 import { programImage } from "@/lib/program-images";
 import { ProgramShowcase } from "@/components/program-showcase";
 
