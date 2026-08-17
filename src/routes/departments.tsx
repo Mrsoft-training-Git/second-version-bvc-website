@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { DEPARTMENTS } from "@/data/departments";
 
