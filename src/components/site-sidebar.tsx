@@ -38,7 +38,7 @@ export function SiteSidebar() {
           <p className="mb-3 ml-1 text-[10px] font-bold uppercase tracking-[0.2em] text-ink-foreground/60">
             Top resources for
           </p>
-          <div className="flex flex-col gap-2">
+          <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-col">
             {TOP_RESOURCES.map((r) => (
               <Link
                 key={r.label}
