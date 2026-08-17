@@ -246,7 +246,6 @@ function Section({
   return (
     <section className="scroll-mt-24">
       <div className="border-b border-border pb-4">
-        <p className="eyebrow text-primary">Section {step}</p>
         <h2 className="mt-2 font-display text-2xl font-bold text-foreground">{title}</h2>
         {description && (
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
@@ -597,10 +596,6 @@ function Apply() {
 
           <section className="scroll-mt-24">
             <div className="border-b border-border pb-4">
-              <p className="eyebrow flex items-center gap-2 text-primary">
-                <FileText className="h-3.5 w-3.5" />
-                Section 10
-              </p>
               <h2 className="mt-2 font-display text-2xl font-bold text-foreground">
                 Supporting documents
               </h2>
@@ -636,7 +631,6 @@ function Apply() {
           </section>
 
           <section className="rounded-xl border border-border bg-surface p-6 sm:p-8">
-            <p className="eyebrow text-primary">Section 11</p>
             <h2 className="mt-2 font-display text-2xl font-bold text-foreground">Declaration</h2>
             <div className="mt-6 space-y-5">
               <div>

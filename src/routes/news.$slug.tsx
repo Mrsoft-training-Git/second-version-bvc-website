@@ -33,7 +33,6 @@ function StoryPage() {
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-14">
-      <p className="eyebrow">{story.category}</p>
       <h1 className="mt-3 text-3xl font-bold sm:text-4xl">{story.title}</h1>
       <p className="mt-3 text-sm text-muted-foreground">{story.date} · BVC Communications</p>
 
