@@ -182,14 +182,15 @@ function Home() {
         <ul className="news-scroller mt-8 -mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4">
           {PROGRAM_CATEGORY_CARDS.map((c, i) => (
             <li key={c.slug} className="w-[280px] shrink-0 snap-start sm:w-[320px] lg:w-[340px]">
-              <ProgramCard
+              <ContentCard
                 to="/programs"
                 hash={c.slug}
                 image={programImage(c.imageSlug, i)}
                 alt={c.name}
+                badge="Programme area"
                 title={c.name}
                 body={c.body}
-                cta="Explore programmes"
+                cta="Explore"
               />
             </li>
           ))}
