@@ -106,19 +106,6 @@ function Departments() {
                   <h3 className="font-display text-sm font-bold tracking-wide text-foreground uppercase">
                     Head of Department
                   </h3>
-                  <div className="mt-5 flex items-center gap-4">
-                    <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-border bg-card text-muted-foreground">
-                      <UserRound className="h-6 w-6" />
-                    </span>
-                    <div>
-                      <p className="font-display text-sm font-bold text-foreground">
-                        Appointment held
-                      </p>
-                      <p className="text-xs tracking-wide text-muted-foreground uppercase">
-                        Profile to be updated
-                      </p>
-                    </div>
-                  </div>
                   <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                     {dept.hodRemit}
                   </p>
