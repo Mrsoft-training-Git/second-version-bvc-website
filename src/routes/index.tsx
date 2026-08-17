@@ -10,7 +10,6 @@ import { newsImage } from "@/lib/news-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ClientMarquee } from "@/components/client-marquee";
 import { ContentCard } from "@/components/content-card";
-import { ProgramCard } from "@/components/program-card";
 
 /** Programme areas featured on the home page, one photo per category. */
 const PROGRAM_CATEGORY_CARDS = [
