@@ -82,7 +82,7 @@ function ProgramDetail() {
             className="inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            {isND ? "Academic departments" : "All programmes"}
+            Back
           </Link>
           <h1 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             {program.name}
