@@ -82,7 +82,7 @@ export function SiteHeader() {
         <div className="relative z-10 flex shrink-0 items-center gap-3">
           <Link
             to="/contact"
-            className="hidden rounded-lg bg-gold px-5 py-2.5 text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
+            className="hidden bg-gold px-5 py-2.5 text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
           >
             PORTAL
           </Link>
