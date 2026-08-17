@@ -27,20 +27,35 @@ export function ProgramPath({
   const stepRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) {
-          const idx = Number((visible.target as HTMLElement).dataset.index);
-          if (!Number.isNaN(idx)) setActive(idx);
-        }
-      },
-      { rootMargin: "-45% 0px -45% 0px", threshold: [0, 0.25, 0.5, 1] }
-    );
-    stepRefs.current.forEach((el) => el && observer.observe(el));
-    return () => observer.disconnect();
+    let frame = 0;
+
+    const update = () => {
+      frame = 0;
+      // A step becomes active once its top edge rises past ~75% of the viewport
+      // (i.e. it has entered from the bottom) and stays active until the next
+      // step's top edge crosses the same line - which happens when the current
+      // step's content has travelled up to the top of the screen.
+      const line = window.innerHeight * 0.75;
+      let next = 0;
+      stepRefs.current.forEach((el, i) => {
+        if (!el) return;
+        if (el.getBoundingClientRect().top <= line) next = i;
+      });
+      setActive((prev) => (prev === next ? prev : next));
+    };
+
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, [steps.length]);
 
   return (
