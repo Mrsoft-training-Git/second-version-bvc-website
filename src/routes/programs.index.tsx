@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import { ProgramCard } from "@/components/program-card";
+import { ContentCard } from "@/components/content-card";
 import { CITY_GUILDS_PROGRAMS, ND_PROGRAMS, PROGRAM_CATEGORIES } from "@/data/programs";
 import { programImage } from "@/lib/program-images";
 import { ProgramShowcase } from "@/components/program-showcase";
@@ -110,14 +110,14 @@ function Programs() {
                     key={p.slug}
                     className="w-[280px] shrink-0 snap-start sm:w-[320px] lg:w-[340px]"
                   >
-                    <ProgramCard
+                    <ContentCard
                       to="/programs/$slug"
                       params={{ slug: p.slug }}
                       image={programImage(p.slug, i)}
                       alt={p.name}
+                      badge={category}
                       title={p.name}
                       body={p.body}
-                      duration={p.duration}
                       cta="Programme details"
                     />
                   </li>
