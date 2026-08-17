@@ -5,27 +5,56 @@ import { PageHeader } from "@/components/page-header";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Visit - Bonny Vocational Center" },
+      { title: "Contact - Bonny Vocational Center" },
       {
         name: "description",
         content:
-          "Reach BVC admissions, placement or workshop staff, or arrange a campus visit on Finima Road, Bonny Island.",
+          "Contact BVC on Bonny Island and in Port Harcourt. Office hours, phone lines, email and social links for Bonny Vocational Center.",
       },
-      { property: "og:title", content: "Contact & Visit - Bonny Vocational Center" },
+      { property: "og:title", content: "Contact - Bonny Vocational Center" },
       {
         property: "og:description",
-        content: "Office hours, department contacts and campus visit information for BVC.",
+        content:
+          "Reach BVC by phone, email or in person at our Bonny Island head office or Port Harcourt office.",
       },
     ],
   }),
   component: Contact,
 });
 
-const DEPARTMENTS = [
-  { name: "Admissions", detail: "admissions@bvc.example · +234 800 000 0001" },
-  { name: "Placement & partnerships", detail: "placement@bvc.example · +234 800 000 0002" },
-  { name: "Workshops & facilities", detail: "workshops@bvc.example · +234 800 000 0003" },
-  { name: "Media enquiries", detail: "media@bvc.example · +234 800 000 0004" },
+type Office = {
+  name: string;
+  tag: string;
+  lines: string[];
+  postal: string;
+};
+
+const OFFICES: Office[] = [
+  {
+    name: "Head Office",
+    tag: "Bonny Island",
+    lines: ["Akiama-Oguede Road", "Bonny Island 503101", "Rivers State, Nigeria"],
+    postal: "",
+  },
+  {
+    name: "Port Harcourt Office",
+    tag: "D-line, Port Harcourt",
+    lines: ["16 Mbonu Street, D-line", "Port Harcourt 500101", "Rivers State, Nigeria"],
+    postal: "",
+  },
+];
+
+const PHONE_LINES = [
+  { number: "+234 813 970 0651", label: "Official line (Esther)" },
+  { number: "+234 703 220 1495", label: "Official line (Francesca)" },
+];
+
+const SOCIAL_LINKS = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/BVCBonny",
+    handle: "facebook.com/BVCBonny",
+  },
 ];
 
 function Contact() {
@@ -35,8 +64,8 @@ function Contact() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Get in touch or come see the workshops"
-        intro="The gate office is open Monday to Friday, 8:00–16:30. Guided workshop tours run on the first Friday of each month."
+        title="Get in touch with BVC"
+        intro="Reach our Bonny Island head office or our Port Harcourt office by phone, email or in person. We are open Monday to Friday, 7:30 AM - 4:30 PM."
       />
 
       <div className="mx-auto max-w-6xl px-4 py-14">
@@ -47,8 +76,8 @@ function Contact() {
             </h2>
             {sent ? (
               <p className="mt-6 border border-border bg-surface p-6 text-sm">
-                Thank you - this demo form doesn't submit anywhere yet. Wire it up once the real
-                contact address is confirmed.
+                Thank you - your message has been noted. This demo form doesn't submit anywhere yet;
+                it will be wired to the BVC inbox once the live address is confirmed.
               </p>
             ) : (
               <form
@@ -120,33 +149,100 @@ function Contact() {
           </section>
 
           <aside className="space-y-10">
+            {/* Offices */}
             <div>
               <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Campus
+                Our offices
               </h2>
-              <address className="mt-4 text-sm not-italic text-muted-foreground">
-                Bonny Vocational Center
-                <br />
-                Finima Road, Bonny Island
-                <br />
-                Rivers State, Nigeria
-              </address>
+              <div className="mt-4 space-y-4">
+                {OFFICES.map((office) => (
+                  <div key={office.name} className="border border-border bg-surface p-5">
+                    <p className="font-display text-base font-bold">{office.name}</p>
+                    <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-gold">
+                      {office.tag}
+                    </p>
+                    <address className="mt-3 text-sm not-italic leading-relaxed text-muted-foreground">
+                      {office.lines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))}
+                    </address>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* Phone */}
             <div>
               <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Departments
+                Phone lines
               </h2>
               <ul className="mt-4 text-sm">
-                {DEPARTMENTS.map((d) => (
-                  <li key={d.name} className="border-b border-border py-3">
-                    <span className="font-display font-semibold">{d.name}</span>
-                    <span className="block text-muted-foreground">{d.detail}</span>
+                {PHONE_LINES.map((line) => (
+                  <li
+                    key={line.number}
+                    className="flex items-baseline justify-between gap-4 border-b border-border py-3"
+                  >
+                    <a
+                      href={`tel:${line.number.replace(/\s/g, "")}`}
+                      className="font-display font-semibold hover:text-primary"
+                    >
+                      {line.number}
+                    </a>
+                    <span className="text-right text-xs text-muted-foreground">{line.label}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-3 text-xs text-muted-foreground">
-                Placeholder contact details for layout purposes.
+            </div>
+
+            {/* Email */}
+            <div>
+              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
+                Email
+              </h2>
+              <p className="mt-4 text-sm">
+                <a
+                  href="mailto:info@bvcbonny.edu.ng"
+                  className="font-display font-semibold hover:text-primary"
+                >
+                  info@bvcbonny.edu.ng
+                </a>
               </p>
+            </div>
+
+            {/* Working hours */}
+            <div>
+              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
+                Working hours
+              </h2>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Monday - Friday
+                <br />
+                <span className="font-display font-semibold text-foreground">7:30 AM - 4:30 PM</span>
+              </p>
+            </div>
+
+            {/* Social */}
+            <div>
+              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
+                Social
+              </h2>
+              <ul className="mt-4 space-y-2 text-sm">
+                {SOCIAL_LINKS.map((s) => (
+                  <li key={s.label}>
+                    <a
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-display font-semibold hover:text-primary"
+                    >
+                      <span className="text-gold">{s.label}</span>
+                      <span className="text-muted-foreground">{s.handle}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </aside>
         </div>
