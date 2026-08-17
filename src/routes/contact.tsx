@@ -62,6 +62,16 @@ const SOCIAL_LINKS = [
   },
 ];
 
+function openMaps(query: string, directions = false) {
+  const url = directions
+    ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}`
+    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  const win = window.open(url, "_blank", "noopener,noreferrer");
+  if (!win) window.top!.location.href = url;
+}
+
+
+
 function Contact() {
   const [sent, setSent] = useState(false);
   const [activeOffice, setActiveOffice] = useState(0);
