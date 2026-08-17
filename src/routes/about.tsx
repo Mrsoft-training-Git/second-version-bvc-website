@@ -177,13 +177,13 @@ function About() {
   return (
     <div className="bg-background">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-primary px-6 pt-12 pb-20 text-primary-foreground sm:px-12">
+      <section className="relative overflow-hidden bg-hero px-6 pt-12 pb-20 text-hero-foreground sm:px-12">
         <div className="pointer-events-none absolute top-0 right-0 h-full w-1/3 opacity-10">
           <div className="grid h-full grid-cols-4 gap-2">
-            <div className="h-full bg-primary-foreground/25" />
-            <div className="h-full translate-y-12 bg-primary-foreground/25" />
-            <div className="h-full bg-primary-foreground/25" />
-            <div className="h-full translate-y-24 bg-primary-foreground/25" />
+            <div className="h-full bg-hero-foreground/25" />
+            <div className="h-full translate-y-12 bg-hero-foreground/25" />
+            <div className="h-full bg-hero-foreground/25" />
+            <div className="h-full translate-y-24 bg-hero-foreground/25" />
           </div>
         </div>
         <div className="relative z-10 mx-auto max-w-5xl">

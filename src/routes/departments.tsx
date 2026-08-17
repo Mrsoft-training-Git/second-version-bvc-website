@@ -28,12 +28,12 @@ export const Route = createFileRoute("/departments")({
 function Departments() {
   return (
     <div>
-      <header className="bg-primary text-primary-foreground">
+      <header className="bg-hero text-hero-foreground">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
           <h1 className="max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             Academic Departments
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/80">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-hero-foreground/80">
             Seven departments deliver BVC&apos;s NBTE-approved National Diploma programmes, each
             pairing the national curriculum with the competency-based workshop training the centre
             is known for.
@@ -41,19 +41,19 @@ function Departments() {
           <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 font-display text-sm">
             <div>
               <dd className="text-2xl font-bold text-gold">7</dd>
-              <dt className="text-xs tracking-[0.14em] text-primary-foreground/70 uppercase">
+              <dt className="text-xs tracking-[0.14em] text-hero-foreground/70 uppercase">
                 Departments
               </dt>
             </div>
             <div>
               <dd className="text-2xl font-bold text-gold">7</dd>
-              <dt className="text-xs tracking-[0.14em] text-primary-foreground/70 uppercase">
+              <dt className="text-xs tracking-[0.14em] text-hero-foreground/70 uppercase">
                 ND programmes
               </dt>
             </div>
             <div>
               <dd className="text-2xl font-bold text-gold">NBTE</dd>
-              <dt className="text-xs tracking-[0.14em] text-primary-foreground/70 uppercase">
+              <dt className="text-xs tracking-[0.14em] text-hero-foreground/70 uppercase">
                 Approved
               </dt>
             </div>
