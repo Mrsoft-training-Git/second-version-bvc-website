@@ -1,3 +1,4 @@
+import { Search } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 import { PANEL_LINKS, TOP_RESOURCES } from "@/data/site";
