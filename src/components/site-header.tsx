@@ -65,7 +65,7 @@ export function SiteHeader() {
         {/* Floating pill nav */}
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-6 rounded-full border border-border bg-background px-6 py-3.5 shadow-sm lg:flex xl:gap-8 xl:px-8"
+          className="hidden items-center gap-6 border border-border bg-background px-6 py-3.5 shadow-sm lg:flex xl:gap-8 xl:px-8"
         >
           {NAV.map((item) =>
             "hash" in item && item.hash ? (
@@ -139,7 +139,7 @@ export function SiteHeader() {
 
           <Link
             to="/contact"
-            className="hidden rounded-full bg-gold px-6 py-3.5 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
+            className="hidden bg-gold px-6 py-3.5 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
           >
             PORTAL
           </Link>
@@ -188,7 +188,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-3 block rounded-full bg-gold px-5 py-3 text-center text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-95"
+              className="mt-3 block bg-gold px-5 py-3 text-center text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-95"
             >
               PORTAL
             </Link>
