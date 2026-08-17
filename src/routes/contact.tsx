@@ -162,9 +162,10 @@ function Contact() {
               <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
                 Our offices
               </h2>
-              <div className="mt-4 space-y-4">
+              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {OFFICES.map((office) => (
                   <div key={office.name} className="border border-border bg-surface p-5">
+
                     <p className="font-display text-base font-bold">{office.name}</p>
                     <p className="mt-0.5 text-xs font-medium uppercase tracking-wide text-gold">
                       {office.tag}
