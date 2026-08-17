@@ -18,9 +18,6 @@ export function PageHeader({
         </div>
       </div>
       <div className="relative z-10 mx-auto max-w-6xl">
-        <span className="mb-4 inline-block bg-gold px-3 py-1 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold-foreground">
-          {eyebrow}
-        </span>
         <h1 className="mt-3 max-w-3xl text-4xl leading-[0.95] font-extrabold sm:text-5xl">
           {title}
         </h1>

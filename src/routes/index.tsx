@@ -115,9 +115,6 @@ function SpotlightCarousel() {
           <div className="absolute inset-0 flex items-center">
             <div className="w-full px-6 py-8 sm:px-10 lg:px-14">
               <div key={item.slug} className="max-w-2xl animate-fade-in text-ink-foreground">
-                <p className="font-display text-[11px] font-semibold tracking-[0.18em] text-gold uppercase">
-                  {item.eyebrow}
-                </p>
                 <h1
                   id="spotlight-heading"
                   className="mt-3 font-display text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl lg:text-5xl"

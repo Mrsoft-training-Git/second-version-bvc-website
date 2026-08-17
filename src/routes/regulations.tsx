@@ -141,10 +141,6 @@ function SectionHeading({
 }) {
   return (
     <div id={id} className="scroll-mt-24 border-b border-border pb-4">
-      <p className="eyebrow flex items-center gap-2 text-primary">
-        <Icon className="h-3.5 w-3.5" />
-        {eyebrow}
-      </p>
       <h2 className="mt-3 font-display text-2xl font-bold text-foreground sm:text-3xl">{title}</h2>
     </div>
   );
@@ -322,7 +318,6 @@ function Regulations() {
             </section>
 
             <section className="rounded-xl bg-ink p-8 text-ink-foreground">
-              <p className="eyebrow text-gold">Ready to apply</p>
               <h2 className="mt-3 font-display text-2xl font-bold">
                 Speak to the Academic Office about the next intake
               </h2>
@@ -350,7 +345,6 @@ function Regulations() {
 
           <nav aria-label="On this page" className="hidden lg:block">
             <div className="sticky top-24">
-              <p className="eyebrow text-primary">On this page</p>
               <ul className="mt-4 space-y-3 border-l border-border pl-4 text-sm">
                 {SECTIONS.map((s) => (
                   <li key={s.id}>
