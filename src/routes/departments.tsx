@@ -33,7 +33,7 @@ function Departments() {
           <h1 className="max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             Academic Departments
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-foreground/80">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/80">
             Seven departments deliver BVC&apos;s NBTE-approved National Diploma programmes, each
             pairing the national curriculum with the competency-based workshop training the centre
             is known for.
