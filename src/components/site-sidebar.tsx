@@ -38,7 +38,7 @@ export function SiteSidebar() {
           <p className="mb-3 ml-1 text-[10px] font-bold uppercase tracking-[0.2em] text-ink-foreground/60">
             Top resources for
           </p>
-          <div className="flex flex-col gap-2">
+          <div className="grid grid-cols-2 gap-2 lg:flex lg:flex-col">
             {TOP_RESOURCES.map((r) => (
               <Link
                 key={r.label}
@@ -59,7 +59,7 @@ export function SiteSidebar() {
 
         <div className="mt-auto pt-12 text-sm">
           <p className="font-semibold">Bonny Vocational Center</p>
-          <div className="mt-1 grid grid-cols-2 gap-3 text-ink-foreground/70">
+          <div className="mt-1 grid grid-cols-2 gap-3 text-ink-foreground/70 lg:block lg:space-y-2">
             <address className="not-italic leading-snug">
               <span className="block text-[11px] font-bold uppercase tracking-wide text-gold">
                 Head Office
