@@ -28,6 +28,7 @@ type Office = {
   tag: string;
   lines: string[];
   postal: string;
+  mapQuery: string;
 };
 
 const OFFICES: Office[] = [
@@ -36,14 +37,17 @@ const OFFICES: Office[] = [
     tag: "Bonny Island",
     lines: ["Akiama-Oguede Road", "Bonny Island 503101", "Rivers State, Nigeria"],
     postal: "",
+    mapQuery: "Bonny Vocational Centre, Akiama-Oguede Road, Bonny Island 503101, Rivers State, Nigeria",
   },
   {
     name: "Port Harcourt Office",
     tag: "D-line, Port Harcourt",
     lines: ["16 Mbonu Street, D-line", "Port Harcourt 500101", "Rivers State, Nigeria"],
     postal: "",
+    mapQuery: "16 Mbonu Street, D-line, Port Harcourt 500101, Rivers State, Nigeria",
   },
 ];
+
 
 const PHONE_LINES = [
   { number: "+234 813 970 0651", label: "Official line (Esther)" },
@@ -60,6 +64,9 @@ const SOCIAL_LINKS = [
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [activeOffice, setActiveOffice] = useState(0);
+  const office = OFFICES[activeOffice];
+
 
   return (
     <>
@@ -253,7 +260,71 @@ function Contact() {
             </div>
           </aside>
         </div>
+
+        {/* Map card */}
+        <section aria-labelledby="map-heading" className="mt-16">
+          <h2
+            id="map-heading"
+            className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase"
+          >
+            Find us
+          </h2>
+
+          <div className="mt-5 overflow-hidden border border-border bg-surface shadow-sm">
+            <div className="flex flex-col gap-4 border-b border-border p-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-wrap gap-2" role="tablist" aria-label="Choose an office">
+                {OFFICES.map((o, i) => (
+                  <button
+                    key={o.name}
+                    type="button"
+                    role="tab"
+                    aria-selected={i === activeOffice}
+                    onClick={() => setActiveOffice(i)}
+                    className={`border px-4 py-2 font-display text-xs font-semibold tracking-[0.12em] uppercase transition-all duration-300 ${
+                      i === activeOffice
+                        ? "border-gold bg-gold text-gold-foreground shadow-sm"
+                        : "border-border bg-background text-muted-foreground hover:-translate-y-0.5 hover:border-gold hover:text-foreground"
+                    }`}
+                  >
+                    {o.tag}
+                  </button>
+                ))}
+              </div>
+              <div className="text-sm">
+                <p className="font-display font-bold">{office.name}</p>
+                <p className="text-muted-foreground">{office.lines.join(", ")}</p>
+              </div>
+            </div>
+
+            <div className="relative aspect-[16/9] w-full bg-muted sm:aspect-[21/9]">
+              <iframe
+                key={office.name}
+                title={`Map of BVC ${office.name}`}
+                src={`https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&output=embed`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 h-full w-full animate-in fade-in duration-500"
+                style={{ border: 0 }}
+              />
+            </div>
+
+            <div className="flex items-center justify-between gap-4 p-5">
+              <p className="text-xs text-muted-foreground">
+                Monday - Friday, 7:30 AM - 4:30 PM
+              </p>
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.mapQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gold px-4 py-2 font-display text-xs font-semibold tracking-[0.12em] uppercase text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:text-gold-foreground"
+              >
+                Get directions
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
+
     </>
   );
 }
