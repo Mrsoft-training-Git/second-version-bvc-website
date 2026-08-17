@@ -78,7 +78,7 @@ function Departments() {
                     <span className="font-display text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
                       Department {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 font-display text-[11px] font-semibold tracking-[0.12em] text-foreground uppercase">
+                    <span className="inline-flex items-center gap-1.5 border border-gold/40 bg-gold/10 px-3 py-1 font-display text-[11px] font-semibold tracking-[0.12em] text-foreground uppercase">
                       {dept.programSlugs.length + 1} Programmes
                     </span>
                   </div>
