@@ -64,6 +64,9 @@ const SOCIAL_LINKS = [
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [activeOffice, setActiveOffice] = useState(0);
+  const office = OFFICES[activeOffice];
+
 
   return (
     <>
