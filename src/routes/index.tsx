@@ -159,41 +159,25 @@ function Home() {
     <>
       <SpotlightCarousel />
 
-      {/* Programs */}
+      {/* Programs - scroll-driven path */}
       <section
         id="programs"
         aria-labelledby="programs-heading"
-        className="mx-auto max-w-6xl scroll-mt-24 px-4 py-14"
+        className="scroll-mt-24 bg-surface py-20 lg:py-28"
       >
-        <div className="module-rule flex items-end justify-between pt-3">
-          <h2 id="programs-heading" className="text-2xl font-bold">
-            Programs
-          </h2>
-          <Link
-            to="/programs"
-            className="font-display text-xs font-semibold tracking-wide text-primary uppercase link-underline"
-          >
-            All programs
-          </Link>
-        </div>
-
-        <ul className="news-scroller mt-8 -mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4">
-          {PROGRAM_CATEGORY_CARDS.map((c, i) => (
-            <li key={c.slug} className="w-[280px] shrink-0 snap-start sm:w-[320px] lg:w-[340px]">
-              <ContentCard
-                to="/programs"
-                hash={c.slug}
-                image={programImage(c.imageSlug, i)}
-                alt={c.name}
-                badge="Programme area"
-                title={c.name}
-                body={c.body}
-                cta="Explore"
-              />
-            </li>
-          ))}
-        </ul>
+        <ProgramPath
+          eyebrow="How it works"
+          heading="Your path to a trade"
+          intro="Pick a programme area, train in a working workshop with industry-standard equipment, and finish with a qualification employers on Bonny Island recognise."
+          steps={PROGRAM_CATEGORY_CARDS.map((c, i) => ({
+            slug: c.slug,
+            name: c.name,
+            body: c.body,
+            image: programImage(c.imageSlug, i),
+          }))}
+        />
       </section>
+
 
 
 
