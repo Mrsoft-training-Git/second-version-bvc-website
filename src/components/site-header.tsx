@@ -131,7 +131,7 @@ export function SiteHeader() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-3 block rounded-lg bg-gold px-5 py-3 text-center text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-95"
+              className="mt-3 block bg-gold px-5 py-3 text-center text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all hover:scale-[1.02] active:scale-95"
             >
               PORTAL
             </Link>
