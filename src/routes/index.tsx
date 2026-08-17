@@ -10,6 +10,7 @@ import { newsImage } from "@/lib/news-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ClientMarquee } from "@/components/client-marquee";
 import { ContentCard } from "@/components/content-card";
+import { ProgramPath } from "@/components/program-path";
 
 /** Programme areas featured on the home page, one photo per category. */
 const PROGRAM_CATEGORY_CARDS = [
@@ -92,7 +93,7 @@ function SpotlightCarousel() {
   return (
     <section
       aria-labelledby="spotlight-heading"
-      className="relative h-[calc(100svh-4rem)] w-full overflow-hidden border-b border-border lg:h-[calc(100svh-5rem)]"
+      className="relative h-[100svh] w-full overflow-hidden border-b border-border"
     >
       {SPOTLIGHTS.map((s, i) => (
         <img
