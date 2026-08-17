@@ -12,7 +12,7 @@ export function SiteSidebar() {
       <div className="nav-ribbon-v pointer-events-none absolute inset-y-0 right-0 w-px hidden lg:block" />
 
       <div className="flex min-h-full flex-col px-4 py-6">
-        <div>
+        <div className="hidden lg:block">
           <p className="font-display text-xs font-bold leading-snug">Explore programs, people and places</p>
           <form
             role="search"

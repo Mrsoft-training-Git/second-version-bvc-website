@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { useState } from "react";
 import { NAV } from "@/data/site";
 import bvcLogo from "@/assets/bvc-logo.png.asset.json";
@@ -78,8 +78,27 @@ export function SiteHeader() {
           )}
         </nav>
 
-        {/* Right side: CTA + mobile toggle */}
-        <div className="relative z-10 flex shrink-0 items-center gap-3">
+        {/* Right side: search (mobile) + CTA + mobile toggle */}
+        <div className="relative z-10 flex shrink-0 items-center gap-2 lg:gap-3">
+          {/* Mobile search */}
+          <form
+            role="search"
+            className="flex flex-1 items-center lg:hidden"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <label htmlFor="header-search" className="sr-only">
+              Search BVC
+            </label>
+            <div className="relative w-full max-w-[180px]">
+              <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-primary-foreground/50" />
+              <input
+                id="header-search"
+                type="search"
+                placeholder="Search BVC"
+                className="w-full border border-primary-foreground/25 bg-transparent py-1.5 pl-8 pr-2 text-xs text-primary-foreground placeholder:text-primary-foreground/50 focus:border-gold focus:outline-none"
+              />
+            </div>
+          </form>
           <Link
             to="/contact"
             className="hidden bg-gold px-5 py-2.5 text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-gold-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[color-mix(in_oklab,var(--color-gold)_88%,black)] active:scale-95 lg:inline-block"
