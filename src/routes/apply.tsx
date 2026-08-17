@@ -337,18 +337,7 @@ function Apply() {
       />
 
       <div className="mx-auto max-w-4xl px-4 py-14">
-        <div className="flex gap-4 rounded-xl border border-border bg-surface p-6">
-          <Info className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            This form is currently a front-end preview. It validates your entries but does not
-            submit anywhere yet - submissions will be connected to the BVC learning portal. Review
-            the{" "}
-            <Link to="/regulations" className="font-semibold text-primary hover:text-gold">
-              enrolment and academic regulations
-            </Link>{" "}
-            before you begin.
-          </p>
-        </div>
+        
 
         <form onSubmit={onSubmit} noValidate className="mt-12 space-y-16">
           <Section

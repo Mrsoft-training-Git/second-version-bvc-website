@@ -187,9 +187,6 @@ function About() {
           </div>
         </div>
         <div className="relative z-10 mx-auto max-w-5xl">
-          <span className="mb-4 inline-block bg-gold px-3 py-1 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold-foreground">
-            Established 2004
-          </span>
           <h1 className="max-w-3xl font-display text-4xl leading-[0.95] font-extrabold sm:text-5xl md:text-6xl">
             An excellent example
             <br />

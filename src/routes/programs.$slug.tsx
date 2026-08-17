@@ -84,20 +84,9 @@ function ProgramDetail() {
             <ArrowLeft className="h-3.5 w-3.5" />
             {isND ? "Academic departments" : "All programmes"}
           </Link>
-          <p className="mt-6 font-display text-[11px] font-semibold tracking-[0.14em] text-ink-foreground/70 uppercase">
-            {program.category}
-          </p>
           <h1 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             {program.name}
           </h1>
-          <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm">
-            <div className="flex items-center gap-2">
-              <BadgeCheck className="h-4 w-4 text-gold" />
-              <dt className="sr-only">Awarding body</dt>
-              <dd>{isND ? "NBTE approved" : "City & Guilds accredited"}</dd>
-            </div>
-          </dl>
-
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
               to="/apply"
