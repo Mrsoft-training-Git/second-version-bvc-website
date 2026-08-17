@@ -28,7 +28,7 @@ export const Route = createFileRoute("/departments")({
 function Departments() {
   return (
     <div>
-      <header className="bg-ink text-ink-foreground">
+      <header className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
           <h1 className="max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             Academic Departments
