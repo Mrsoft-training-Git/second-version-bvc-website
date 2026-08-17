@@ -204,7 +204,7 @@ function Contact() {
               </ul>
             </div>
 
-            {/* Email */}
+            {/* Email + Social */}
             <div>
               <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
                 Email
@@ -217,26 +217,8 @@ function Contact() {
                   info@bvcbonny.edu.ng
                 </a>
               </p>
-            </div>
 
-            {/* Working hours */}
-            <div>
-              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Working hours
-              </h2>
-              <p className="mt-4 text-sm text-muted-foreground">
-                Monday - Friday
-                <br />
-                <span className="font-display font-semibold text-foreground">7:30 AM - 4:30 PM</span>
-              </p>
-            </div>
-
-            {/* Social */}
-            <div>
-              <h2 className="module-rule pt-3 font-display text-sm font-semibold tracking-[0.14em] uppercase">
-                Social
-              </h2>
-              <ul className="mt-4 space-y-2 text-sm">
+              <ul className="mt-6 space-y-2 border-t border-border pt-5 text-sm">
                 {SOCIAL_LINKS.map((s) => (
                   <li key={s.label}>
                     <a
@@ -258,6 +240,7 @@ function Contact() {
                 ))}
               </ul>
             </div>
+
           </aside>
         </div>
 
