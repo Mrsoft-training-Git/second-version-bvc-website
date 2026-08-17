@@ -196,25 +196,22 @@ function Home() {
           </Link>
         </div>
 
-        <ul
-          className="news-scroller mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4"
-        >
-          {STORIES.slice(0, 3).map((s, i) => (
-            <li key={s.slug} className="w-[320px] shrink-0 snap-start sm:w-[400px]">
-              <ContentCard
-                to="/news/$slug"
-                params={{ slug: s.slug }}
-                image={newsImage(s.slug, i)}
-                badge={s.category}
-                badgeVariant="neutral"
-                title={s.title}
-                body={s.dek}
-                meta={s.date}
-                cta="Read"
-              />
-            </li>
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {STORIES.slice(0, 6).map((s, i) => (
+            <ContentCard
+              key={s.slug}
+              to="/news/$slug"
+              params={{ slug: s.slug }}
+              image={newsImage(s.slug, i)}
+              badge={s.category}
+              badgeVariant="neutral"
+              title={s.title}
+              body={s.dek}
+              meta={s.date}
+              cta="Read"
+            />
           ))}
-        </ul>
+        </div>
 
       </section>
 
