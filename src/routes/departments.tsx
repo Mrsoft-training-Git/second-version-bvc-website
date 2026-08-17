@@ -30,10 +30,7 @@ function Departments() {
     <div>
       <header className="bg-ink text-ink-foreground">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-          <p className="font-display text-[11px] font-semibold tracking-[0.16em] text-gold uppercase">
-            Academics
-          </p>
-          <h1 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+          <h1 className="max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
             Academic Departments
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-foreground/80">
@@ -66,7 +63,7 @@ function Departments() {
 
       <div className="mx-auto max-w-6xl px-4 py-14">
         <ul className="space-y-10">
-          {DEPARTMENTS.map((dept, i) => (
+          {DEPARTMENTS.map((dept) => (
             <li
               key={dept.slug}
               id={dept.slug}
@@ -75,9 +72,6 @@ function Departments() {
               <div className="grid gap-0 lg:grid-cols-[1.6fr_1fr]">
                 <div className="p-7 sm:p-9">
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="font-display text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
-                      Department {String(i + 1).padStart(2, "0")}
-                    </span>
                     <span className="font-display text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
                       {dept.programSlugs.length + 1} Programmes
                     </span>
