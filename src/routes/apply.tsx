@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { CheckCircle2, FileText, Info, Upload } from "lucide-react";
+import { CheckCircle2, FileText, Upload } from "lucide-react";
 import { z } from "zod";
 
 import { PageHeader } from "@/components/page-header";

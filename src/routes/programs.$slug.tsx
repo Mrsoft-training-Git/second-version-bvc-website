@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Award, BadgeCheck, Briefcase, ClipboardList } from "lucide-react";
+import { ArrowLeft, Award, Briefcase, ClipboardList } from "lucide-react";
 
 import { ProgramCard } from "@/components/program-card";
 import { departmentForProgram } from "@/data/departments";
