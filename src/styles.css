@@ -46,6 +46,9 @@
   --color-brand-tint: var(--brand-tint);
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
+  --color-hero: var(--hero);
+  --color-hero-foreground: var(--hero-foreground);
+
 }
 
 :root {
