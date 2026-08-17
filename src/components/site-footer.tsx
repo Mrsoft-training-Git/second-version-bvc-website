@@ -71,72 +71,30 @@ export function SiteFooter() {
 
       {/* Resources + contact */}
       <div className="border-t border-ink-foreground/15">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-4">
           <div>
             <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-ink-foreground/60">
-              Top resources for
+              Explore
             </p>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-2">
+            <ul className="flex flex-col gap-2">
               {TOP_RESOURCES.map((r) => (
-                <Link
-                  key={r.label}
-                  to={r.to}
-                  className="group relative flex h-9 items-center overflow-hidden border border-ink-foreground/25 px-3 transition-colors duration-300 hover:border-gold"
-                >
-                  <span className="relative z-10 text-[11px] font-bold uppercase leading-tight tracking-wider text-ink-foreground transition-colors duration-300 group-hover:text-gold-foreground">
+                <li key={r.label}>
+                  <Link
+                    to={r.to}
+                    className="text-[11px] font-bold uppercase tracking-wider text-ink-foreground transition-colors hover:text-gold"
+                  >
                     {r.label}
-                  </span>
-                  <div className="absolute inset-0 translate-y-full bg-gold transition-transform duration-300 ease-out group-hover:translate-y-0" />
-                </Link>
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div>
             <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-ink-foreground/60">
-              Contact
+              Information
             </p>
-            <p className="font-semibold">Bonny Vocational Center</p>
-            <div className="mt-2 grid gap-4 text-sm text-ink-foreground/70 sm:grid-cols-2 md:grid-cols-1">
-              <address className="not-italic leading-snug">
-                <span className="block text-[11px] font-bold uppercase tracking-wide text-gold">
-                  Head Office
-                </span>
-                Akiama-Oguede Road<br />
-                Bonny Island 503101<br />
-                Rivers State, Nigeria
-              </address>
-              <address className="not-italic leading-snug">
-                <span className="block text-[11px] font-bold uppercase tracking-wide text-gold">
-                  Port Harcourt Office
-                </span>
-                16 Mbonu Street, D-line<br />
-                Port Harcourt 500101<br />
-                Rivers State, Nigeria
-              </address>
-            </div>
-          </div>
-
-          <div>
-            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-ink-foreground/60">
-              Search
-            </p>
-            <form role="search" onSubmit={(e) => e.preventDefault()}>
-              <label htmlFor="footer-search" className="sr-only">
-                Search BVC
-              </label>
-              <div className="relative">
-                <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-ink-foreground/50" />
-                <input
-                  id="footer-search"
-                  type="search"
-                  placeholder="Search BVC"
-                  className="w-full border border-ink-foreground/25 bg-transparent py-2 pl-8 pr-2 text-xs text-ink-foreground placeholder:text-ink-foreground/50 focus:border-gold focus:outline-none"
-                />
-              </div>
-            </form>
-
-            <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            <ul className="flex flex-col gap-2 text-sm">
               {PANEL_LINKS.map((l) => (
                 <li key={l.label}>
                   <Link to={l.to} className="link-underline">
@@ -145,6 +103,31 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="md:col-span-2">
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-ink-foreground/60">
+              Contact
+            </p>
+            <p className="font-semibold">Bonny Vocational Center</p>
+            <div className="mt-3 grid grid-cols-1 gap-6 text-sm text-ink-foreground/70 sm:grid-cols-2">
+              <address className="not-italic leading-snug">
+                <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-gold">
+                  Head Office
+                </span>
+                Akiama-Oguede Road<br />
+                Bonny Island 503101<br />
+                Rivers State, Nigeria
+              </address>
+              <address className="not-italic leading-snug">
+                <span className="mb-1 block text-[11px] font-bold uppercase tracking-wide text-gold">
+                  Port Harcourt Office
+                </span>
+                16 Mbonu Street, D-line<br />
+                Port Harcourt 500101<br />
+                Rivers State, Nigeria
+              </address>
+            </div>
           </div>
         </div>
       </div>
