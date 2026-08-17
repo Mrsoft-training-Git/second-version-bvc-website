@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "8f68f3cb-91c5-4ea3-81ad-07161680ea7b",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/8f68f3cb-91c5-4ea3-81ad-07161680ea7b/amanyanabo.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/8f68f3cb-91c5-4ea3-81ad-07161680ea7b/amanyanabo.png",
-  "original_filename": "amanyanabo.png",
-  "size": 1280460,
   "content_type": "image/png",
-  "created_at": "2026-08-11T07:42:26Z"
+  "created_at": "2026-08-11T07:42:26Z",
+  "original_filename": "amanyanabo.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/8f68f3cb-91c5-4ea3-81ad-07161680ea7b/amanyanabo.png",
+  "size": 1280460,
+  "url": "/__l5e/assets-v1/8f68f3cb-91c5-4ea3-81ad-07161680ea7b/amanyanabo.png",
+  "version": 1
 }

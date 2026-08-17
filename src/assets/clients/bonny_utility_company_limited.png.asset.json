@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "eb4d2101-6996-490e-b0dd-96da8c756321",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/eb4d2101-6996-490e-b0dd-96da8c756321/bonny_utility_company_limited.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/eb4d2101-6996-490e-b0dd-96da8c756321/bonny_utility_company_limited.png",
-  "original_filename": "bonny_utility_company_limited.png",
-  "size": 2764,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:00:56Z"
+  "created_at": "2026-08-12T13:00:56Z",
+  "original_filename": "bonny_utility_company_limited.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/eb4d2101-6996-490e-b0dd-96da8c756321/bonny_utility_company_limited.png",
+  "size": 2764,
+  "url": "/__l5e/assets-v1/eb4d2101-6996-490e-b0dd-96da8c756321/bonny_utility_company_limited.png",
+  "version": 1
 }

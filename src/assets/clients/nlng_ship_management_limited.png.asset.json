@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "1aded16e-a36f-4c5b-9195-04681cd173ad",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/1aded16e-a36f-4c5b-9195-04681cd173ad/nlng_ship_management_limited.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/1aded16e-a36f-4c5b-9195-04681cd173ad/nlng_ship_management_limited.png",
-  "original_filename": "nlng_ship_management_limited.png",
-  "size": 5081,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:03:25Z"
+  "created_at": "2026-08-12T13:03:25Z",
+  "original_filename": "nlng_ship_management_limited.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/1aded16e-a36f-4c5b-9195-04681cd173ad/nlng_ship_management_limited.png",
+  "size": 5081,
+  "url": "/__l5e/assets-v1/1aded16e-a36f-4c5b-9195-04681cd173ad/nlng_ship_management_limited.png",
+  "version": 1
 }

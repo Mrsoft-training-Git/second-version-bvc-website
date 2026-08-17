@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "7fd4b74f-6d8d-46d9-940d-ea4570a94720",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/7fd4b74f-6d8d-46d9-940d-ea4570a94720/courdeau_catering_nigeria_limited.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/7fd4b74f-6d8d-46d9-940d-ea4570a94720/courdeau_catering_nigeria_limited.png",
-  "original_filename": "courdeau_catering_nigeria_limited.png",
-  "size": 14313,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:01:27Z"
+  "created_at": "2026-08-12T13:01:27Z",
+  "original_filename": "courdeau_catering_nigeria_limited.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/7fd4b74f-6d8d-46d9-940d-ea4570a94720/courdeau_catering_nigeria_limited.png",
+  "size": 14313,
+  "url": "/__l5e/assets-v1/7fd4b74f-6d8d-46d9-940d-ea4570a94720/courdeau_catering_nigeria_limited.png",
+  "version": 1
 }

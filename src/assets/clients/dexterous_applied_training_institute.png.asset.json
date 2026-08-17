@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "97f7dd04-35a3-4524-98af-f56cbc236a10",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/97f7dd04-35a3-4524-98af-f56cbc236a10/dexterous_applied_training_institute.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/97f7dd04-35a3-4524-98af-f56cbc236a10/dexterous_applied_training_institute.png",
-  "original_filename": "dexterous_applied_training_institute.png",
-  "size": 6247,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:01:34Z"
+  "created_at": "2026-08-12T13:01:34Z",
+  "original_filename": "dexterous_applied_training_institute.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/97f7dd04-35a3-4524-98af-f56cbc236a10/dexterous_applied_training_institute.png",
+  "size": 6247,
+  "url": "/__l5e/assets-v1/97f7dd04-35a3-4524-98af-f56cbc236a10/dexterous_applied_training_institute.png",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "fea4eb71-f314-4c2e-9979-28bce229fb60",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/fea4eb71-f314-4c2e-9979-28bce229fb60/ens_catering_suppermarket_limited.jpg",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/fea4eb71-f314-4c2e-9979-28bce229fb60/ens_catering_suppermarket_limited.jpg",
-  "original_filename": "ens_catering_suppermarket_limited.jpg",
-  "size": 2508,
   "content_type": "image/jpeg",
-  "created_at": "2026-08-12T13:01:37Z"
+  "created_at": "2026-08-12T13:01:37Z",
+  "original_filename": "ens_catering_suppermarket_limited.jpg",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/fea4eb71-f314-4c2e-9979-28bce229fb60/ens_catering_suppermarket_limited.jpg",
+  "size": 2508,
+  "url": "/__l5e/assets-v1/fea4eb71-f314-4c2e-9979-28bce229fb60/ens_catering_suppermarket_limited.jpg",
+  "version": 1
 }

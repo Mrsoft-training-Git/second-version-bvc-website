@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "acab3e81-328a-4b39-b579-eb90dba4f2d8",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/acab3e81-328a-4b39-b579-eb90dba4f2d8/rivers_state_sustainable_development_agency.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/acab3e81-328a-4b39-b579-eb90dba4f2d8/rivers_state_sustainable_development_agency.png",
-  "original_filename": "rivers_state_sustainable_development_agency.png",
-  "size": 14071,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:03:41Z"
+  "created_at": "2026-08-12T13:03:41Z",
+  "original_filename": "rivers_state_sustainable_development_agency.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/acab3e81-328a-4b39-b579-eb90dba4f2d8/rivers_state_sustainable_development_agency.png",
+  "size": 14071,
+  "url": "/__l5e/assets-v1/acab3e81-328a-4b39-b579-eb90dba4f2d8/rivers_state_sustainable_development_agency.png",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "0a09bdf9-ff93-4ea1-a21a-218b1084b5d1",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/0a09bdf9-ff93-4ea1-a21a-218b1084b5d1/catering_facilities_solutions_limited.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/0a09bdf9-ff93-4ea1-a21a-218b1084b5d1/catering_facilities_solutions_limited.png",
-  "original_filename": "catering_facilities_solutions_limited.png",
-  "size": 6898,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:01:01Z"
+  "created_at": "2026-08-12T13:01:01Z",
+  "original_filename": "catering_facilities_solutions_limited.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/0a09bdf9-ff93-4ea1-a21a-218b1084b5d1/catering_facilities_solutions_limited.png",
+  "size": 6898,
+  "url": "/__l5e/assets-v1/0a09bdf9-ff93-4ea1-a21a-218b1084b5d1/catering_facilities_solutions_limited.png",
+  "version": 1
 }

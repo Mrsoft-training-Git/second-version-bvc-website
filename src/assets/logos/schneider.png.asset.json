@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "8c4714a4-b7de-4bb5-b1db-91890a3cfbec",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/8c4714a4-b7de-4bb5-b1db-91890a3cfbec/schneider.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/8c4714a4-b7de-4bb5-b1db-91890a3cfbec/schneider.png",
-  "original_filename": "schneider.png",
-  "size": 1030525,
   "content_type": "image/png",
-  "created_at": "2026-08-11T07:42:10Z"
+  "created_at": "2026-08-11T07:42:10Z",
+  "original_filename": "schneider.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/8c4714a4-b7de-4bb5-b1db-91890a3cfbec/schneider.png",
+  "size": 1030525,
+  "url": "/__l5e/assets-v1/8c4714a4-b7de-4bb5-b1db-91890a3cfbec/schneider.png",
+  "version": 1
 }

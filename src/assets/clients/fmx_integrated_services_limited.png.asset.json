@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "f0028b31-f7ea-4ada-a43d-79d3d5d7e3c0",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/f0028b31-f7ea-4ada-a43d-79d3d5d7e3c0/fmx_integrated_services_limited.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/f0028b31-f7ea-4ada-a43d-79d3d5d7e3c0/fmx_integrated_services_limited.png",
-  "original_filename": "fmx_integrated_services_limited.png",
-  "size": 69764,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:01:40Z"
+  "created_at": "2026-08-12T13:01:40Z",
+  "original_filename": "fmx_integrated_services_limited.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/f0028b31-f7ea-4ada-a43d-79d3d5d7e3c0/fmx_integrated_services_limited.png",
+  "size": 69764,
+  "url": "/__l5e/assets-v1/f0028b31-f7ea-4ada-a43d-79d3d5d7e3c0/fmx_integrated_services_limited.png",
+  "version": 1
 }

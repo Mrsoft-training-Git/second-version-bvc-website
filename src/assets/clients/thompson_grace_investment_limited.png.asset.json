@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "751feff1-da41-4d29-940b-9168551c6035",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/751feff1-da41-4d29-940b-9168551c6035/thompson_grace_investment_limited.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/751feff1-da41-4d29-940b-9168551c6035/thompson_grace_investment_limited.png",
-  "original_filename": "thompson_grace_investment_limited.png",
-  "size": 3968,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:03:53Z"
+  "created_at": "2026-08-12T13:03:53Z",
+  "original_filename": "thompson_grace_investment_limited.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/751feff1-da41-4d29-940b-9168551c6035/thompson_grace_investment_limited.png",
+  "size": 3968,
+  "url": "/__l5e/assets-v1/751feff1-da41-4d29-940b-9168551c6035/thompson_grace_investment_limited.png",
+  "version": 1
 }

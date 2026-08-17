@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "708910cc-d9a4-477a-8eb2-4e0f933d17b3",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/708910cc-d9a4-477a-8eb2-4e0f933d17b3/Julius_Berger_Plc.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/708910cc-d9a4-477a-8eb2-4e0f933d17b3/Julius_Berger_Plc.png",
-  "original_filename": "Julius_Berger_Plc.png",
-  "size": 26650,
   "content_type": "image/png",
-  "created_at": "2026-08-13T13:16:54Z"
+  "created_at": "2026-08-13T13:16:54Z",
+  "original_filename": "Julius_Berger_Plc.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/708910cc-d9a4-477a-8eb2-4e0f933d17b3/Julius_Berger_Plc.png",
+  "size": 26650,
+  "url": "/__l5e/assets-v1/708910cc-d9a4-477a-8eb2-4e0f933d17b3/Julius_Berger_Plc.png",
+  "version": 1
 }

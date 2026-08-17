@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "4496d148-2a1d-4ea3-af95-fd45651c11fd",
-  "project_id": "8874681a-bfc8-4044-97f7-4cd859285d5b",
-  "url": "/__l5e/assets-v1/4496d148-2a1d-4ea3-af95-fd45651c11fd/pivot_gis_limited.png",
-  "r2_key": "a/v1/8874681a-bfc8-4044-97f7-4cd859285d5b/4496d148-2a1d-4ea3-af95-fd45651c11fd/pivot_gis_limited.png",
-  "original_filename": "pivot_gis_limited.png",
-  "size": 4846,
   "content_type": "image/png",
-  "created_at": "2026-08-12T13:03:35Z"
+  "created_at": "2026-08-12T13:03:35Z",
+  "original_filename": "pivot_gis_limited.png",
+  "project_id": "e09ad770-7c97-4eb0-8a49-888ff6ec07d1",
+  "r2_key": "a/v1/e09ad770-7c97-4eb0-8a49-888ff6ec07d1/4496d148-2a1d-4ea3-af95-fd45651c11fd/pivot_gis_limited.png",
+  "size": 4846,
+  "url": "/__l5e/assets-v1/4496d148-2a1d-4ea3-af95-fd45651c11fd/pivot_gis_limited.png",
+  "version": 1
 }
