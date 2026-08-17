@@ -10,7 +10,42 @@ import { newsImage } from "@/lib/news-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ClientMarquee } from "@/components/client-marquee";
 import { ContentCard } from "@/components/content-card";
-import { ProgramShowcase } from "@/components/program-showcase";
+import { ProgramCard } from "@/components/program-card";
+
+/** Programme areas featured on the home page, one photo per category. */
+const PROGRAM_CATEGORY_CARDS = [
+  {
+    slug: "engineering",
+    name: "Engineering",
+    imageSlug: "engineering-fabrication-welding-l3",
+    body: "Fabrication and welding, electrical and electronic, maintenance and mechanical engineering programmes taught in working workshops.",
+  },
+  {
+    slug: "hospitality-and-culinary",
+    name: "Hospitality & Culinary",
+    imageSlug: "culinary-arts-supervision-l3",
+    body: "Professional cookery, food and beverage service and hospitality supervision training in our production kitchens.",
+  },
+  {
+    slug: "ict",
+    name: "ICT",
+    imageSlug: "ict-professionals-systems-principles-l4",
+    body: "IT systems and principles, networking and end-user computing qualifications for digital and technical careers.",
+  },
+  {
+    slug: "business-and-education",
+    name: "Business & Education",
+    imageSlug: "principles-business-administration-l3",
+    body: "Business administration, leadership and management, and teaching, training and assessing qualifications.",
+  },
+  {
+    slug: "skills-proficiency",
+    name: "Skills Proficiency",
+    imageSlug: "basic-electrical-installation",
+    body: "Short, intensive proficiency certificates that build a single practical trade skill quickly.",
+  },
+];
+
 
 
 
