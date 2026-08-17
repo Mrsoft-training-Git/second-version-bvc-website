@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import { Menu, Search, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NAV } from "@/data/site";
@@ -9,6 +9,8 @@ export function SiteHeader() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const pathname = useRouterState({ select: (st) => st.location.pathname });
+  const overHero = pathname === "/" && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -36,7 +38,7 @@ export function SiteHeader() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
+        !overHero
           ? "bg-ink py-2.5 shadow-[0_18px_45px_color-mix(in_oklab,var(--color-ink)_38%,transparent)]"
           : "bg-transparent py-4 lg:py-5"
       }`}
