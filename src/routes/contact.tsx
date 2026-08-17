@@ -296,20 +296,29 @@ function Contact() {
                 className="absolute inset-0 h-full w-full animate-in fade-in duration-500"
                 style={{ border: 0 }}
               />
+              <button
+                type="button"
+                aria-label={`Open ${office.name} in Google Maps`}
+                onClick={() => openMaps(office.mapQuery)}
+                className="absolute right-3 bottom-3 z-10 border border-gold bg-background/95 px-3 py-1.5 font-display text-[11px] font-semibold tracking-[0.12em] uppercase text-gold shadow-sm transition-all duration-300 hover:bg-gold hover:text-gold-foreground"
+              >
+                Open in Google Maps
+              </button>
             </div>
 
             <div className="flex items-center justify-between gap-4 p-5">
               <p className="text-xs text-muted-foreground">
                 Monday - Friday, 7:30 AM - 4:30 PM
               </p>
-              <a
-                href={`https://maps.google.com/maps?saddr=Current+Location&daddr=${encodeURIComponent(office.mapQuery)}`}
-                target="_top"
+              <button
+                type="button"
+                onClick={() => openMaps(office.mapQuery, true)}
                 className="border border-gold px-4 py-2 font-display text-xs font-semibold tracking-[0.12em] uppercase text-gold transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:text-gold-foreground"
               >
                 Get directions
-              </a>
+              </button>
             </div>
+
           </div>
         </section>
       </div>
