@@ -229,6 +229,7 @@ export const TOP_RESOURCES = [
 
 export const PANEL_LINKS = [
   { label: "Contact", to: "/contact" },
+  { label: "Privacy", to: "/about" },
 ];
 
 
