@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Search } from "lucide-react";
+
 import { PANEL_LINKS, TOP_RESOURCES } from "@/data/site";
 
 export function SiteSidebar() {
@@ -13,22 +13,6 @@ export function SiteSidebar() {
       <div className="flex min-h-full flex-col px-4 py-6">
         <div>
           <p className="font-display text-xs font-bold leading-snug">Explore programs, people and places</p>
-          <form
-            role="search"
-            onSubmit={(e) => e.preventDefault()}
-            className="mt-3 flex items-center gap-2 border border-ink-foreground/20 bg-ink-foreground/5 px-2.5 py-2.5"
-          >
-            <Search className="h-4 w-4 shrink-0 text-gold" aria-hidden />
-            <label htmlFor="panel-search" className="sr-only">
-              Search BVC
-            </label>
-            <input
-              id="panel-search"
-              type="search"
-              placeholder="Search BVC"
-              className="w-full bg-transparent text-xs text-ink-foreground outline-none placeholder:text-ink-foreground/50"
-            />
-          </form>
         </div>
 
         <div className="mt-6">
