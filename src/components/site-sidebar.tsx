@@ -83,13 +83,6 @@ export function SiteSidebar() {
               </li>
             ))}
           </ul>
-          <ul className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
-            <li>
-              <Link to="/about" className="link-underline">
-                Privacy
-              </Link>
-            </li>
-          </ul>
         </div>
       </div>
     </aside>
