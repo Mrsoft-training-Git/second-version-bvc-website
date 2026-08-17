@@ -4,13 +4,48 @@ import metrologyImg from "@/assets/Picture67.jpg.asset.json";
 import refrigerationImg from "@/assets/Picture70.jpg.asset.json";
 import weldingImg from "@/assets/Picture69.jpg.asset.json";
 
-import { CLIENTS, DONORS, FACTS, PROGRAMS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
+import { CLIENTS, DONORS, FACTS, SPONSORS, SPOTLIGHTS, STORIES } from "@/data/site";
 import { programImage } from "@/lib/program-images";
 import { newsImage } from "@/lib/news-images";
 import { LogoMarquee } from "@/components/logo-marquee";
 import { ClientMarquee } from "@/components/client-marquee";
 import { ContentCard } from "@/components/content-card";
-import { ProgramShowcase } from "@/components/program-showcase";
+import { ProgramCard } from "@/components/program-card";
+
+/** Programme areas featured on the home page, one photo per category. */
+const PROGRAM_CATEGORY_CARDS = [
+  {
+    slug: "engineering",
+    name: "Engineering",
+    imageSlug: "engineering-fabrication-welding-l3",
+    body: "Fabrication and welding, electrical and electronic, maintenance and mechanical engineering programmes taught in working workshops.",
+  },
+  {
+    slug: "hospitality-and-culinary",
+    name: "Hospitality & Culinary",
+    imageSlug: "culinary-arts-supervision-l3",
+    body: "Professional cookery, food and beverage service and hospitality supervision training in our production kitchens.",
+  },
+  {
+    slug: "ict",
+    name: "ICT",
+    imageSlug: "ict-professionals-systems-principles-l4",
+    body: "IT systems and principles, networking and end-user computing qualifications for digital and technical careers.",
+  },
+  {
+    slug: "business-and-education",
+    name: "Business & Education",
+    imageSlug: "principles-business-administration-l3",
+    body: "Business administration, leadership and management, and teaching, training and assessing qualifications.",
+  },
+  {
+    slug: "skills-proficiency",
+    name: "Skills Proficiency",
+    imageSlug: "basic-electrical-installation",
+    body: "Short, intensive proficiency certificates that build a single practical trade skill quickly.",
+  },
+];
+
 
 
 
@@ -126,8 +161,41 @@ function Home() {
     <>
       <SpotlightCarousel />
 
-      {/* Programs showcase */}
-      <ProgramShowcase />
+      {/* Programs */}
+      <section
+        id="programs"
+        aria-labelledby="programs-heading"
+        className="mx-auto max-w-6xl scroll-mt-24 px-4 py-14"
+      >
+        <div className="module-rule flex items-end justify-between pt-3">
+          <h2 id="programs-heading" className="text-2xl font-bold">
+            Programs
+          </h2>
+          <Link
+            to="/programs"
+            className="font-display text-xs font-semibold tracking-wide text-primary uppercase link-underline"
+          >
+            All programs
+          </Link>
+        </div>
+
+        <ul className="news-scroller mt-8 -mx-4 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4">
+          {PROGRAM_CATEGORY_CARDS.map((c, i) => (
+            <li key={c.slug} className="w-[280px] shrink-0 snap-start sm:w-[320px] lg:w-[340px]">
+              <ProgramCard
+                to="/programs"
+                hash={c.slug}
+                image={programImage(c.imageSlug, i)}
+                alt={c.name}
+                title={c.name}
+                body={c.body}
+                cta="Explore programmes"
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
+
 
 
       {/* Facts band */}

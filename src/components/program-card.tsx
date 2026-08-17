@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 type ProgramCardProps = {
   to: any;
   params?: any;
+  hash?: string;
   image: string;
   alt?: string;
   title: string;
@@ -21,6 +22,7 @@ type ProgramCardProps = {
 export function ProgramCard({
   to,
   params,
+  hash,
   image,
   alt = "",
   title,
@@ -32,6 +34,7 @@ export function ProgramCard({
     <Link
       to={to}
       params={params}
+      hash={hash}
       className={cn(
         "group relative isolate flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card p-7 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-transparent hover:shadow-2xl",
         className,
