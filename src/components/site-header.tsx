@@ -89,7 +89,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-primary-foreground/80 transition-colors hover:text-gold lg:hidden"
+            className="flex h-9 w-9 items-center justify-center text-primary-foreground/80 transition-colors hover:text-gold lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
