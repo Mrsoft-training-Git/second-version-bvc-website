@@ -70,7 +70,7 @@ function Departments() {
             <li
               key={dept.slug}
               id={dept.slug}
-              className="scroll-mt-24 overflow-hidden rounded-2xl border border-border bg-card"
+              className="scroll-mt-24 border border-border bg-card"
             >
               <div className="grid gap-0 lg:grid-cols-[1.6fr_1fr]">
                 <div className="p-7 sm:p-9">
@@ -78,9 +78,7 @@ function Departments() {
                     <span className="font-display text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
                       Department {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="h-px w-6 bg-border" aria-hidden="true" />
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 font-display text-[11px] font-semibold tracking-[0.12em] text-foreground uppercase">
-                      <GraduationCap className="h-3.5 w-3.5 text-gold" />
                       {dept.programSlugs.length + 1} Programmes
                     </span>
                   </div>
@@ -96,7 +94,6 @@ function Departments() {
                     params={{ slug: dept.programSlug }}
                     className="group mt-7 inline-flex items-center gap-2 border border-gold bg-gold px-5 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
                   >
-                    <GraduationCap className="h-4 w-4" />
                     View programme
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </Link>
