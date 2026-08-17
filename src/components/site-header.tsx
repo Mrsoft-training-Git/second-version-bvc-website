@@ -45,9 +45,6 @@ export function SiteHeader() {
             <span className="font-display text-lg font-bold uppercase tracking-tight text-primary-foreground">
               BVC
             </span>
-            <span className="text-[0.625rem] font-semibold uppercase tracking-[0.18em] text-gold">
-              Bonny Vocational Centre
-            </span>
           </span>
         </Link>
 
