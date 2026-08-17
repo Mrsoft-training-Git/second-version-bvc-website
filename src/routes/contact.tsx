@@ -28,6 +28,7 @@ type Office = {
   tag: string;
   lines: string[];
   postal: string;
+  mapQuery: string;
 };
 
 const OFFICES: Office[] = [
@@ -36,14 +37,17 @@ const OFFICES: Office[] = [
     tag: "Bonny Island",
     lines: ["Akiama-Oguede Road", "Bonny Island 503101", "Rivers State, Nigeria"],
     postal: "",
+    mapQuery: "Bonny Vocational Centre, Akiama-Oguede Road, Bonny Island 503101, Rivers State, Nigeria",
   },
   {
     name: "Port Harcourt Office",
     tag: "D-line, Port Harcourt",
     lines: ["16 Mbonu Street, D-line", "Port Harcourt 500101", "Rivers State, Nigeria"],
     postal: "",
+    mapQuery: "16 Mbonu Street, D-line, Port Harcourt 500101, Rivers State, Nigeria",
   },
 ];
+
 
 const PHONE_LINES = [
   { number: "+234 813 970 0651", label: "Official line (Esther)" },
