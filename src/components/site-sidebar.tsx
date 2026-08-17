@@ -56,9 +56,24 @@ export function SiteSidebar() {
 
         <div className="mt-auto pt-12 text-sm">
           <p className="font-semibold">Bonny Vocational Center</p>
-          <p className="mt-1 text-ink-foreground/70">
-            Finima Road, Bonny Island, Rivers State, Nigeria
-          </p>
+          <div className="mt-1 space-y-2 text-ink-foreground/70">
+            <address className="not-italic leading-snug">
+              <span className="block text-[11px] font-bold uppercase tracking-wide text-gold">
+                Head Office
+              </span>
+              Akiama-Oguede Road<br />
+              Bonny Island 503101<br />
+              Rivers State, Nigeria
+            </address>
+            <address className="not-italic leading-snug">
+              <span className="block text-[11px] font-bold uppercase tracking-wide text-gold">
+                Port Harcourt Office
+              </span>
+              16 Mbonu Street, D-line<br />
+              Port Harcourt 500101<br />
+              Rivers State, Nigeria
+            </address>
+          </div>
           <ul className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
             {PANEL_LINKS.map((l) => (
               <li key={l.label}>

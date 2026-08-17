@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Facebook } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 
 export const Route = createFileRoute("/contact")({
@@ -235,10 +236,16 @@ function Contact() {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 font-display font-semibold hover:text-primary"
+                      aria-label={`${s.label} - ${s.handle}`}
+                      className="inline-flex items-center gap-3 font-display font-semibold transition-colors hover:text-primary"
                     >
-                      <span className="text-gold">{s.label}</span>
-                      <span className="text-muted-foreground">{s.handle}</span>
+                      <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-gold text-gold-foreground transition-transform duration-300 hover:scale-110">
+                        <Facebook className="h-4 w-4" aria-hidden />
+                      </span>
+                      <span>
+                        <span className="block text-gold">{s.label}</span>
+                        <span className="text-xs text-muted-foreground">{s.handle}</span>
+                      </span>
                     </a>
                   </li>
                 ))}
