@@ -51,16 +51,7 @@ export function ProgramCard({
         <div className="absolute inset-0 bg-ink/85" />
       </div>
 
-      <span
-        className={cn(
-          "inline-flex h-12 w-12 items-center justify-center rounded-full bg-muted text-primary transition-colors duration-300",
-          "group-hover:bg-gold group-hover:text-gold-foreground",
-        )}
-      >
-        <BarChart3 className="h-5 w-5" />
-      </span>
-
-      <h3 className="mt-7 font-display text-2xl font-bold leading-tight text-foreground transition-colors duration-300 group-hover:text-ink-foreground">
+      <h3 className="font-display text-2xl font-bold leading-tight text-foreground transition-colors duration-300 group-hover:text-ink-foreground">
         {title}
       </h3>
 
