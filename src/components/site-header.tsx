@@ -48,7 +48,7 @@ export function SiteHeader() {
         <Link to="/" className="flex shrink-0 items-center gap-3">
           <span
             className={`flex items-center justify-center bg-primary-foreground p-1 shadow-inner transition-all duration-300 ${
-              scrolled ? "h-9 w-9" : "h-11 w-11"
+              overHero ? "h-11 w-11" : "h-9 w-9"
             }`}
           >
             <img
