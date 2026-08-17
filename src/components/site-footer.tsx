@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   const [open, setOpen] = useState(false);
