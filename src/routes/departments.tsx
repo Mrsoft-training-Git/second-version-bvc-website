@@ -122,7 +122,7 @@ function Departments() {
           ))}
         </ul>
 
-        <div className="mt-14 rounded-2xl border border-border bg-muted/60 p-8 text-center">
+        <div className="mt-14 border border-border bg-muted/60 p-8 text-center">
           <h2 className="font-display text-xl font-bold text-foreground">
             Explore the full programme catalogue
           </h2>
