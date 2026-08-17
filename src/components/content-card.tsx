@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 type ContentCardProps = {
   to: string;
   params?: Record<string, string>;
+  hash?: string;
   image: string;
   alt?: string;
   badge: string;
@@ -24,6 +25,7 @@ type ContentCardProps = {
 export function ContentCard({
   to,
   params,
+  hash,
   image,
   alt = "",
   badge,
@@ -38,6 +40,7 @@ export function ContentCard({
     <Link
       to={to}
       params={params}
+      hash={hash}
       className={cn(
         "group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl",
         className,
