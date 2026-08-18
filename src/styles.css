@@ -109,7 +109,7 @@
   --rule: oklch(1 0 0 / 22%);
   --surface: oklch(0.255 0.012 264);
   --surface-foreground: oklch(0.97 0.002 256);
-  --brand-tint: oklch(0.3 0.04 264);
+  --brand-tint: oklch(0.30 0.04 263);
   --gold: oklch(0.74 0.13 79);
   --gold-foreground: oklch(0.18 0.03 79);
 }
