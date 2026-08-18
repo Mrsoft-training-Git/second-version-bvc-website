@@ -230,7 +230,7 @@ function About() {
           <div className="mt-6 h-1 w-20 bg-gold" />
         </div>
         <div className="col-span-12 md:col-span-8">
-          <div className="space-y-6 font-serif text-xl leading-relaxed">
+          <div className="space-y-6 font-serif text-base leading-relaxed">
             <p>
               <span className="float-left mt-2 mr-4 font-display text-6xl leading-none font-bold text-primary">
                 I
