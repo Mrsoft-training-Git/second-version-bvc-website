@@ -375,7 +375,7 @@ function About() {
           </div>
 
           <div>
-            <h2 className="mb-10 border-l-4 border-primary pl-6 font-display text-3xl font-bold">
+            <h2 className="mb-10 border-l-4 border-primary pl-6 font-display text-2xl font-bold sm:text-3xl">
               Consultancy team
             </h2>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
