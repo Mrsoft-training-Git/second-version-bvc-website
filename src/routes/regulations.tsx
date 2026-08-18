@@ -1,7 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import {
-  ArrowLeft,
   Award,
   BadgeCheck,
   CalendarCheck,
@@ -160,27 +159,14 @@ function Regulations() {
         eyebrow="Student management"
         title="Enrolment & academic regulations"
         intro="Bonny Vocational Centre is committed to maintaining high academic standards and ensuring that every learner is adequately prepared for their chosen programme. Prospective students must comply with the Centre's admission and registration procedures before commencing studies."
+        back={
+          program
+            ? { to: "/programs/$slug", label: "BACK TO PROGRAM", params: { slug: program } }
+            : { to: "/programs", label: "BACK TO PROGRAMS" }
+        }
       />
 
       <div className="mx-auto max-w-6xl px-4 py-14">
-        {program ? (
-          <Link
-            to="/programs/$slug"
-            params={{ slug: program }}
-            className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            BACK TO PROGRAM
-          </Link>
-        ) : (
-          <Link
-            to="/programs"
-            className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            BACK TO PROGRAMS
-          </Link>
-        )}
         <div className="grid gap-14 lg:grid-cols-[1fr_220px]">
           <div className="space-y-16">
             {/* Enrolment */}
