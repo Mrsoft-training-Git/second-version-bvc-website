@@ -70,8 +70,8 @@ export function SiteHeader() {
           aria-label="Primary"
           className={`hidden items-center gap-6 px-6 py-3.5 shadow-sm transition-colors duration-300 lg:flex xl:gap-8 xl:px-8 ${
             overHero
-              ? "border border-border bg-background"
-              : "border border-ink-foreground/15 bg-ink"
+              ? "bg-background"
+              : "bg-ink"
           }`}
         >
           {NAV.map((item) =>
