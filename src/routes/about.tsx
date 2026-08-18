@@ -202,7 +202,7 @@ function About() {
             <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold">
               Our Mission
             </h2>
-            <p className="text-xl leading-relaxed font-light">
+            <p className="text-base leading-relaxed font-light">
               To provide market-responsive, competency-based technical and vocational education
               through strong industry partnerships, cutting-edge technology, and practical training
               that empowers youths across Bonny Kingdom, NLNG&rsquo;s GTS Communities, and Nigeria.
