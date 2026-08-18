@@ -96,6 +96,7 @@ function ProgramDetail() {
             </Link>
             <Link
               to="/regulations"
+              search={{ program: program.slug }}
               className="inline-block border border-ink-foreground/40 px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] uppercase transition-colors hover:border-gold hover:text-gold"
             >
               Enrolment regulations
