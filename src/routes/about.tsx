@@ -326,7 +326,7 @@ function About() {
                 <p className="mb-6 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold">
                   {m.role}
                 </p>
-                <div className="space-y-4 font-serif text-lg leading-relaxed text-muted-foreground">
+                <div className="space-y-4 font-serif text-base leading-relaxed text-muted-foreground">
                   {m.bio.map((p) => (
                     <p key={p.slice(0, 40)}>{p}</p>
                   ))}
