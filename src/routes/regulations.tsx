@@ -163,14 +163,24 @@ function Regulations() {
       />
 
       <div className="mx-auto max-w-6xl px-4 py-14">
-        <Link
-          to={program ? "/programs/$slug" : "/programs"}
-          params={program ? { slug: program } : undefined}
-          className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          {program ? "Back to programme" : "Back to programmes"}
-        </Link>
+        {program ? (
+          <Link
+            to="/programs/$slug"
+            params={{ slug: program }}
+            className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            Back to programme
+          </Link>
+        ) : (
+          <Link
+            to="/programs"
+            className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            Back to programmes
+          </Link>
+        )}
         <div className="grid gap-14 lg:grid-cols-[1fr_220px]">
           <div className="space-y-16">
             {/* Enrolment */}
