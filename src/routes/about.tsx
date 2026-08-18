@@ -477,7 +477,7 @@ function About() {
       <section className="mx-auto max-w-5xl px-6 py-24 sm:px-12">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl">
+            <h2 className="font-display text-2xl font-extrabold leading-tight sm:text-3xl">
               Partners
             </h2>
             <div className="mt-5 h-1 w-20 bg-primary" />
