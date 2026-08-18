@@ -341,7 +341,7 @@ function About() {
       <section className="bg-ink px-6 py-24 text-ink-foreground sm:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="mb-20">
-            <h2 className="mb-10 border-l-4 border-gold pl-6 font-display text-3xl font-bold">
+            <h2 className="mb-10 border-l-4 border-gold pl-6 font-display text-2xl font-bold sm:text-3xl">
               Board of Trustees
             </h2>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-6">
