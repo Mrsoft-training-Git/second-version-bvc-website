@@ -428,7 +428,7 @@ function About() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
+              <h2 className="font-display text-2xl font-extrabold leading-tight text-ink sm:text-3xl">
                 Accreditation & Awarding bodies
               </h2>
               <div className="mt-5 h-1 w-20 bg-gold" />
