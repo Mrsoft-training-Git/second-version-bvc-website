@@ -295,7 +295,7 @@ function About() {
 
       {/* LEADERSHIP */}
       <section className="mx-auto max-w-5xl px-6 py-24 sm:px-12">
-        <h2 className="mb-16 text-center font-display text-4xl font-extrabold">Leadership</h2>
+        <h2 className="mb-16 text-center font-display text-2xl font-extrabold sm:text-3xl">Leadership</h2>
         <div className="space-y-24">
           {MANAGEMENT.map((m, i) => (
             <article
