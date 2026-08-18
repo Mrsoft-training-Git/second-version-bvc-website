@@ -32,8 +32,11 @@ export function SiteHeader() {
     }
   };
 
-  const navLinkClass =
-    "text-[0.6875rem] xl:text-xs font-display font-bold uppercase tracking-[0.15em] text-foreground transition-colors hover:text-primary aria-[current=page]:text-primary";
+  const navLinkClass = `text-[0.6875rem] xl:text-xs font-display font-bold uppercase tracking-[0.15em] transition-colors ${
+    overHero
+      ? "text-foreground hover:text-primary aria-[current=page]:text-primary"
+      : "text-ink-foreground hover:text-gold aria-[current=page]:text-gold"
+  }`;
 
   return (
     <header
