@@ -322,7 +322,7 @@ function About() {
                 </div>
               </div>
               <div className="w-full md:w-2/3">
-                <h3 className="mb-1 font-display text-3xl font-bold">{m.name}</h3>
+                <h3 className="mb-1 font-display text-2xl font-bold">{m.name}</h3>
                 <p className="mb-6 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold">
                   {m.role}
                 </p>
