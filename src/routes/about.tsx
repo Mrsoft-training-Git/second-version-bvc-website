@@ -428,9 +428,6 @@ function About() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="mb-3 inline-block bg-gold px-3 py-1 font-display text-[10px] font-bold tracking-[0.18em] uppercase text-gold-foreground">
-                Quality assured
-              </span>
               <h2 className="font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
                 Accreditation & Awarding bodies
               </h2>
