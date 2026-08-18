@@ -56,8 +56,8 @@
   --card-foreground: oklch(0.22 0.01 256);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.01 256);
-  /* BVC crest royal blue (#1D4DB0) */
-  --primary: oklch(0.45 0.18 264);
+  /* BVC midnight steel navy (#16284D) */
+  --primary: oklch(0.283 0.072 263);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.965 0.006 256);
   --secondary-foreground: oklch(0.28 0.01 256);
