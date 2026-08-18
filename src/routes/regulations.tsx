@@ -170,7 +170,7 @@ function Regulations() {
             className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            Back to programme
+            BACK TO PROGRAM
           </Link>
         ) : (
           <Link
@@ -178,7 +178,7 @@ function Regulations() {
             className="mb-10 inline-flex items-center gap-2 font-display text-[11px] font-semibold tracking-[0.14em] text-gold uppercase transition-opacity hover:opacity-80"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            Back to programmes
+            BACK TO PROGRAMS
           </Link>
         )}
         <div className="grid gap-14 lg:grid-cols-[1fr_220px]">
