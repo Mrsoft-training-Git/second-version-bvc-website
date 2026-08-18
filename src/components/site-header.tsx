@@ -32,8 +32,11 @@ export function SiteHeader() {
     }
   };
 
-  const navLinkClass =
-    "text-[0.6875rem] xl:text-xs font-display font-bold uppercase tracking-[0.15em] text-foreground transition-colors hover:text-primary aria-[current=page]:text-primary";
+  const navLinkClass = `text-[0.6875rem] xl:text-xs font-display font-bold uppercase tracking-[0.15em] transition-colors ${
+    overHero
+      ? "text-foreground hover:text-primary aria-[current=page]:text-primary"
+      : "text-ink-foreground hover:text-gold aria-[current=page]:text-gold"
+  }`;
 
   return (
     <header
@@ -65,7 +68,11 @@ export function SiteHeader() {
         {/* Floating pill nav */}
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-6 border border-border bg-background px-6 py-3.5 shadow-sm lg:flex xl:gap-8 xl:px-8"
+          className={`hidden items-center gap-6 px-6 py-3.5 shadow-sm transition-colors duration-300 lg:flex xl:gap-8 xl:px-8 ${
+            overHero
+              ? "border border-border bg-background"
+              : "border border-ink-foreground/15 bg-ink"
+          }`}
         >
           {NAV.map((item) =>
             "hash" in item && item.hash ? (
