@@ -77,8 +77,8 @@
   /* cool blue-grey sidebar / content plates */
   --surface: oklch(0.951 0.008 264);
   --surface-foreground: oklch(0.24 0.01 256);
-  /* pale crest-blue plate (#E3ECFB) */
-  --brand-tint: oklch(0.94 0.03 264);
+  /* pale steel-blue plate (#E1ECFF) */
+  --brand-tint: oklch(0.941 0.028 261);
   /* warm gold accent for calls to action (#C8901E) */
   --gold: oklch(0.688 0.133 79);
   --gold-foreground: oklch(0.2 0.03 79);
