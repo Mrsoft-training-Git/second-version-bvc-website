@@ -87,7 +87,7 @@ export function ProgramPath({
       <div className="relative flex flex-col gap-16 lg:flex-row lg:gap-24">
         {/* Sticky visual */}
         <div className="relative hidden lg:block lg:w-1/2">
-          <div className="sticky top-32 h-[600px] w-full overflow-hidden rounded-[20px] border border-border bg-ink shadow-2xl">
+          <div className="sticky top-32 h-[600px] w-full overflow-hidden border border-border bg-ink shadow-2xl">
             {steps.map((s, i) => (
               <div
                 key={s.slug}
@@ -137,7 +137,7 @@ export function ProgramPath({
               }`}
             >
               {/* Mobile visual */}
-              <div className="relative mb-8 block h-[260px] w-full overflow-hidden rounded-2xl shadow-lg lg:hidden">
+              <div className="relative mb-8 block h-[260px] w-full overflow-hidden shadow-lg lg:hidden">
                 <img src={s.image} alt={s.name} loading="lazy" className="h-full w-full object-cover" />
                 <div
                   aria-hidden
