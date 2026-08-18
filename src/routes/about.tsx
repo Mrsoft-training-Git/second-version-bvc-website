@@ -224,7 +224,7 @@ function About() {
       {/* HISTORY */}
       <section className="mx-auto grid max-w-5xl grid-cols-12 gap-10 px-6 py-24 sm:px-12">
         <div className="col-span-12 md:col-span-4">
-          <h2 className="font-display text-4xl leading-tight font-extrabold">
+          <h2 className="font-display text-2xl leading-tight font-extrabold sm:text-3xl">
             A foundation built on purpose
           </h2>
           <div className="mt-6 h-1 w-20 bg-gold" />
