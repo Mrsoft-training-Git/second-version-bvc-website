@@ -202,7 +202,7 @@ function About() {
             <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold">
               Our Mission
             </h2>
-            <p className="text-xl leading-relaxed font-light">
+            <p className="text-base leading-relaxed font-light">
               To provide market-responsive, competency-based technical and vocational education
               through strong industry partnerships, cutting-edge technology, and practical training
               that empowers youths across Bonny Kingdom, NLNG&rsquo;s GTS Communities, and Nigeria.
@@ -212,7 +212,7 @@ function About() {
             <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase text-primary">
               Our Vision
             </h2>
-            <p className="text-xl leading-relaxed font-medium text-ink">
+            <p className="text-base leading-relaxed font-medium text-ink">
               To become a leading TVET institution in the region, supplying the manpower
               requirements of relevant industries within and beyond Bonny Island.
             </p>
@@ -224,13 +224,13 @@ function About() {
       {/* HISTORY */}
       <section className="mx-auto grid max-w-5xl grid-cols-12 gap-10 px-6 py-24 sm:px-12">
         <div className="col-span-12 md:col-span-4">
-          <h2 className="font-display text-4xl leading-tight font-extrabold">
+          <h2 className="font-display text-2xl leading-tight font-extrabold sm:text-3xl">
             A foundation built on purpose
           </h2>
           <div className="mt-6 h-1 w-20 bg-gold" />
         </div>
         <div className="col-span-12 md:col-span-8">
-          <div className="space-y-6 font-serif text-xl leading-relaxed">
+          <div className="space-y-6 font-serif text-base leading-relaxed">
             <p>
               <span className="float-left mt-2 mr-4 font-display text-6xl leading-none font-bold text-primary">
                 I
@@ -295,7 +295,7 @@ function About() {
 
       {/* LEADERSHIP */}
       <section className="mx-auto max-w-5xl px-6 py-24 sm:px-12">
-        <h2 className="mb-16 text-center font-display text-4xl font-extrabold">Leadership</h2>
+        <h2 className="mb-16 text-center font-display text-2xl font-extrabold sm:text-3xl">Leadership</h2>
         <div className="space-y-24">
           {MANAGEMENT.map((m, i) => (
             <article
@@ -322,11 +322,11 @@ function About() {
                 </div>
               </div>
               <div className="w-full md:w-2/3">
-                <h3 className="mb-1 font-display text-3xl font-bold">{m.name}</h3>
+                <h3 className="mb-1 font-display text-2xl font-bold">{m.name}</h3>
                 <p className="mb-6 font-display text-xs font-bold tracking-[0.18em] uppercase text-gold">
                   {m.role}
                 </p>
-                <div className="space-y-4 font-serif text-lg leading-relaxed text-muted-foreground">
+                <div className="space-y-4 font-serif text-base leading-relaxed text-muted-foreground">
                   {m.bio.map((p) => (
                     <p key={p.slice(0, 40)}>{p}</p>
                   ))}
@@ -341,7 +341,7 @@ function About() {
       <section className="bg-ink px-6 py-24 text-ink-foreground sm:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="mb-20">
-            <h2 className="mb-10 border-l-4 border-gold pl-6 font-display text-3xl font-bold">
+            <h2 className="mb-10 border-l-4 border-gold pl-6 font-display text-2xl font-bold sm:text-3xl">
               Board of Trustees
             </h2>
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-6">
@@ -375,7 +375,7 @@ function About() {
           </div>
 
           <div>
-            <h2 className="mb-10 border-l-4 border-primary pl-6 font-display text-3xl font-bold">
+            <h2 className="mb-10 border-l-4 border-primary pl-6 font-display text-2xl font-bold sm:text-3xl">
               Consultancy team
             </h2>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
@@ -428,7 +428,7 @@ function About() {
         <div className="mx-auto max-w-5xl">
           <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="font-display text-3xl font-extrabold leading-tight text-ink sm:text-4xl">
+              <h2 className="font-display text-2xl font-extrabold leading-tight text-ink sm:text-3xl">
                 Accreditation & Awarding bodies
               </h2>
               <div className="mt-5 h-1 w-20 bg-gold" />
@@ -477,7 +477,7 @@ function About() {
       <section className="mx-auto max-w-5xl px-6 py-24 sm:px-12">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl">
+            <h2 className="font-display text-2xl font-extrabold leading-tight sm:text-3xl">
               Partners
             </h2>
             <div className="mt-5 h-1 w-20 bg-primary" />
