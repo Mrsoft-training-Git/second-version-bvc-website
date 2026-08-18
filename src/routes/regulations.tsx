@@ -316,32 +316,8 @@ function Regulations() {
               </h3>
               <Bullets items={RESPONSIBILITIES} />
             </section>
-
-            <section className="rounded-xl bg-ink p-8 text-ink-foreground">
-              <h2 className="mt-3 font-display text-2xl font-bold">
-                Speak to the Academic Office about the next intake
-              </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-foreground/80">
-                Online applications will be submitted through the BVC learning portal. In the
-                meantime, the Academic Office will guide you through entry requirements,
-                documentation and registration.
-              </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Link
-                  to="/apply"
-                  className="inline-block border border-gold bg-gold px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] text-gold-foreground uppercase transition-colors hover:bg-transparent hover:text-gold"
-                >
-                  Start an application
-                </Link>
-                <Link
-                  to="/departments"
-                  className="inline-block border border-ink-foreground/40 px-6 py-2.5 font-display text-xs font-semibold tracking-[0.12em] uppercase transition-colors hover:border-gold hover:text-gold"
-                >
-                  Browse programmes
-                </Link>
-              </div>
-            </section>
           </div>
+
 
           <nav aria-label="On this page" className="hidden lg:block">
             <div className="sticky top-24">
