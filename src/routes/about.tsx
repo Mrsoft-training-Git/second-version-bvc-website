@@ -212,7 +212,7 @@ function About() {
             <h2 className="mb-4 font-display text-xs font-bold tracking-[0.18em] uppercase text-primary">
               Our Vision
             </h2>
-            <p className="text-xl leading-relaxed font-medium text-ink">
+            <p className="text-base leading-relaxed font-medium text-ink">
               To become a leading TVET institution in the region, supplying the manpower
               requirements of relevant industries within and beyond Bonny Island.
             </p>
