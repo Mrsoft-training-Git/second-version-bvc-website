@@ -69,9 +69,9 @@
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.9 0.004 256);
   --input: oklch(0.88 0.005 256);
-  --ring: oklch(0.45 0.18 264);
-  /* near-black crest plate (#0B0E16) */
-  --ink: oklch(0.168 0.017 284);
+  --ring: oklch(0.283 0.072 263);
+  /* near-black navy plate (#0A1628) */
+  --ink: oklch(0.200 0.040 258);
   --ink-foreground: oklch(0.97 0.004 256);
   --rule: oklch(0.78 0.008 256);
   /* cool blue-grey sidebar / content plates */
