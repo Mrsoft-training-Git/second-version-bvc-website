@@ -99,7 +99,7 @@ export function SiteHeader() {
 
         {/* Right side: search (mobile) + CTA + mobile toggle */}
         <div className="flex shrink-0 items-center gap-2 lg:gap-3">
-          <div className="flex items-center lg:hidden">
+          <div className="flex items-center">
             {searchOpen ? (
               <form
                 role="search"
@@ -109,8 +109,12 @@ export function SiteHeader() {
                 <label htmlFor="header-search" className="sr-only">
                   Search BVC
                 </label>
-                <div className="relative w-[170px]">
-                  <Search className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-ink-foreground/50" />
+                <div className="relative w-[170px] lg:w-[210px]">
+                  <Search
+                    className={`pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 ${
+                      overHero ? "text-foreground/50" : "text-ink-foreground/50"
+                    }`}
+                  />
                   <input
                     id="header-search"
                     type="search"
@@ -119,13 +123,19 @@ export function SiteHeader() {
                     onBlur={(e) => {
                       if (!e.currentTarget.value) setSearchOpen(false);
                     }}
-                    className="w-full rounded-full border border-ink-foreground/25 bg-ink/60 py-1.5 pl-8 pr-7 text-xs text-ink-foreground placeholder:text-ink-foreground/50 focus:border-gold focus:outline-none"
+                    className={`w-full border py-1.5 pl-8 pr-7 text-xs focus:border-gold focus:outline-none ${
+                      overHero
+                        ? "border-foreground/20 bg-background text-foreground placeholder:text-foreground/50"
+                        : "border-ink-foreground/25 bg-ink/60 text-ink-foreground placeholder:text-ink-foreground/50"
+                    }`}
                   />
                   <button
                     type="button"
                     onClick={() => setSearchOpen(false)}
                     aria-label="Close search"
-                    className="absolute right-1.5 top-1/2 -translate-y-1/2 text-ink-foreground/60 hover:text-gold"
+                    className={`absolute right-1.5 top-1/2 -translate-y-1/2 hover:text-gold ${
+                      overHero ? "text-foreground/60" : "text-ink-foreground/60"
+                    }`}
                   >
                     <X className="size-3.5" />
                   </button>
@@ -137,12 +147,17 @@ export function SiteHeader() {
                 onClick={() => setSearchOpen(true)}
                 aria-label="Open search"
                 aria-expanded={false}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-ink/50 text-ink-foreground/85 transition-colors hover:text-gold"
+                className={`flex h-9 w-9 items-center justify-center transition-colors hover:text-gold ${
+                  overHero
+                    ? "bg-background text-foreground/85"
+                    : "bg-ink/50 text-ink-foreground/85"
+                }`}
               >
                 <Search className="h-5 w-5" />
               </button>
             )}
           </div>
+
 
           <Link
             to="/contact"
