@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * BVC design system - "Crest":
- * crisp white canvas, the crest's royal-blue brand and near-black ink band,
+ * BVC design system - "Midnight steel":
+ * crisp white canvas, a cool midnight-navy brand and near-black navy ink band,
  * cool blue-grey content plates, a warm gold accent for calls to action,
  * condensed grotesque headings and a highly legible body sans.
  */
@@ -56,8 +56,8 @@
   --card-foreground: oklch(0.22 0.01 256);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.01 256);
-  /* BVC crest royal blue (#1D4DB0) */
-  --primary: oklch(0.45 0.18 264);
+  /* BVC midnight steel navy (#16284D) */
+  --primary: oklch(0.283 0.072 263);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.965 0.006 256);
   --secondary-foreground: oklch(0.28 0.01 256);
@@ -69,16 +69,16 @@
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.9 0.004 256);
   --input: oklch(0.88 0.005 256);
-  --ring: oklch(0.45 0.18 264);
-  /* near-black crest plate (#0B0E16) */
-  --ink: oklch(0.168 0.017 284);
+  --ring: oklch(0.283 0.072 263);
+  /* near-black navy plate (#0A1628) */
+  --ink: oklch(0.200 0.040 258);
   --ink-foreground: oklch(0.97 0.004 256);
   --rule: oklch(0.78 0.008 256);
   /* cool blue-grey sidebar / content plates */
   --surface: oklch(0.951 0.008 264);
   --surface-foreground: oklch(0.24 0.01 256);
-  /* pale crest-blue plate (#E3ECFB) */
-  --brand-tint: oklch(0.94 0.03 264);
+  /* pale steel-blue plate (#E1ECFF) */
+  --brand-tint: oklch(0.941 0.028 261);
   /* warm gold accent for calls to action (#C8901E) */
   --gold: oklch(0.688 0.133 79);
   --gold-foreground: oklch(0.2 0.03 79);
@@ -91,7 +91,7 @@
   --card-foreground: oklch(0.97 0.002 256);
   --popover: oklch(0.24 0.006 256);
   --popover-foreground: oklch(0.97 0.002 256);
-  --primary: oklch(0.62 0.16 264);
+  --primary: oklch(0.50 0.08 263);
   --primary-foreground: oklch(0.16 0.02 264);
   --secondary: oklch(0.28 0.008 256);
   --secondary-foreground: oklch(0.97 0.002 256);
@@ -103,13 +103,13 @@
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(1 0 0 / 14%);
   --input: oklch(1 0 0 / 18%);
-  --ring: oklch(0.62 0.16 264);
-  --ink: oklch(0.16 0.017 284);
+  --ring: oklch(0.50 0.08 263);
+  --ink: oklch(0.200 0.040 258);
   --ink-foreground: oklch(0.97 0.004 256);
   --rule: oklch(1 0 0 / 22%);
   --surface: oklch(0.255 0.012 264);
   --surface-foreground: oklch(0.97 0.002 256);
-  --brand-tint: oklch(0.3 0.04 264);
+  --brand-tint: oklch(0.30 0.04 263);
   --gold: oklch(0.74 0.13 79);
   --gold-foreground: oklch(0.18 0.03 79);
 }
@@ -220,9 +220,9 @@
   background-image: linear-gradient(
     90deg,
     var(--color-gold),
-    oklch(0.55 0.17 264),
-    oklch(0.74 0.12 264),
-    oklch(0.55 0.17 264),
+    oklch(0.42 0.08 263),
+    oklch(0.74 0.06 263),
+    oklch(0.42 0.08 263),
     var(--color-gold)
   );
   background-size: 200% 100%;
@@ -234,9 +234,9 @@
   background-image: linear-gradient(
     180deg,
     var(--color-gold),
-    oklch(0.55 0.17 264),
-    oklch(0.74 0.12 264),
-    oklch(0.55 0.17 264),
+    oklch(0.42 0.08 263),
+    oklch(0.74 0.06 263),
+    oklch(0.42 0.08 263),
     var(--color-gold)
   );
   background-size: 100% 200%;
