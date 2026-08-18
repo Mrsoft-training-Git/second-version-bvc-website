@@ -16,6 +16,9 @@ import { PageHeader } from "@/components/page-header";
 
 
 export const Route = createFileRoute("/regulations")({
+  validateSearch: z.object({
+    program: z.string().optional(),
+  }),
   head: () => ({
     meta: [
       { title: "Enrolment & Academic Regulations - Bonny Vocational Centre" },
