@@ -85,7 +85,19 @@ function ProgramDetail() {
             Back
           </Link>
           <h1 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
-            {program.name}
+            {isND && program.name.includes(" in ")
+              ? (() => {
+                  const idx = program.name.indexOf(" in ") + 4;
+                  return (
+                    <>
+                      {program.name.slice(0, idx)}
+                      <span className="underline decoration-gold decoration-[3px] underline-offset-[6px]">
+                        {program.name.slice(idx)}
+                      </span>
+                    </>
+                  );
+                })()
+              : program.name}
           </h1>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
