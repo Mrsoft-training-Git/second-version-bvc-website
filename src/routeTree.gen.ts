@@ -23,8 +23,10 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
 import { Route as NewsIndexRouteImport } from './routes/news.index'
+import { Route as GalleryIndexRouteImport } from './routes/gallery.index'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
+import { Route as GalleryFolderRouteImport } from './routes/gallery.$folder'
 
 const VisitRoute = VisitRouteImport.update({
   id: '/visit',
@@ -96,6 +98,11 @@ const NewsIndexRoute = NewsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => NewsRoute,
 } as any)
+const GalleryIndexRoute = GalleryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => GalleryRoute,
+} as any)
 const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -106,6 +113,11 @@ const NewsSlugRoute = NewsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => NewsRoute,
 } as any)
+const GalleryFolderRoute = GalleryFolderRouteImport.update({
+  id: '/$folder',
+  path: '/$folder',
+  getParentRoute: () => GalleryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -114,14 +126,16 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
-  '/gallery': typeof GalleryRoute
+  '/gallery': typeof GalleryRouteWithChildren
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
   '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/gallery/$folder': typeof GalleryFolderRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/gallery/': typeof GalleryIndexRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -132,12 +146,13 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
-  '/gallery': typeof GalleryRoute
   '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/gallery/$folder': typeof GalleryFolderRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/gallery': typeof GalleryIndexRoute
   '/news': typeof NewsIndexRoute
   '/programs': typeof ProgramsIndexRoute
 }
@@ -149,14 +164,16 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
-  '/gallery': typeof GalleryRoute
+  '/gallery': typeof GalleryRouteWithChildren
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
   '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/gallery/$folder': typeof GalleryFolderRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/gallery/': typeof GalleryIndexRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -175,8 +192,10 @@ export interface FileRouteTypes {
     | '/regulations'
     | '/sitemap.xml'
     | '/visit'
+    | '/gallery/$folder'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/gallery/'
     | '/news/'
     | '/programs/'
   fileRoutesByTo: FileRoutesByTo
@@ -187,12 +206,13 @@ export interface FileRouteTypes {
     | '/contact'
     | '/departments'
     | '/education'
-    | '/gallery'
     | '/regulations'
     | '/sitemap.xml'
     | '/visit'
+    | '/gallery/$folder'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/gallery'
     | '/news'
     | '/programs'
   id:
@@ -209,8 +229,10 @@ export interface FileRouteTypes {
     | '/regulations'
     | '/sitemap.xml'
     | '/visit'
+    | '/gallery/$folder'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/gallery/'
     | '/news/'
     | '/programs/'
   fileRoutesById: FileRoutesById
@@ -222,7 +244,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DepartmentsRoute: typeof DepartmentsRoute
   EducationRoute: typeof EducationRoute
-  GalleryRoute: typeof GalleryRoute
+  GalleryRoute: typeof GalleryRouteWithChildren
   NewsRoute: typeof NewsRouteWithChildren
   ProgramsRoute: typeof ProgramsRouteWithChildren
   RegulationsRoute: typeof RegulationsRoute
@@ -330,6 +352,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsIndexRouteImport
       parentRoute: typeof NewsRoute
     }
+    '/gallery/': {
+      id: '/gallery/'
+      path: '/'
+      fullPath: '/gallery/'
+      preLoaderRoute: typeof GalleryIndexRouteImport
+      parentRoute: typeof GalleryRoute
+    }
     '/programs/$slug': {
       id: '/programs/$slug'
       path: '/$slug'
@@ -344,8 +373,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsSlugRouteImport
       parentRoute: typeof NewsRoute
     }
+    '/gallery/$folder': {
+      id: '/gallery/$folder'
+      path: '/$folder'
+      fullPath: '/gallery/$folder'
+      preLoaderRoute: typeof GalleryFolderRouteImport
+      parentRoute: typeof GalleryRoute
+    }
   }
 }
+
+interface GalleryRouteChildren {
+  GalleryFolderRoute: typeof GalleryFolderRoute
+  GalleryIndexRoute: typeof GalleryIndexRoute
+}
+
+const GalleryRouteChildren: GalleryRouteChildren = {
+  GalleryFolderRoute: GalleryFolderRoute,
+  GalleryIndexRoute: GalleryIndexRoute,
+}
+
+const GalleryRouteWithChildren =
+  GalleryRoute._addFileChildren(GalleryRouteChildren)
 
 interface NewsRouteChildren {
   NewsSlugRoute: typeof NewsSlugRoute
@@ -380,7 +429,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DepartmentsRoute: DepartmentsRoute,
   EducationRoute: EducationRoute,
-  GalleryRoute: GalleryRoute,
+  GalleryRoute: GalleryRouteWithChildren,
   NewsRoute: NewsRouteWithChildren,
   ProgramsRoute: ProgramsRouteWithChildren,
   RegulationsRoute: RegulationsRoute,
