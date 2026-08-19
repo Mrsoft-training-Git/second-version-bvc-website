@@ -147,10 +147,10 @@ export function SiteHeader() {
                 onClick={() => setSearchOpen(true)}
                 aria-label="Open search"
                 aria-expanded={false}
-                className={`flex h-9 w-9 items-center justify-center transition-colors hover:text-gold ${
+                className={`flex h-9 w-9 items-center justify-center bg-transparent transition-colors hover:text-gold ${
                   overHero
-                    ? "bg-background text-foreground/85"
-                    : "bg-ink/50 text-ink-foreground/85"
+                    ? "text-foreground/85"
+                    : "text-ink-foreground/85"
                 }`}
               >
                 <Search className="h-5 w-5" />
