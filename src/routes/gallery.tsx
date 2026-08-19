@@ -24,6 +24,14 @@ import p71 from "@/assets/Picture71.jpg.asset.json";
 import p54 from "@/assets/Picture54.jpg.asset.json";
 import p55 from "@/assets/Picture55.jpg.asset.json";
 import p56 from "@/assets/Picture56.jpg.asset.json";
+import p13 from "@/assets/Picture13.jpg.asset.json";
+import p21 from "@/assets/Picture21.jpg.asset.json";
+import p22 from "@/assets/Picture22.jpg.asset.json";
+import p24 from "@/assets/Picture24.jpg.asset.json";
+import p25 from "@/assets/Picture25.jpg.asset.json";
+import p27 from "@/assets/Picture27.jpg.asset.json";
+import p29 from "@/assets/Picture29.jpg.asset.json";
+import p30 from "@/assets/Picture30.jpg.asset.json";
 
 type Shot = { src: string; alt: string; category: string };
 
@@ -31,6 +39,7 @@ const CATEGORIES = [
   "All",
   "Welding & Fabrication",
   "Instruction",
+  "Electrical Installation",
   "Refrigeration & Air-Conditioning",
   "Surveying",
   "Workshops",
@@ -46,16 +55,24 @@ const SHOTS: Shot[] = [
   { src: p35.url, alt: "Trainee finishing a workpiece under instructor supervision", category: "Instruction" },
   { src: p36.url, alt: "Trainees assembling fabricated cones on the workshop floor", category: "Welding & Fabrication" },
   { src: p37.url, alt: "Group practical session on sheet-metal development", category: "Welding & Fabrication" },
+  { src: p21.url, alt: "Trainees working inside a low-voltage switchgear panel with an instructor", category: "Electrical Installation" },
+  { src: p24.url, alt: "Trainees wiring a distribution board under instructor supervision", category: "Electrical Installation" },
+  { src: p25.url, alt: "Trainees building a control circuit on a training board", category: "Electrical Installation" },
+  { src: p27.url, alt: "Instructor showing trainees how to take readings with a multimeter", category: "Electrical Installation" },
+  { src: p29.url, alt: "Electrical installation class working through bench exercises", category: "Electrical Installation" },
+  { src: p30.url, alt: "Trainees testing an electric motor with an instructor", category: "Electrical Installation" },
+  { src: p22.url, alt: "Trainee installing a ceiling luminaire during a practical assessment", category: "Electrical Installation" },
   { src: p11.url, alt: "Trainees stripping down air-conditioning units at the workshop bench", category: "Refrigeration & Air-Conditioning" },
   { src: p12.url, alt: "Instructor guiding trainees through a compressor teardown", category: "Refrigeration & Air-Conditioning" },
+  { src: p13.url, alt: "Instructor and trainees dismantling a compressor unit", category: "Refrigeration & Air-Conditioning" },
   { src: p71.url, alt: "Trainees brazing refrigerant pipework on a split-unit condenser", category: "Refrigeration & Air-Conditioning" },
   { src: p18.url, alt: "Practical session charging an air-conditioning system with refrigerant", category: "Refrigeration & Air-Conditioning" },
   { src: p20.url, alt: "Instructor and trainee inspecting air-conditioning components", category: "Refrigeration & Air-Conditioning" },
+  { src: p70.url, alt: "Trainees servicing a large industrial chiller compressor", category: "Refrigeration & Air-Conditioning" },
   { src: p54.url, alt: "Surveying practical with a levelling instrument on site", category: "Surveying" },
   { src: p55.url, alt: "Trainees recording level readings during a site survey exercise", category: "Surveying" },
   { src: p56.url, alt: "Surveying team taking staff readings through a level", category: "Surveying" },
   { src: p67.url, alt: "Metrology and measurement practical in the engineering workshop", category: "Workshops" },
-  { src: p70.url, alt: "Refrigeration and air-conditioning training rig", category: "Workshops" },
   { src: p73.url, alt: "Trainees at work in a Bonny Vocational Centre workshop", category: "Workshops" },
 ];
 
