@@ -97,7 +97,7 @@ function SpotlightCarousel() {
     >
       {SPOTLIGHTS.map((s, i) => (
         <img
-          key={s.slug}
+          key={s.imageKey}
           src={SPOTLIGHT_IMAGES[s.imageKey]}
           alt={s.alt}
           loading={i === 0 ? "eager" : "lazy"}
@@ -131,7 +131,7 @@ function SpotlightCarousel() {
           <div className="mt-8 flex items-center gap-3">
             {SPOTLIGHTS.map((s, i) => (
               <button
-                key={s.slug}
+                key={s.imageKey}
                 type="button"
                 aria-label={`Show spotlight: ${s.title}`}
                 aria-current={i === index}
