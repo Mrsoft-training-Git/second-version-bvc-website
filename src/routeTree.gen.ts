@@ -26,6 +26,7 @@ import { Route as NewsIndexRouteImport } from './routes/news.index'
 import { Route as GalleryIndexRouteImport } from './routes/gallery.index'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
+import { Route as GalleryFolderRouteImport } from './routes/gallery.$folder'
 
 const VisitRoute = VisitRouteImport.update({
   id: '/visit',
@@ -112,6 +113,11 @@ const NewsSlugRoute = NewsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => NewsRoute,
 } as any)
+const GalleryFolderRoute = GalleryFolderRouteImport.update({
+  id: '/$folder',
+  path: '/$folder',
+  getParentRoute: () => GalleryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -126,6 +132,7 @@ export interface FileRoutesByFullPath {
   '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/gallery/$folder': typeof GalleryFolderRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/gallery/': typeof GalleryIndexRoute
@@ -142,6 +149,7 @@ export interface FileRoutesByTo {
   '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/gallery/$folder': typeof GalleryFolderRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/gallery': typeof GalleryIndexRoute
@@ -162,6 +170,7 @@ export interface FileRoutesById {
   '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/gallery/$folder': typeof GalleryFolderRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
   '/gallery/': typeof GalleryIndexRoute
@@ -183,6 +192,7 @@ export interface FileRouteTypes {
     | '/regulations'
     | '/sitemap.xml'
     | '/visit'
+    | '/gallery/$folder'
     | '/news/$slug'
     | '/programs/$slug'
     | '/gallery/'
@@ -199,6 +209,7 @@ export interface FileRouteTypes {
     | '/regulations'
     | '/sitemap.xml'
     | '/visit'
+    | '/gallery/$folder'
     | '/news/$slug'
     | '/programs/$slug'
     | '/gallery'
@@ -218,6 +229,7 @@ export interface FileRouteTypes {
     | '/regulations'
     | '/sitemap.xml'
     | '/visit'
+    | '/gallery/$folder'
     | '/news/$slug'
     | '/programs/$slug'
     | '/gallery/'
@@ -361,14 +373,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsSlugRouteImport
       parentRoute: typeof NewsRoute
     }
+    '/gallery/$folder': {
+      id: '/gallery/$folder'
+      path: '/$folder'
+      fullPath: '/gallery/$folder'
+      preLoaderRoute: typeof GalleryFolderRouteImport
+      parentRoute: typeof GalleryRoute
+    }
   }
 }
 
 interface GalleryRouteChildren {
+  GalleryFolderRoute: typeof GalleryFolderRoute
   GalleryIndexRoute: typeof GalleryIndexRoute
 }
 
 const GalleryRouteChildren: GalleryRouteChildren = {
+  GalleryFolderRoute: GalleryFolderRoute,
   GalleryIndexRoute: GalleryIndexRoute,
 }
 
