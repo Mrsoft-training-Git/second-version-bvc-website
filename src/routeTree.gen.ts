@@ -23,6 +23,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProgramsIndexRouteImport } from './routes/programs.index'
 import { Route as NewsIndexRouteImport } from './routes/news.index'
+import { Route as GalleryIndexRouteImport } from './routes/gallery.index'
 import { Route as ProgramsSlugRouteImport } from './routes/programs.$slug'
 import { Route as NewsSlugRouteImport } from './routes/news.$slug'
 
@@ -96,6 +97,11 @@ const NewsIndexRoute = NewsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => NewsRoute,
 } as any)
+const GalleryIndexRoute = GalleryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => GalleryRoute,
+} as any)
 const ProgramsSlugRoute = ProgramsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -114,7 +120,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
-  '/gallery': typeof GalleryRoute
+  '/gallery': typeof GalleryRouteWithChildren
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
   '/regulations': typeof RegulationsRoute
@@ -122,6 +128,7 @@ export interface FileRoutesByFullPath {
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/gallery/': typeof GalleryIndexRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -132,12 +139,12 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
-  '/gallery': typeof GalleryRoute
   '/regulations': typeof RegulationsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/gallery': typeof GalleryIndexRoute
   '/news': typeof NewsIndexRoute
   '/programs': typeof ProgramsIndexRoute
 }
@@ -149,7 +156,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/departments': typeof DepartmentsRoute
   '/education': typeof EducationRoute
-  '/gallery': typeof GalleryRoute
+  '/gallery': typeof GalleryRouteWithChildren
   '/news': typeof NewsRouteWithChildren
   '/programs': typeof ProgramsRouteWithChildren
   '/regulations': typeof RegulationsRoute
@@ -157,6 +164,7 @@ export interface FileRoutesById {
   '/visit': typeof VisitRoute
   '/news/$slug': typeof NewsSlugRoute
   '/programs/$slug': typeof ProgramsSlugRoute
+  '/gallery/': typeof GalleryIndexRoute
   '/news/': typeof NewsIndexRoute
   '/programs/': typeof ProgramsIndexRoute
 }
@@ -177,6 +185,7 @@ export interface FileRouteTypes {
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/gallery/'
     | '/news/'
     | '/programs/'
   fileRoutesByTo: FileRoutesByTo
@@ -187,12 +196,12 @@ export interface FileRouteTypes {
     | '/contact'
     | '/departments'
     | '/education'
-    | '/gallery'
     | '/regulations'
     | '/sitemap.xml'
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/gallery'
     | '/news'
     | '/programs'
   id:
@@ -211,6 +220,7 @@ export interface FileRouteTypes {
     | '/visit'
     | '/news/$slug'
     | '/programs/$slug'
+    | '/gallery/'
     | '/news/'
     | '/programs/'
   fileRoutesById: FileRoutesById
@@ -222,7 +232,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DepartmentsRoute: typeof DepartmentsRoute
   EducationRoute: typeof EducationRoute
-  GalleryRoute: typeof GalleryRoute
+  GalleryRoute: typeof GalleryRouteWithChildren
   NewsRoute: typeof NewsRouteWithChildren
   ProgramsRoute: typeof ProgramsRouteWithChildren
   RegulationsRoute: typeof RegulationsRoute
@@ -330,6 +340,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsIndexRouteImport
       parentRoute: typeof NewsRoute
     }
+    '/gallery/': {
+      id: '/gallery/'
+      path: '/'
+      fullPath: '/gallery/'
+      preLoaderRoute: typeof GalleryIndexRouteImport
+      parentRoute: typeof GalleryRoute
+    }
     '/programs/$slug': {
       id: '/programs/$slug'
       path: '/$slug'
@@ -346,6 +363,17 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface GalleryRouteChildren {
+  GalleryIndexRoute: typeof GalleryIndexRoute
+}
+
+const GalleryRouteChildren: GalleryRouteChildren = {
+  GalleryIndexRoute: GalleryIndexRoute,
+}
+
+const GalleryRouteWithChildren =
+  GalleryRoute._addFileChildren(GalleryRouteChildren)
 
 interface NewsRouteChildren {
   NewsSlugRoute: typeof NewsSlugRoute
@@ -380,7 +408,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DepartmentsRoute: DepartmentsRoute,
   EducationRoute: EducationRoute,
-  GalleryRoute: GalleryRoute,
+  GalleryRoute: GalleryRouteWithChildren,
   NewsRoute: NewsRouteWithChildren,
   ProgramsRoute: ProgramsRouteWithChildren,
   RegulationsRoute: RegulationsRoute,
