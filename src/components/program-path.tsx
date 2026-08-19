@@ -63,10 +63,6 @@ export function ProgramPath({
       {/* Section head */}
       <div className="mb-14 flex flex-col justify-between gap-8 lg:mb-20 lg:flex-row lg:items-end">
         <div className="w-full lg:w-1/2">
-          <div className="mb-5 flex items-center gap-3 font-display text-[0.6875rem] font-bold uppercase tracking-[0.15em] text-muted-foreground">
-            <span className="block h-0.5 w-8 bg-primary" />
-            {eyebrow}
-          </div>
           <h2
             id="programs-heading"
             className="font-display text-3xl font-bold tracking-tight md:text-5xl"
