@@ -16,10 +16,25 @@ import p69 from "@/assets/Picture69.jpg.asset.json";
 import p67 from "@/assets/Picture67.jpg.asset.json";
 import p70 from "@/assets/Picture70.jpg.asset.json";
 import p73 from "@/assets/Picture73.jpg.asset.json";
+import p11 from "@/assets/Picture11.jpg.asset.json";
+import p12 from "@/assets/Picture12.jpg.asset.json";
+import p18 from "@/assets/Picture18.jpg.asset.json";
+import p20 from "@/assets/Picture20.jpg.asset.json";
+import p71 from "@/assets/Picture71.jpg.asset.json";
+import p54 from "@/assets/Picture54.jpg.asset.json";
+import p55 from "@/assets/Picture55.jpg.asset.json";
+import p56 from "@/assets/Picture56.jpg.asset.json";
 
 type Shot = { src: string; alt: string; category: string };
 
-const CATEGORIES = ["All", "Welding & Fabrication", "Instruction", "Workshops"] as const;
+const CATEGORIES = [
+  "All",
+  "Welding & Fabrication",
+  "Instruction",
+  "Refrigeration & Air-Conditioning",
+  "Surveying",
+  "Workshops",
+] as const;
 
 const SHOTS: Shot[] = [
   { src: p68.url, alt: "Trainee arc welding a steel frame in the fabrication workshop", category: "Welding & Fabrication" },
@@ -31,6 +46,14 @@ const SHOTS: Shot[] = [
   { src: p35.url, alt: "Trainee finishing a workpiece under instructor supervision", category: "Instruction" },
   { src: p36.url, alt: "Trainees assembling fabricated cones on the workshop floor", category: "Welding & Fabrication" },
   { src: p37.url, alt: "Group practical session on sheet-metal development", category: "Welding & Fabrication" },
+  { src: p11.url, alt: "Trainees stripping down air-conditioning units at the workshop bench", category: "Refrigeration & Air-Conditioning" },
+  { src: p12.url, alt: "Instructor guiding trainees through a compressor teardown", category: "Refrigeration & Air-Conditioning" },
+  { src: p71.url, alt: "Trainees brazing refrigerant pipework on a split-unit condenser", category: "Refrigeration & Air-Conditioning" },
+  { src: p18.url, alt: "Practical session charging an air-conditioning system with refrigerant", category: "Refrigeration & Air-Conditioning" },
+  { src: p20.url, alt: "Instructor and trainee inspecting air-conditioning components", category: "Refrigeration & Air-Conditioning" },
+  { src: p54.url, alt: "Surveying practical with a levelling instrument on site", category: "Surveying" },
+  { src: p55.url, alt: "Trainees recording level readings during a site survey exercise", category: "Surveying" },
+  { src: p56.url, alt: "Surveying team taking staff readings through a level", category: "Surveying" },
   { src: p67.url, alt: "Metrology and measurement practical in the engineering workshop", category: "Workshops" },
   { src: p70.url, alt: "Refrigeration and air-conditioning training rig", category: "Workshops" },
   { src: p73.url, alt: "Trainees at work in a Bonny Vocational Centre workshop", category: "Workshops" },
