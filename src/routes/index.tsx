@@ -169,7 +169,7 @@ function Home() {
         <ProgramPath
           eyebrow="How it works"
           heading="Your path to a trade"
-          intro="Pick a programme area, train in a working workshop with industry-standard equipment, and finish with a qualification employers on Bonny Island recognise."
+          intro="Pick a programme area, train in a working workshop with industry-standard equipment, and finish with a qualification employers recognise."
           steps={PROGRAM_CATEGORY_CARDS.map((c, i) => ({
             slug: c.slug,
             name: c.name,
