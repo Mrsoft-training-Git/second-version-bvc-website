@@ -70,7 +70,7 @@ export function SiteHeader() {
           aria-label="Primary"
           className={`hidden items-center gap-6 px-6 py-3.5 shadow-sm transition-colors duration-300 lg:flex xl:gap-8 xl:px-8 ${
             overHero
-              ? "bg-background"
+              ? "bg-transparent"
               : "bg-ink"
           }`}
         >
